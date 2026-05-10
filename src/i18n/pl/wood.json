@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "line1": "NASZĄ PASJĄ JEST",
+    "line2": "ARCHITEKTURA",
+    "line3": "DREWNIANA"
+  },
+  "about": {
+    "label": "//O NAS",
+    "body": "Od 2015 roku zajmujemy się drewnem. Wykonujemy nowe projekty, jak również dajemy nowe życie antykom.",
+    "services": {
+      "antique": "Renowacja antyków",
+      "furniture": "Meble i wiaty ogrodowe",
+      "construction": "Budowa i elewacje",
+      "roofing": "Więźby dachowe",
+      "other": "Inne projekty drewniane"
+    }
+  },
+  "projects": {
+    "label": "//REALIZACJE"
+  },
+  "whyUs": {
+    "label": "//DLACZEGO MY",
+    "items": [
+      { "title": "WYSOKA JAKOŚĆ", "body": "Każdy projekt realizujemy z najwyższą starannością i dbałością o detale." },
+      { "title": "SZYBKA REAKCJA", "body": "Odpowiadamy na zapytania i realizujemy zlecenia bez zbędnej zwłoki." },
+      { "title": "DOSTĘPNOŚĆ USŁUG", "body": "Działamy na terenie całej Polski, dostosowując się do potrzeb klienta." }
+    ]
+  },
+  "testimonials": {
+    "label": "//OPINIE"
+  },
+  "transformations": {
+    "label": "//TRANSFORMACJE"
+  },
+  "faq": {
+    "label": "//FAQ"
+  }
+}

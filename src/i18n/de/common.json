@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "about": "//ÜBER UNS",
+    "projects": "//PROJEKTE",
+    "whyUs": "//WARUM WIR",
+    "testimonials": "//MEINUNGEN",
+    "faq": "//FAQ",
+    "contact": "KONTAKT"
+  },
+  "footer": {
+    "tagline": "UNSERE LEIDENSCHAFT IST HOLZARCHITEKTUR",
+    "address": "67-320 Małomice, ul. Kościuszki 19c",
+    "phone": "782 243 640",
+    "phoneSecondary": "602 345 678",
+    "email": "queistal@gmail.com",
+    "rights": "© 2025 QUEIS TAL Sp. z o.o. Alle Rechte vorbehalten."
+  },
+  "services": {
+    "wood": "HOLZ",
+    "cleaning": "REINIGUNG"
+  }
+}

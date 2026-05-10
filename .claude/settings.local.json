@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell($env:PATH += ';C:\\\\Program Files\\\\GitHub CLI'; gh auth status 2>&1)"
+      "PowerShell($env:PATH += ';C:\\\\Program Files\\\\GitHub CLI'; gh auth status 2>&1)",
+      "Bash(npm install *)",
+      "Bash(cd \"C:\\\\Users\\\\fourt\\\\Desktop\\\\‎ ‎ ‎\\\\Programowanie\\\\Projects\\\\queistal-v2\\\\src\" && rm routes/drewno.tsx routes/czyszczenie.tsx && mkdir -p routes/'$lang'/wood routes/'$lang'/cleaning && echo \"done\")",
+      "Bash(npm run *)",
+      "Bash(npx vite *)"
     ]
   }
 }

@@ -15,8 +15,11 @@
     "@radix-ui/react-popover": "^1.1.15",
     "@tanstack/react-router": "^1.169.2",
     "framer-motion": "^12.38.0",
+    "i18next": "^26.0.10",
+    "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-i18next": "^17.0.7",
     "react-intersection-observer": "^10.0.3"
   },
   "devDependencies": {

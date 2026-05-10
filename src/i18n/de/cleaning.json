@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "line1": "LASER UND",
+    "line2": "SANDSTRAHLEN"
+  },
+  "services": {
+    "label": "//LEISTUNGEN",
+    "laser": {
+      "title": "LASERREINIGUNG",
+      "body": "Präzises Entfernen von Rost, Farbe und Verunreinigungen mit dem Laserstrahl."
+    },
+    "sandblasting": {
+      "title": "SANDSTRAHLEN",
+      "body": "Effektive Oberflächenreinigung mit einem Schleifmittelstrahl."
+    }
+  },
+  "beforeAfter": {
+    "label": "//VORHER & NACHHER"
+  },
+  "applications": {
+    "label": "//ANWENDUNGEN"
+  },
+  "process": {
+    "label": "//PROZESS"
+  },
+  "testimonials": {
+    "label": "//MEINUNGEN"
+  },
+  "faq": {
+    "label": "//FAQ"
+  }
+}

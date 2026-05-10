@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "line1": "UNSERE LEIDENSCHAFT",
+    "line2": "IST",
+    "line3": "HOLZARCHITEKTUR"
+  },
+  "about": {
+    "label": "//ÜBER UNS",
+    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein.",
+    "services": {
+      "antique": "Antiquitätenrestaurierung",
+      "furniture": "Gartenmöbel & Überdachungen",
+      "construction": "Bau & Fassaden",
+      "roofing": "Dachstühle",
+      "other": "Andere Holzprojekte"
+    }
+  },
+  "projects": {
+    "label": "//PROJEKTE"
+  },
+  "whyUs": {
+    "label": "//WARUM WIR",
+    "items": [
+      { "title": "HOHE QUALITÄT", "body": "Jedes Projekt realisieren wir mit höchster Sorgfalt und Liebe zum Detail." },
+      { "title": "SCHNELLE REAKTION", "body": "Wir antworten auf Anfragen und führen Aufträge ohne unnötige Verzögerung aus." },
+      { "title": "VERFÜGBARKEIT", "body": "Wir sind in ganz Polen tätig und passen uns den Bedürfnissen unserer Kunden an." }
+    ]
+  },
+  "testimonials": {
+    "label": "//MEINUNGEN"
+  },
+  "transformations": {
+    "label": "//TRANSFORMATIONEN"
+  },
+  "faq": {
+    "label": "//FAQ"
+  }
+}

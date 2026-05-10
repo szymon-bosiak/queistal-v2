@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "line1": "LASER I",
+    "line2": "PIASKOWANIE"
+  },
+  "services": {
+    "label": "//USŁUGI",
+    "laser": {
+      "title": "CZYSZCZENIE LASEROWE",
+      "body": "Precyzyjne usuwanie rdzy, farby i zanieczyszczeń wiązką lasera."
+    },
+    "sandblasting": {
+      "title": "PIASKOWANIE",
+      "body": "Skuteczne oczyszczanie powierzchni strumieniem ścierniwa."
+    }
+  },
+  "beforeAfter": {
+    "label": "//ZANIM I PO"
+  },
+  "applications": {
+    "label": "//ZASTOSOWANIA"
+  },
+  "process": {
+    "label": "//PROCES"
+  },
+  "testimonials": {
+    "label": "//OPINIE"
+  },
+  "faq": {
+    "label": "//FAQ"
+  }
+}

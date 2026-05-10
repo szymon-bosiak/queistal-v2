@@ -9,18 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as DrewnoRouteImport } from './routes/drewno'
-import { Route as CzyszczenieRouteImport } from './routes/czyszczenie'
+import { Route as LangRouteRouteImport } from './routes/$lang/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangWoodIndexRouteImport } from './routes/$lang/wood/index'
+import { Route as LangCleaningIndexRouteImport } from './routes/$lang/cleaning/index'
 
-const DrewnoRoute = DrewnoRouteImport.update({
-  id: '/drewno',
-  path: '/drewno',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CzyszczenieRoute = CzyszczenieRouteImport.update({
-  id: '/czyszczenie',
-  path: '/czyszczenie',
+const LangRouteRoute = LangRouteRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -28,51 +25,69 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangWoodIndexRoute = LangWoodIndexRouteImport.update({
+  id: '/wood/',
+  path: '/wood/',
+  getParentRoute: () => LangRouteRoute,
+} as any)
+const LangCleaningIndexRoute = LangCleaningIndexRouteImport.update({
+  id: '/cleaning/',
+  path: '/cleaning/',
+  getParentRoute: () => LangRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/czyszczenie': typeof CzyszczenieRoute
-  '/drewno': typeof DrewnoRoute
+  '/$lang': typeof LangRouteRouteWithChildren
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/cleaning/': typeof LangCleaningIndexRoute
+  '/$lang/wood/': typeof LangWoodIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/czyszczenie': typeof CzyszczenieRoute
-  '/drewno': typeof DrewnoRoute
+  '/$lang': typeof LangIndexRoute
+  '/$lang/cleaning': typeof LangCleaningIndexRoute
+  '/$lang/wood': typeof LangWoodIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/czyszczenie': typeof CzyszczenieRoute
-  '/drewno': typeof DrewnoRoute
+  '/$lang': typeof LangRouteRouteWithChildren
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/cleaning/': typeof LangCleaningIndexRoute
+  '/$lang/wood/': typeof LangWoodIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/czyszczenie' | '/drewno'
+  fullPaths: '/' | '/$lang' | '/$lang/' | '/$lang/cleaning/' | '/$lang/wood/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/czyszczenie' | '/drewno'
-  id: '__root__' | '/' | '/czyszczenie' | '/drewno'
+  to: '/' | '/$lang' | '/$lang/cleaning' | '/$lang/wood'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/'
+    | '/$lang/cleaning/'
+    | '/$lang/wood/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CzyszczenieRoute: typeof CzyszczenieRoute
-  DrewnoRoute: typeof DrewnoRoute
+  LangRouteRoute: typeof LangRouteRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/drewno': {
-      id: '/drewno'
-      path: '/drewno'
-      fullPath: '/drewno'
-      preLoaderRoute: typeof DrewnoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/czyszczenie': {
-      id: '/czyszczenie'
-      path: '/czyszczenie'
-      fullPath: '/czyszczenie'
-      preLoaderRoute: typeof CzyszczenieRouteImport
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -82,13 +97,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/wood/': {
+      id: '/$lang/wood/'
+      path: '/wood'
+      fullPath: '/$lang/wood/'
+      preLoaderRoute: typeof LangWoodIndexRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
+    '/$lang/cleaning/': {
+      id: '/$lang/cleaning/'
+      path: '/cleaning'
+      fullPath: '/$lang/cleaning/'
+      preLoaderRoute: typeof LangCleaningIndexRouteImport
+      parentRoute: typeof LangRouteRoute
+    }
   }
 }
 
+interface LangRouteRouteChildren {
+  LangIndexRoute: typeof LangIndexRoute
+  LangCleaningIndexRoute: typeof LangCleaningIndexRoute
+  LangWoodIndexRoute: typeof LangWoodIndexRoute
+}
+
+const LangRouteRouteChildren: LangRouteRouteChildren = {
+  LangIndexRoute: LangIndexRoute,
+  LangCleaningIndexRoute: LangCleaningIndexRoute,
+  LangWoodIndexRoute: LangWoodIndexRoute,
+}
+
+const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
+  LangRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CzyszczenieRoute: CzyszczenieRoute,
-  DrewnoRoute: DrewnoRoute,
+  LangRouteRoute: LangRouteRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

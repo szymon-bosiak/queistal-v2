@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "about": "//O NAS",
+    "projects": "//REALIZACJE",
+    "whyUs": "//DLACZEGO MY",
+    "testimonials": "//OPINIE",
+    "faq": "//FAQ",
+    "contact": "KONTAKT"
+  },
+  "footer": {
+    "tagline": "NASZĄ PASJĄ JEST ARCHITEKTURA DREWNIANA",
+    "address": "67-320 Małomice, ul. Kościuszki 19c",
+    "phone": "782 243 640",
+    "phoneSecondary": "602 345 678",
+    "email": "queistal@gmail.com",
+    "rights": "© 2025 QUEIS TAL Sp. z o.o. Wszelkie prawa zastrzeżone."
+  },
+  "services": {
+    "wood": "DREWNO",
+    "cleaning": "CZYSZCZENIE"
+  }
+}
