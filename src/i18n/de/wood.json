@@ -5,8 +5,8 @@
     "line3": "HOLZARCHITEKTUR"
   },
   "about": {
-    "label": "//ÜBER UNS",
-    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein.",
+    "label": "ÜBER UNS",
+    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein. Wir arbeiten mit Leidenschaft — jedes Projekt ist für uns eine einzigartige Herausforderung.",
     "services": {
       "antique": "Antiquitätenrestaurierung",
       "furniture": "Gartenmöbel & Überdachungen",
@@ -16,23 +16,79 @@
     }
   },
   "projects": {
-    "label": "//PROJEKTE"
+    "label": "PROJEKTE",
+    "prev": "VORHERIGE",
+    "next": "NÄCHSTE"
   },
   "whyUs": {
-    "label": "//WARUM WIR",
+    "label": "WARUM WIR",
     "items": [
-      { "title": "HOHE QUALITÄT", "body": "Jedes Projekt realisieren wir mit höchster Sorgfalt und Liebe zum Detail." },
-      { "title": "SCHNELLE REAKTION", "body": "Wir antworten auf Anfragen und führen Aufträge ohne unnötige Verzögerung aus." },
-      { "title": "VERFÜGBARKEIT", "body": "Wir sind in ganz Polen tätig und passen uns den Bedürfnissen unserer Kunden an." }
+      {
+        "title": "HOHE QUALITÄT",
+        "body": "Jedes Projekt realisieren wir mit höchster Sorgfalt und Liebe zum Detail. Wir verwenden ausschließlich bewährte Holzarten und zertifizierte Materialien."
+      },
+      {
+        "title": "SCHNELLE REAKTION",
+        "body": "Wir antworten auf Anfragen und führen Aufträge ohne unnötige Verzögerung aus. Ein Kostenvoranschlag wird innerhalb weniger Werktage nach einer kostenlosen Besichtigung erstellt."
+      },
+      {
+        "title": "VERFÜGBARKEIT",
+        "body": "Wir sind in ganz Polen tätig und passen uns den Bedürfnissen unserer Kunden an. Die Anfahrtskosten werden individuell ohne versteckte Kosten vereinbart."
+      }
     ]
   },
-  "testimonials": {
-    "label": "//MEINUNGEN"
-  },
   "transformations": {
-    "label": "//TRANSFORMATIONEN"
+    "label": "TRANSFORMATIONEN",
+    "intro": "Jedes Projekt ist eine Geschichte der Verwandlung — vom rohen Holz bis zur fertigen Realisierung."
+  },
+  "testimonials": {
+    "label": "MEINUNGEN",
+    "items": [
+      {
+        "name": "Anna Wiśniewska",
+        "location": "Breslau",
+        "text": "Wir beauftragten die Restaurierung einer antiken Kommode aus dem 19. Jahrhundert. Das Ergebnis übertraf unsere Erwartungen — das Möbel sieht aus wie neu und hat seinen ursprünglichen Charakter bewahrt."
+      },
+      {
+        "name": "Marek Jankowski",
+        "location": "Warschau",
+        "text": "Das von Queis Tal gebaute Gartenpavillon ist eine wahre Zierde unseres Gartens. Solide Arbeit, Termine eingehalten, Kontakt während der gesamten Realisierung einwandfrei."
+      },
+      {
+        "name": "Tomasz Kowalczyk",
+        "location": "Krakau",
+        "text": "Der Austausch des Dachstuhls wurde reibungslos und professionell durchgeführt. Das Team arbeitete sauber und pünktlich. Das Endergebnis erfüllte alle Erwartungen vollständig."
+      },
+      {
+        "name": "Katarzyna Zielińska",
+        "location": "Posen",
+        "text": "Seit über fünf Jahren nutze ich die Dienste des Unternehmens für verschiedene Holzprojekte. Immer hohe Qualität, faire Preise und volle Professionalität — das ist mir am wichtigsten."
+      }
+    ]
   },
   "faq": {
-    "label": "//FAQ"
+    "label": "FAQ",
+    "items": [
+      {
+        "q": "Wie läuft die Kostenabschätzung ab?",
+        "a": "Wir kommen kostenlos zur Besichtigung, bewerten den Arbeitsumfang und erstellen innerhalb weniger Werktage ein detailliertes Angebot. Für den Besuch erheben wir keine Gebühren."
+      },
+      {
+        "q": "Welches Holz verwenden Sie?",
+        "a": "Wir wählen die Holzart je nach Projekt und Einsatzbedingungen — häufig Kiefer, Eiche oder Lärche. Wir verwenden ausschließlich zertifiziertes Holz aus legalen Quellen."
+      },
+      {
+        "q": "Bieten Sie Garantie auf Ihre Arbeiten an?",
+        "a": "Ja, wir geben auf jede Umsetzung eine schriftliche Garantie. Die Dauer hängt von der Art des Projekts ab — Details werden bei der Vertragsunterzeichnung besprochen."
+      },
+      {
+        "q": "In welchem Gebiet sind Sie tätig?",
+        "a": "Hauptsächlich in den Woiwodschaften Niederschlesien und Lebus, aber wir führen Aufträge in ganz Polen aus. Fahrtkosten werden individuell bei der Kalkulation vereinbart."
+      },
+      {
+        "q": "Wie lange dauert die Projektrealisierung?",
+        "a": "Einfache Projekte schließen wir in wenigen Tagen ab. Größere Konstruktionen dauern einige Wochen bis Monate. Den genauen Termin nennen wir stets vor Vertragsunterzeichnung."
+      }
+    ]
   }
 }
