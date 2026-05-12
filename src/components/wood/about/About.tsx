@@ -1,83 +1,129 @@
 import { useTranslation } from 'react-i18next'
-import { Reveal } from '../../shared/reveal'
 import { ServiceCard } from './components/service-card'
 import iconAntique from '../../../assets/icons/antique.svg'
-import iconBench from '../../../assets/icons/bench.svg'
 import iconHouse from '../../../assets/icons/house.svg'
 import iconRoof from '../../../assets/icons/roof.svg'
+import iconBench from '../../../assets/icons/bench.svg'
 import iconEtc from '../../../assets/icons/etc.svg'
+import decor from '../../../assets/icons/decor.svg'
 
-const ICONS: Record<string, string> = {
-  antique:      iconAntique,
-  furniture:    iconBench,
-  construction: iconHouse,
-  roofing:      iconRoof,
-  other:        iconEtc,
-}
+const SERVICES = [
+  { icon: iconAntique, key: 'antique' },
+  { icon: iconHouse,   key: 'construction' },
+  { icon: iconRoof,    key: 'roofing' },
+  { icon: iconBench,   key: 'furniture' },
+  { icon: iconEtc,     key: 'other' },
+] as const
 
-const SERVICE_KEYS = ['antique', 'furniture', 'construction', 'roofing', 'other'] as const
+const GRID_POSITIONS = [
+  { col: 1, row: '1/3' },
+  { col: 2, row: '2/4' },
+  { col: 3, row: '1/3' },
+  { col: 4, row: '2/4' },
+  { col: 5, row: '1/3' },
+] as const
 
 export const About = () => {
   const { t } = useTranslation('wood')
 
   return (
     <section
-      id="about"
+      id="o-nas"
       style={{
-        background: 'var(--color-sage)',
-        color: 'var(--color-ink)',
-        padding: 'clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,5rem)',
+        paddingTop: '6rem',
+        overflow: 'visible',
+        display: 'flex',
+        justifyContent: 'center',
+        background: 'var(--sage)',
         borderBottom: '1px dashed rgba(40,37,34,.18)',
       }}
     >
       <div
-        className="about-grid"
-        style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem,6vw,7rem)', alignItems: 'start' }}
+        style={{
+          width: '100%',
+          maxWidth: 1400,
+          padding: '0 clamp(1.5rem,5vw,5rem) 6rem',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '3rem',
+          boxSizing: 'border-box',
+        }}
       >
-        {/* Left — text */}
-        <Reveal kind="left">
-          <div className="stag" style={{ marginBottom: '2rem' }}>
-            {t('about.label')}
-          </div>
-          <p style={{
-            fontSize: 'clamp(18px,2vw,26px)',
-            fontWeight: 300,
-            lineHeight: 1.7,
-            maxWidth: 480,
-          }}>
+        {/* Text column */}
+        <div style={{ minWidth: '9rem', width: '14rem' }}>
+          <h3 style={{ fontSize: 30, fontWeight: 400, marginBottom: '1.2rem' }}>
+            //{t('about.label')}
+          </h3>
+          <p style={{ fontSize: 18, fontWeight: 300, lineHeight: 1.7, opacity: 0.7 }}>
             {t('about.body')}
           </p>
-        </Reveal>
+          <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div style={{ width: 1, height: 40, borderLeft: '1px dashed rgba(40,37,34,.3)' }} />
+            <span style={{ fontSize: 11, letterSpacing: 3, opacity: 0.35, fontWeight: 400 }}>
+              {t('about.servicesLabel')}
+            </span>
+          </div>
+        </div>
 
-        {/* Right — service cards */}
-        <Reveal kind="right" delay={150}>
+        {/* Cards container */}
+        <div style={{ flex: 1, minWidth: 340, position: 'relative', padding: '2.5rem 2rem' }}>
+          {/* Dashed border frame */}
+          <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(40,37,34,.18)', pointerEvents: 'none' }} />
+
+          {/* Corner decors */}
+          <img src={decor} alt="" style={{ position: 'absolute', left: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'none', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" style={{ position: 'absolute', right: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'scaleX(-1)', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" style={{ position: 'absolute', left: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scaleY(-1)', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" style={{ position: 'absolute', right: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scale(-1,-1)', opacity: 0.7, zIndex: 2 }} />
+
+          {/* 5-column stagger grid — odd columns top row, even columns bottom row */}
           <div
-            className="cards-grid"
+            className="wood-card-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '1rem',
+              gridTemplateColumns: 'repeat(5, minmax(0, 1fr))',
+              gridTemplateRows: 'auto 3rem auto',
+              justifyContent: 'center',
+              justifyItems: 'center',
+              gap: '0 clamp(.5rem, 1.5vw, 1.5rem)',
             }}
           >
-            {SERVICE_KEYS.map((key, i) => (
-              <Reveal key={key} kind="scale" delay={i * 60}>
+            {SERVICES.map((svc, i) => (
+              <div
+                key={svc.key}
+                style={{
+                  gridColumn: GRID_POSITIONS[i].col,
+                  gridRow: GRID_POSITIONS[i].row,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
                 <ServiceCard
-                  icon={ICONS[key]}
-                  label={t(`about.services.${key}`)}
+                  idx={i}
+                  icon={svc.icon}
+                  label={t(`about.services.${svc.key}`)}
                 />
-              </Reveal>
+              </div>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
-          .about-grid { grid-template-columns: 1fr !important; }
-          .cards-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (max-width: 1100px) {
+          #o-nas > div { flex-direction: column !important; }
+          .wood-card-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
         }
-        @media (max-width: 480px) {
-          .cards-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (max-width: 700px) {
+          .wood-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; grid-template-rows: auto auto auto auto auto !important; }
+          .wood-card-grid > div:nth-child(1) { grid-column: 1 !important; grid-row: 1 !important; }
+          .wood-card-grid > div:nth-child(2) { grid-column: 2 !important; grid-row: 1 !important; }
+          .wood-card-grid > div:nth-child(3) { grid-column: 3 !important; grid-row: 1 !important; }
+          .wood-card-grid > div:nth-child(4) { grid-column: 1/3 !important; grid-row: 2 !important; }
+          .wood-card-grid > div:nth-child(5) { grid-column: 3 !important; grid-row: 2 !important; }
         }
       `}</style>
     </section>

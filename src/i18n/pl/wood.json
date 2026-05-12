@@ -12,13 +12,14 @@
   },
   "about": {
     "label": "O NAS",
-    "body": "Od 2015 roku zajmujemy się drewnem. Wykonujemy nowe projekty, jak również dajemy nowe życie antykom. Działamy z pasją — każdy projekt to dla nas wyjątkowe wyzwanie.",
+    "body": "Od 2015 roku zajmujemy się drewnem. Wykonujemy nowe projekty, jak również dajemy nowe życie antykom.",
+    "servicesLabel": "USŁUGI",
     "services": {
-      "antique": "Renowacja antyków",
-      "furniture": "Meble i wiaty ogrodowe",
-      "construction": "Budowa i elewacje",
+      "antique": "Renowacje antyków",
+      "construction": "Konstrukcje budynków",
       "roofing": "Więźby dachowe",
-      "other": "Inne projekty drewniane"
+      "furniture": "Meble ogrodowe",
+      "other": "Inne projekty"
     }
   },
   "projects": {

@@ -12,13 +12,14 @@
   },
   "about": {
     "label": "ÜBER UNS",
-    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein. Wir arbeiten mit Leidenschaft — jedes Projekt ist für uns eine einzigartige Herausforderung.",
+    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein.",
+    "servicesLabel": "LEISTUNGEN",
     "services": {
-      "antique": "Antiquitätenrestaurierung",
-      "furniture": "Gartenmöbel & Überdachungen",
-      "construction": "Bau & Fassaden",
+      "antique": "Antiquitäten",
+      "construction": "Holzkonstruktionen",
       "roofing": "Dachstühle",
-      "other": "Andere Holzprojekte"
+      "furniture": "Gartenmöbel",
+      "other": "Andere Projekte"
     }
   },
   "projects": {
