@@ -3,17 +3,43 @@
     "about": "//O NAS",
     "projects": "//REALIZACJE",
     "whyUs": "//DLACZEGO MY",
+    "transformations": "//TRANSFORMACJE",
     "testimonials": "//OPINIE",
     "faq": "//FAQ",
-    "contact": "KONTAKT"
+    "contact": "KONTAKT",
+    "cleaning": {
+      "services": "//USŁUGI",
+      "beforeAfter": "//ZANIM I PO",
+      "applications": "//ZASTOSOWANIA",
+      "process": "//PROCES",
+      "testimonials": "//OPINIE",
+      "faq": "//FAQ"
+    }
   },
   "footer": {
     "tagline": "NASZĄ PASJĄ JEST ARCHITEKTURA DREWNIANA",
     "address": "67-320 Małomice, ul. Kościuszki 19c",
     "phone": "782 243 640",
+    "phoneHref": "tel:+48782243640",
     "phoneSecondary": "602 345 678",
+    "phoneSecondaryHref": "tel:+48602345678",
     "email": "queistal@gmail.com",
-    "rights": "© 2025 QUEIS TAL Sp. z o.o. Wszelkie prawa zastrzeżone."
+    "rights": "© 2025 Queis Tal. Wszelkie prawa zastrzeżone.",
+    "credit": "Projekt: Szymon Bosiak",
+    "creditHref": "https://www.linkedin.com/in/szymon-bosiak-b228151a4/",
+    "contactLabel": "//SKONTAKTUJ SIĘ Z NAMI",
+    "companyLabel": "FIRMA",
+    "companyName": "\"QUEIS TAL\" Sp z o.o.",
+    "servicesLabel": "USŁUGI",
+    "navLabel": "NAWIGACJA",
+    "services": [
+      "Architektura drewniana",
+      "Renowacje antyków",
+      "Więźby dachowe",
+      "Meble ogrodowe",
+      "Czyszczenie laserowe",
+      "Piaskowanie"
+    ]
   },
   "services": {
     "wood": "DREWNO",

@@ -3,11 +3,11 @@
 
 @theme {
   --font-oswald: 'Oswald', sans-serif;
-
   --color-sage: #E3EBD4;
   --color-ink: #282522;
   --color-blueprint: #0d1117;
   --color-white: #ffffff;
+  --ease: cubic-bezier(.4, 0, .2, 1);
 }
 
 *,
@@ -16,6 +16,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,4 +34,117 @@ body {
 
 #root {
   min-height: 100svh;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(227,235,212,.65); }
+  70%  { box-shadow: 0 0 0 14px rgba(227,235,212,0); }
+  100% { box-shadow: 0 0 0 0 rgba(227,235,212,0); }
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: .4; }
+  50%       { opacity: 1; }
+}
+@keyframes marchDashes {
+  to {
+    background-position: 24px 0, 0 24px, -24px 0, 0 -24px;
+  }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes underlineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes blink {
+  0%, 100% { opacity: .6; }
+  50%       { opacity: .15; }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes drawLine {
+  from { stroke-dashoffset: 600; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ── Reveal helpers ── */
+.reveal        { opacity: 0; }
+.reveal.visible { animation: fadeUp .8s var(--ease) forwards; }
+
+.reveal-l        { opacity: 0; }
+.reveal-l.visible { animation: slideInLeft .8s var(--ease) forwards; }
+
+.reveal-r        { opacity: 0; }
+.reveal-r.visible { animation: slideInRight .8s var(--ease) forwards; }
+
+.reveal-scale        { opacity: 0; }
+.reveal-scale.visible { animation: fadeInScale .7s var(--ease) forwards; }
+
+.reveal-fade        { opacity: 0; }
+.reveal-fade.visible { animation: fadeIn 1s var(--ease) forwards; }
+
+/* ── Section tag (.stag) ── */
+.stag {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.stag::before { content: '//'; }
+.stag::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+  opacity: .4;
+  margin-left: 6px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: underlineGrow 1s .3s var(--ease) forwards;
+}
+
+/* ── Marching dashes border ── */
+.march {
+  background-image:
+    linear-gradient(90deg,  rgba(255,255,255,.15) 50%, transparent 50%),
+    linear-gradient(180deg, rgba(255,255,255,.15) 50%, transparent 50%),
+    linear-gradient(90deg,  rgba(255,255,255,.15) 50%, transparent 50%),
+    linear-gradient(180deg, rgba(255,255,255,.15) 50%, transparent 50%);
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  animation: marchDashes 6s linear infinite;
 }

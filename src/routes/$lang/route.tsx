@@ -1,8 +1,8 @@
 import { createFileRoute, Outlet, redirect } from '@tanstack/react-router'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import Nav from '../../components/shared/Nav'
-import Footer from '../../components/shared/Footer'
+import { Nav } from '../../components/shared/nav'
+import { Footer } from '../../components/shared/footer'
 
 const SUPPORTED_LANGUAGES = ['pl', 'de'] as const
 export type Language = (typeof SUPPORTED_LANGUAGES)[number]
