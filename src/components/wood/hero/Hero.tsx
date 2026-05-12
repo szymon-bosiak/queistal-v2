@@ -11,7 +11,7 @@ export const Hero = () => {
     <section
       id="hero"
       className="hero-grid min-h-svh border-b border-dashed border-ink/18"
-      style={{ background: 'var(--color-sage)', color: 'var(--color-ink)' }}
+      style={{ background: 'var(--color-sage)', color: 'var(--color-ink)', maxHeight: '500px' }}
     >
       {/* Text column */}
       <div
