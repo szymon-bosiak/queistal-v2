@@ -1,8 +1,14 @@
 {
   "hero": {
-    "line1": "NASZĄ PASJĄ JEST",
-    "line2": "ARCHITEKTURA",
-    "line3": "DREWNIANA"
+    "since": "OD 2015",
+    "line1": "ARCHI-",
+    "line2": "TEKTURA",
+    "line3": "DREWNIANA",
+    "tagline": "Projektujemy i tworzymy zabudowę drewnianą skrojoną na Twoje potrzeby — nowe projekty i renowacja antyków.",
+    "cta": {
+      "projects": "NASZE PROJEKTY",
+      "about": "O NAS"
+    }
   },
   "about": {
     "label": "O NAS",

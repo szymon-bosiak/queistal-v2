@@ -1,8 +1,14 @@
 {
   "hero": {
-    "line1": "UNSERE LEIDENSCHAFT",
-    "line2": "IST",
-    "line3": "HOLZARCHITEKTUR"
+    "since": "SEIT 2015",
+    "line1": "ARCHI-",
+    "line2": "TEKTUR",
+    "line3": "AUS HOLZ",
+    "tagline": "Wir entwerfen und fertigen Holzkonstruktionen nach Ihren Wünschen — Neubauten und Restaurierung von Antiquitäten.",
+    "cta": {
+      "projects": "UNSERE PROJEKTE",
+      "about": "ÜBER UNS"
+    }
   },
   "about": {
     "label": "ÜBER UNS",

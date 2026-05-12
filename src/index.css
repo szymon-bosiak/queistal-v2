@@ -10,6 +10,14 @@
   --ease: cubic-bezier(.4, 0, .2, 1);
 }
 
+/* ── Short-name aliases matching v8 design tokens ── */
+:root {
+  --sage:  #E3EBD4;
+  --ink:   #282522;
+  --bp:    #0d1117;
+  --white: #fff;
+}
+
 *,
 *::before,
 *::after {

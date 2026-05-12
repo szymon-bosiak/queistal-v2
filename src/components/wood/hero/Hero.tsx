@@ -9,17 +9,32 @@ export const Hero = () => {
 
   return (
     <section
-      id="hero"
-      className="hero-grid min-h-svh border-b border-dashed border-ink/18"
-      style={{ background: 'var(--color-sage)', color: 'var(--color-ink)', maxHeight: '500px' }}
+      className="whg"
+      style={{
+        minHeight: '100svh',
+        maxHeight: '680px',
+        display: 'grid',
+        background: 'var(--sage)',
+        color: 'var(--ink)',
+        borderBottom: '1px dashed rgba(40,37,34,.18)',
+      }}
     >
       {/* Text column */}
       <div
-        className="hero-text flex flex-col justify-end relative z-[2]"
-        style={{ padding: 'clamp(6rem,10vw,9rem) clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,5rem)' }}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+          padding: 'clamp(6rem,10vw,9rem) clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,5rem)',
+          position: 'relative',
+          zIndex: 2,
+        }}
       >
-        <div className="stag mb-6" style={{ opacity: 0, animation: 'fadeIn .8s .15s var(--ease) forwards' }}>
-          OD 2015
+        <div
+          className="stag"
+          style={{ marginBottom: '1.5rem', opacity: 0, animation: 'fadeIn .8s .15s var(--ease) forwards' }}
+        >
+          {t('hero.since')}
         </div>
 
         <h1
@@ -57,16 +72,16 @@ export const Hero = () => {
             animation: 'fadeUp .8s .7s var(--ease) forwards',
           }}
         >
-          {t('about.body')}
+          {t('hero.tagline')}
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', opacity: 0, animation: 'fadeUp .8s .9s var(--ease) forwards' }}>
           <a
-            href="#projects"
+            href="#realizacje"
             className="hero-btn-primary"
             style={{
-              background: 'var(--color-ink)',
-              color: '#fff',
+              background: 'var(--ink)',
+              color: 'var(--white)',
               padding: '13px 28px',
               fontSize: 14,
               fontWeight: 400,
@@ -85,13 +100,14 @@ export const Hero = () => {
               el.style.boxShadow = ''
             }}
           >
-            NASZE PROJEKTY
+            {t('hero.cta.projects')}
           </a>
           <a
-            href="#about"
+            href="#o-nas"
+            className="hero-btn-secondary"
             style={{
               border: '1.5px solid rgba(40,37,34,.38)',
-              color: 'var(--color-ink)',
+              color: 'var(--ink)',
               padding: '13px 28px',
               fontSize: 14,
               fontWeight: 400,
@@ -101,8 +117,8 @@ export const Hero = () => {
             }}
             onMouseEnter={e => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.background = 'var(--color-ink)'
-              el.style.color = '#fff'
+              el.style.background = 'var(--ink)'
+              el.style.color = 'var(--white)'
             }}
             onMouseLeave={e => {
               const el = e.currentTarget as HTMLAnchorElement
@@ -110,13 +126,13 @@ export const Hero = () => {
               el.style.color = ''
             }}
           >
-            O NAS
+            {t('hero.cta.about')}
           </a>
         </div>
       </div>
 
       {/* Photo column */}
-      <div className="hero-photo" style={{ overflow: 'hidden', clipPath: 'polygon(8% 0, 100% 0, 100% 100%, 0% 100%)' }}>
+      <div className="whp" style={{ overflow: 'hidden', clipPath: 'polygon(8% 0, 100% 0, 100% 100%, 0% 100%)' }}>
         <picture>
           <source media="(max-width: 768px)" srcSet={heroMobile} />
           <img
@@ -136,36 +152,23 @@ export const Hero = () => {
       </div>
 
       <style>{`
-        .hero-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
+        .whg { grid-template-columns: 1fr 1fr; }
+        .whp { position: relative; }
         @media (max-width: 768px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-            position: relative;
-          }
-          .hero-photo {
-            position: absolute !important;
-            inset: 0 !important;
-            clip-path: none !important;
-          }
-          .hero-photo::after {
+          .whg { grid-template-columns: 1fr !important; position: relative; min-height: 100svh; }
+          .whp { position: absolute !important; inset: 0 !important; clip-path: none !important; }
+          .whp::after {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(to top, rgba(40,37,34,.88) 35%, rgba(40,37,34,.15) 100%);
           }
-          .hero-text {
-            position: relative;
-            z-index: 3;
-            color: #fff !important;
-          }
-          .hero-text h1,
-          .hero-text p,
-          .hero-text .stag {
-            color: #fff !important;
-          }
+          .whg > div:first-child { position: relative; z-index: 3; color: var(--white) !important; }
+          .whg > div:first-child h1,
+          .whg > div:first-child p,
+          .whg > div:first-child .stag { color: var(--white) !important; }
+          .hero-btn-primary { background: var(--sage) !important; color: var(--ink) !important; }
+          .hero-btn-secondary { border-color: rgba(255,255,255,.55) !important; color: var(--white) !important; }
         }
       `}</style>
     </section>

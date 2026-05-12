@@ -8,7 +8,12 @@
       "Bash(npx vite *)",
       "WebFetch(domain:api.anthropic.com)",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\fourt\\\\Desktop\\\\‎ ‎ ‎\\\\Programowanie\\\\Projects\\\\queistal-v2\\\\src\\\\assets\\\\\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\Users\\\\fourt\\\\Desktop\\\\‎ ‎ ‎\\\\Programowanie\\\\Projects\\\\queistal-v2\\\\src\\\\assets\\\\\", \"\"\\) })"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\fourt\\\\Desktop\\\\‎ ‎ ‎\\\\Programowanie\\\\Projects\\\\queistal-v2\\\\src\\\\assets\\\\\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\Users\\\\fourt\\\\Desktop\\\\‎ ‎ ‎\\\\Programowanie\\\\Projects\\\\queistal-v2\\\\src\\\\assets\\\\\", \"\"\\) })",
+      "Bash(dir C:\\\\Users\\\\fourt\\\\AppData\\\\Local\\\\Temp\\\\*.png)",
+      "Bash(dir C:\\\\Users\\\\fourt\\\\AppData\\\\Local\\\\Temp\\\\*.jpg)",
+      "Bash(sort -t' ' -k6 -r)",
+      "Bash(sort -k6 -r)",
+      "Bash(ls -la \"/c/Users/fourt/.claude/projects/\" 2>/dev/null | head -20)"
     ]
   }
 }
