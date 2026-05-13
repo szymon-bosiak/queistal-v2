@@ -68,15 +68,15 @@ export const About = () => {
         </div>
 
         {/* Cards container */}
-        <div style={{ flex: 1, minWidth: 340, position: 'relative', padding: '2.5rem 2rem' }}>
+        <div className="wood-cards-wrap" style={{ flex: 1, minWidth: 340, position: 'relative', padding: '2.5rem 2rem' }}>
           {/* Dashed border frame */}
           <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(40,37,34,.18)', pointerEvents: 'none' }} />
 
           {/* Corner decors */}
-          <img src={decor} alt="" style={{ position: 'absolute', left: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'none', opacity: 0.7, zIndex: 2 }} />
-          <img src={decor} alt="" style={{ position: 'absolute', right: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'scaleX(-1)', opacity: 0.7, zIndex: 2 }} />
-          <img src={decor} alt="" style={{ position: 'absolute', left: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scaleY(-1)', opacity: 0.7, zIndex: 2 }} />
-          <img src={decor} alt="" style={{ position: 'absolute', right: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scale(-1,-1)', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" className="wood-decor" style={{ position: 'absolute', left: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'none', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" className="wood-decor" style={{ position: 'absolute', right: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'scaleX(-1)', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" className="wood-decor" style={{ position: 'absolute', left: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scaleY(-1)', opacity: 0.7, zIndex: 2 }} />
+          <img src={decor} alt="" className="wood-decor" style={{ position: 'absolute', right: '-1.5rem', bottom: '-1.5rem', width: '3.2rem', transform: 'scale(-1,-1)', opacity: 0.7, zIndex: 2 }} />
 
           {/* 5-column stagger grid — odd columns top row, even columns bottom row */}
           <div
@@ -118,12 +118,15 @@ export const About = () => {
           .wood-card-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
         }
         @media (max-width: 700px) {
-          .wood-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; grid-template-rows: auto auto auto auto auto !important; }
-          .wood-card-grid > div:nth-child(1) { grid-column: 1 !important; grid-row: 1 !important; }
-          .wood-card-grid > div:nth-child(2) { grid-column: 2 !important; grid-row: 1 !important; }
-          .wood-card-grid > div:nth-child(3) { grid-column: 3 !important; grid-row: 1 !important; }
-          .wood-card-grid > div:nth-child(4) { grid-column: 1/3 !important; grid-row: 2 !important; }
-          .wood-card-grid > div:nth-child(5) { grid-column: 3 !important; grid-row: 2 !important; }
+          #o-nas { overflow: hidden !important; }
+          .wood-cards-wrap { min-width: 0 !important; }
+          .wood-card-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          .wood-card-grid > div { align-self: flex-start !important; }
+          .wood-card-grid > div:nth-child(even) { align-self: flex-end !important; }
         }
       `}</style>
     </section>

@@ -115,15 +115,15 @@ export const Projects = () => {
         @media (max-width: 768px) {
           .bento {
             grid-template-columns: repeat(2, 1fr) !important;
-            grid-template-rows: repeat(6, 160px) !important;
-            grid-template-areas: "a a" "a a" "b c" "d e" "f g" "h i" !important;
-          }
-        }
-        @media (max-width: 480px) {
-          .bento {
-            grid-template-columns: 1fr !important;
-            grid-template-rows: repeat(10, 180px) !important;
-            grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" !important;
+            grid-template-rows: repeat(7, 160px) !important;
+            grid-template-areas:
+              "a a"
+              "a a"
+              "b c"
+              "d e"
+              "f g"
+              "h i"
+              "j j" !important;
           }
         }
       `}</style>
