@@ -181,7 +181,7 @@ export const Nav = () => {
           <div style={{ display: 'flex', gap: '.75rem', alignItems: 'center', flexShrink: 0 }}>
 
             {/* Language switcher */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 10, fontWeight: 400, letterSpacing: 2 }}>
+            <div className="nav-lang" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 10, fontWeight: 400, letterSpacing: 2 }}>
               {(['pl', 'de'] as const).map((l, i) => (
                 <React.Fragment key={l}>
                   {i > 0 && (
@@ -204,7 +204,7 @@ export const Nav = () => {
             </div>
 
             {/* KONTAKT button + dropdown */}
-            <div ref={contactRef} style={{ position: 'relative' }}>
+            <div ref={contactRef} className="nav-kontakt" style={{ position: 'relative' }}>
               <button
                 onClick={() => setContactOpen(!contactOpen)}
                 style={{
@@ -339,8 +339,6 @@ export const Nav = () => {
         transition: 'transform .32s var(--ease)',
         fontFamily: 'Oswald, sans-serif',
       }}>
-        <img src={logoDark} alt="Queistal" style={{ height: 36, marginBottom: '2.5rem' }} />
-
         {/* Links */}
         {links.map(({ key, anchor }, i) => (
           <a
@@ -348,7 +346,7 @@ export const Nav = () => {
             href={anchor}
             onClick={() => setMenuOpen(false)}
             style={{
-              fontSize: 'clamp(26px, 6vw, 44px)', fontWeight: 500, lineHeight: 1.25,
+              fontSize: 'clamp(18px, 5vw, 28px)', fontWeight: 300, lineHeight: 1.3,
               color: '#fff', marginBottom: '.2rem', letterSpacing: 1,
               opacity: 0,
               animation: menuOpen ? `fadeUp .32s ${i * 0.06 + 0.1}s var(--ease) forwards` : 'none',
@@ -418,6 +416,10 @@ export const Nav = () => {
       <style>{`
         @media (min-width: 900px) { .ham { display: none !important; } }
         @media (max-width: 899px) { .desk-links { display: none !important; } }
+        @media (max-width: 600px) {
+          .nav-lang    { display: none !important; }
+          .nav-kontakt { display: none !important; }
+        }
       `}</style>
     </>
   )
