@@ -24,77 +24,88 @@
   },
   "projects": {
     "label": "REALIZACJE",
-    "prev": "POPRZEDNIE",
-    "next": "NASTĘPNE"
+    "heading": "Nasze projekty"
   },
   "whyUs": {
     "label": "DLACZEGO MY",
+    "heading": "Co nas wyróżnia",
     "items": [
       {
+        "n": "01",
         "title": "WYSOKA JAKOŚĆ",
-        "body": "Każdy projekt realizujemy z najwyższą starannością i dbałością o detale. Stosujemy wyłącznie sprawdzone gatunki drewna i certyfikowane materiały."
+        "body": "Jesteśmy zespołem specjalistów z bogatym doświadczeniem. Każda praca wykonywana z dbałością o najmniejszy szczegół."
       },
       {
+        "n": "02",
         "title": "SZYBKA REAKCJA",
-        "body": "Odpowiadamy na zapytania i realizujemy zlecenia bez zbędnej zwłoki. Wycenę przygotowujemy w ciągu kilku dni roboczych po bezpłatnych oględzinach."
+        "body": "Zawsze służymy pomocą i doradztwem. Dzięki elastyczności jesteśmy w stanie sprostać nawet najbardziej wymagającym oczekiwaniom."
       },
       {
-        "title": "DOSTĘPNOŚĆ USŁUG",
-        "body": "Działamy na terenie całej Polski, dostosowując się do potrzeb klienta. Dojazd ustalamy indywidualnie, bez ukrytych kosztów."
+        "n": "03",
+        "title": "DOSTĘPNOŚĆ",
+        "body": "Oferujemy szeroki wachlarz usług — od małych zleceń po duże projekty budowlane. Dostosowujemy się do każdych potrzeb."
       }
     ]
   },
   "transformations": {
     "label": "TRANSFORMACJE",
-    "intro": "Każdy projekt to historia przemiany — od surowego drewna do gotowej realizacji."
+    "heading": "Renowacje w akcji",
+    "videos": ["Antyk — stół dębowy", "Ławka ogrodowa", "Elewacja drewniana"]
   },
   "testimonials": {
-    "label": "OPINIE",
+    "label": "REKOMENDACJE",
+    "heading": "Co mówią klienci",
     "items": [
       {
-        "name": "Anna Wiśniewska",
-        "location": "Wrocław",
-        "text": "Zleciliśmy renowację zabytkowej komody z XIX wieku. Efekt przeszedł nasze oczekiwania — mebel wygląda jak nowy, zachowując swój pierwotny charakter. Polecam z pełnym przekonaniem."
+        "name": "Robert Woźniak",
+        "initials": "RW",
+        "text": "Jestem zachwycony z wykonanej drewnianej altany w moim ogrodzie. Cały projekt był zrealizowany bardzo profesjonalnie."
       },
       {
-        "name": "Marek Jankowski",
-        "location": "Warszawa",
-        "text": "Drewniana wiata ogrodowa wykonana przez Queis Tal to prawdziwa ozdoba naszego ogrodu. Solidna robota, terminy dotrzymane, kontakt bez zarzutu przez cały czas realizacji."
+        "name": "Julia Sadowska",
+        "initials": "JS",
+        "text": "Zamówiłam dwie ławki z grawerunkiem i jestem bardzo zadowolona. Pięknie wykonane, z dbałością o każdy szczegół."
       },
       {
-        "name": "Tomasz Kowalczyk",
-        "location": "Kraków",
-        "text": "Wymiana więźby dachowej przeprowadzona sprawnie i fachowo. Ekipa pracowała czysto i terminowo. Efekt końcowy w pełni spełnił oczekiwania. Zdecydowanie polecam."
+        "name": "Asia Kozłowska",
+        "initials": "AK",
+        "text": "Firma Queis Tal zrobiła wspaniałą robotę przy budowie mojego domu. Wszystkie prace wykonywane terminowo."
       },
       {
-        "name": "Katarzyna Zielińska",
-        "location": "Poznań",
-        "text": "Od ponad pięciu lat korzystam z usług firmy przy różnych projektach drewnianych. Zawsze wysoka jakość, uczciwa wycena i pełen profesjonalizm — to dla mnie najważniejsze."
+        "name": "Maria Kubiak",
+        "initials": "MK",
+        "text": "Zespół prawdziwych profesjonalistów. Szybko, efektywnie i dokładnie. Polecam z czystym sumieniem."
+      },
+      {
+        "name": "Leszek Kowalczyk",
+        "initials": "LK",
+        "text": "Stawiali moje potrzeby na pierwszym miejscu. Elastyczni i zawsze dostępni. Na pewno skorzystam ponownie."
       }
     ]
   },
   "faq": {
     "label": "FAQ",
+    "heading": "Często zadawane pytania",
     "items": [
       {
-        "q": "Jak wygląda wycena projektu?",
-        "a": "Bezpłatnie przyjeżdżamy na oględziny, oceniamy zakres prac i przygotowujemy szczegółową wycenę w ciągu kilku dni roboczych. Nie pobieramy żadnych opłat za wizytę."
+        "q": "Jak długo trwa realizacja projektu?",
+        "a": "Czas realizacji zależy od skali. Małe meble ogrodowe — 2–4 tygodnie. Wiaty i elewacje — 4–12 tygodni. Po oględzinach podajemy dokładny harmonogram."
       },
       {
-        "q": "Jakiego drewna używacie?",
-        "a": "Dobieramy gatunek do projektu i warunków docelowych — najczęściej sosna, dąb lub modrzew. Stosujemy wyłącznie certyfikowane drewno z legalnych źródeł."
+        "q": "Czy pracujecie w całej Polsce?",
+        "a": "Tak. Realizujemy projekty w całej Polsce, a przy większych zleceniach również za granicą. Koszty transportu wyceniamy indywidualnie."
       },
       {
-        "q": "Czy oferujecie gwarancję na wykonane prace?",
-        "a": "Tak, na każdą realizację udzielamy pisemnej gwarancji. Jej długość zależy od rodzaju projektu — szczegóły omawiamy przy podpisaniu umowy."
+        "q": "Z jakiego drewna korzystacie?",
+        "a": "Głównie sosna, dąb i modrzew. Gatunek dobieramy do przeznaczenia — uwzględniając wilgotność, obciążenie i estetykę."
       },
       {
-        "q": "Na jakim terenie działacie?",
-        "a": "Głównie województwa dolnośląskie i lubuskie, ale realizujemy zlecenia w całej Polsce. Koszty dojazdu ustalamy indywidualnie przy wycenie."
+        "q": "Czy zajmujecie się renowacją starych mebli?",
+        "a": "Tak — to jeden z naszych głównych zakresów od 2015 roku. Odnawiamy antyki, meble ogrodowe i elementy architektoniczne."
       },
       {
-        "q": "Ile trwa realizacja projektu?",
-        "a": "Proste projekty zamykamy w kilka dni. Większe konstrukcje — od kilku tygodni do kilku miesięcy. Dokładny termin podajemy zawsze przy wycenie, przed podpisaniem umowy."
+        "q": "Jak wygląda wycena?",
+        "a": "Wycena jest bezpłatna. Opisz projekt telefonicznie lub mailowo — odpiszemy w ciągu 24h z propozycją terminu oględzin."
       }
     ]
   }

@@ -1,115 +1,56 @@
 import { useTranslation } from 'react-i18next'
-import { Reveal } from '../../shared/reveal'
-import boxLeft  from '../../../assets/icons/box_left.svg'
-import boxRight from '../../../assets/icons/box_right.svg'
+import { TechSvg } from './components/tech-svg'
+import { AdvCard } from './components/adv-card'
 
-const pad = (n: number) => String(n).padStart(2, '0')
+interface WhyUsItem {
+  n: string
+  title: string
+  body: string
+}
 
 export const WhyUs = () => {
   const { t } = useTranslation('wood')
-  const items: { title: string; body: string }[] = t('whyUs.items', { returnObjects: true }) as []
+  const items = t('whyUs.items', { returnObjects: true }) as WhyUsItem[]
 
   return (
     <section
-      id="why-us"
+      id="dlaczego-my"
       style={{
-        background: 'var(--color-sage)',
-        color: 'var(--color-ink)',
-        padding: 'clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,5rem)',
-        borderBottom: '1px dashed rgba(40,37,34,.18)',
+        padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
+        background: 'var(--sage)',
+        borderTop: '1px dashed rgba(40,37,34,.18)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Decorative boxes */}
-      <img
-        src={boxLeft}
-        alt=""
-        style={{
-          position: 'absolute', left: '-4rem', top: '50%',
-          transform: 'translateY(-50%)',
-          height: 'clamp(200px,30vw,360px)',
-          opacity: .07, pointerEvents: 'none',
-          animation: 'fadeInScale .6s .2s var(--ease) both',
-        }}
-      />
-      <img
-        src={boxRight}
-        alt=""
-        style={{
-          position: 'absolute', right: '-4rem', top: '50%',
-          transform: 'translateY(-50%)',
-          height: 'clamp(200px,30vw,360px)',
-          opacity: .07, pointerEvents: 'none',
-          animation: 'fadeInScale .6s .4s var(--ease) both',
-        }}
-      />
+      <TechSvg />
 
       <div style={{ maxWidth: 1400, margin: '0 auto', position: 'relative' }}>
-
-        {/* Label */}
-        <Reveal>
-          <div className="stag" style={{ marginBottom: 'clamp(2.5rem,5vw,4rem)' }}>
+        <div style={{ marginBottom: '3rem' }}>
+          <div className="stag" style={{ marginBottom: '1rem', opacity: 0.45 }}>
             {t('whyUs.label')}
           </div>
-        </Reveal>
+          <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 500, textTransform: 'uppercase' }}>
+            {t('whyUs.heading')}
+          </h2>
+        </div>
 
-        {/* Items */}
-        <div>
+        <div
+          className="why-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1px',
+            background: 'rgba(40,37,34,.18)',
+          }}
+        >
           {items.map((item, i) => (
-            <Reveal key={i} delay={i * 120}>
-              <div
-                className="why-row"
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '72px 1fr 1.6fr',
-                  gap: '2.5rem',
-                  alignItems: 'start',
-                  padding: '2.5rem 0',
-                  borderTop: '1px dashed rgba(40,37,34,.22)',
-                  borderBottom: i === items.length - 1 ? '1px dashed rgba(40,37,34,.22)' : 'none',
-                }}
-              >
-                <div style={{
-                  fontSize: 'clamp(30px,3.5vw,48px)',
-                  fontWeight: 200, lineHeight: 1,
-                  opacity: .2,
-                }}>
-                  {pad(i + 1)}
-                </div>
-                <h3 style={{
-                  fontSize: 'clamp(17px,1.8vw,22px)',
-                  fontWeight: 500,
-                  textTransform: 'uppercase',
-                  letterSpacing: 1,
-                  paddingTop: '.2rem',
-                }}>
-                  {item.title}
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(14px,1.2vw,17px)',
-                  fontWeight: 300,
-                  lineHeight: 1.8,
-                  opacity: .65,
-                }}>
-                  {item.body}
-                </p>
-              </div>
-            </Reveal>
+            <AdvCard key={i} n={item.n} title={item.title} body={item.body} idx={i} />
           ))}
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          .why-row {
-            grid-template-columns: 48px 1fr !important;
-          }
-          .why-row > p {
-            grid-column: 2 !important;
-          }
-        }
-      `}</style>
+      <style>{`@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr !important; } }`}</style>
     </section>
   )
 }

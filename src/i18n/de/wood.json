@@ -24,77 +24,88 @@
   },
   "projects": {
     "label": "PROJEKTE",
-    "prev": "VORHERIGE",
-    "next": "NÄCHSTE"
+    "heading": "Unsere Projekte"
   },
   "whyUs": {
     "label": "WARUM WIR",
+    "heading": "Was uns auszeichnet",
     "items": [
       {
+        "n": "01",
         "title": "HOHE QUALITÄT",
-        "body": "Jedes Projekt realisieren wir mit höchster Sorgfalt und Liebe zum Detail. Wir verwenden ausschließlich bewährte Holzarten und zertifizierte Materialien."
+        "body": "Wir sind ein Team von Spezialisten mit langjähriger Erfahrung. Jede Arbeit wird mit Liebe zum kleinsten Detail ausgeführt."
       },
       {
+        "n": "02",
         "title": "SCHNELLE REAKTION",
-        "body": "Wir antworten auf Anfragen und führen Aufträge ohne unnötige Verzögerung aus. Ein Kostenvoranschlag wird innerhalb weniger Werktage nach einer kostenlosen Besichtigung erstellt."
+        "body": "Wir stehen stets mit Rat und Tat zur Seite. Dank unserer Flexibilität sind wir in der Lage, auch den anspruchsvollsten Erwartungen gerecht zu werden."
       },
       {
+        "n": "03",
         "title": "VERFÜGBARKEIT",
-        "body": "Wir sind in ganz Polen tätig und passen uns den Bedürfnissen unserer Kunden an. Die Anfahrtskosten werden individuell ohne versteckte Kosten vereinbart."
+        "body": "Wir bieten ein breites Leistungsspektrum — von kleinen Aufträgen bis zu großen Bauprojekten. Wir passen uns jedem Bedarf an."
       }
     ]
   },
   "transformations": {
     "label": "TRANSFORMATIONEN",
-    "intro": "Jedes Projekt ist eine Geschichte der Verwandlung — vom rohen Holz bis zur fertigen Realisierung."
+    "heading": "Renovierungen in Aktion",
+    "videos": ["Antiquität — Eichentisch", "Gartenbank", "Holzfassade"]
   },
   "testimonials": {
-    "label": "MEINUNGEN",
+    "label": "EMPFEHLUNGEN",
+    "heading": "Was Kunden sagen",
     "items": [
       {
-        "name": "Anna Wiśniewska",
-        "location": "Breslau",
-        "text": "Wir beauftragten die Restaurierung einer antiken Kommode aus dem 19. Jahrhundert. Das Ergebnis übertraf unsere Erwartungen — das Möbel sieht aus wie neu und hat seinen ursprünglichen Charakter bewahrt."
+        "name": "Robert Woźniak",
+        "initials": "RW",
+        "text": "Ich bin begeistert von der ausgeführten Holzlaube in meinem Garten. Das gesamte Projekt wurde sehr professionell abgewickelt."
       },
       {
-        "name": "Marek Jankowski",
-        "location": "Warschau",
-        "text": "Das von Queis Tal gebaute Gartenpavillon ist eine wahre Zierde unseres Gartens. Solide Arbeit, Termine eingehalten, Kontakt während der gesamten Realisierung einwandfrei."
+        "name": "Julia Sadowska",
+        "initials": "JS",
+        "text": "Ich habe zwei Bänke mit Gravur bestellt und bin sehr zufrieden. Schön gefertigt, mit Liebe zum Detail."
       },
       {
-        "name": "Tomasz Kowalczyk",
-        "location": "Krakau",
-        "text": "Der Austausch des Dachstuhls wurde reibungslos und professionell durchgeführt. Das Team arbeitete sauber und pünktlich. Das Endergebnis erfüllte alle Erwartungen vollständig."
+        "name": "Asia Kozłowska",
+        "initials": "AK",
+        "text": "Queis Tal hat beim Hausbau großartige Arbeit geleistet. Alle Arbeiten wurden termingerecht ausgeführt."
       },
       {
-        "name": "Katarzyna Zielińska",
-        "location": "Posen",
-        "text": "Seit über fünf Jahren nutze ich die Dienste des Unternehmens für verschiedene Holzprojekte. Immer hohe Qualität, faire Preise und volle Professionalität — das ist mir am wichtigsten."
+        "name": "Maria Kubiak",
+        "initials": "MK",
+        "text": "Ein Team echter Profis. Schnell, effektiv und präzise. Ich empfehle sie ohne Einschränkungen."
+      },
+      {
+        "name": "Leszek Kowalczyk",
+        "initials": "LK",
+        "text": "Meine Bedürfnisse standen immer an erster Stelle. Flexibel und immer erreichbar. Ich werde sicher wieder beauftragen."
       }
     ]
   },
   "faq": {
     "label": "FAQ",
+    "heading": "Häufig gestellte Fragen",
     "items": [
       {
-        "q": "Wie läuft die Kostenabschätzung ab?",
-        "a": "Wir kommen kostenlos zur Besichtigung, bewerten den Arbeitsumfang und erstellen innerhalb weniger Werktage ein detailliertes Angebot. Für den Besuch erheben wir keine Gebühren."
+        "q": "Wie lange dauert die Projektrealisierung?",
+        "a": "Die Dauer hängt vom Umfang ab. Kleine Gartenmöbel — 2–4 Wochen. Überdachungen und Fassaden — 4–12 Wochen. Nach der Besichtigung nennen wir einen genauen Zeitplan."
+      },
+      {
+        "q": "Arbeiten Sie in ganz Polen?",
+        "a": "Ja. Wir führen Projekte in ganz Polen aus, bei größeren Aufträgen auch im Ausland. Transportkosten werden individuell kalkuliert."
       },
       {
         "q": "Welches Holz verwenden Sie?",
-        "a": "Wir wählen die Holzart je nach Projekt und Einsatzbedingungen — häufig Kiefer, Eiche oder Lärche. Wir verwenden ausschließlich zertifiziertes Holz aus legalen Quellen."
+        "a": "Hauptsächlich Kiefer, Eiche und Lärche. Die Holzart wählen wir je nach Verwendungszweck — unter Berücksichtigung von Feuchtigkeit, Belastung und Ästhetik."
       },
       {
-        "q": "Bieten Sie Garantie auf Ihre Arbeiten an?",
-        "a": "Ja, wir geben auf jede Umsetzung eine schriftliche Garantie. Die Dauer hängt von der Art des Projekts ab — Details werden bei der Vertragsunterzeichnung besprochen."
+        "q": "Restaurieren Sie alte Möbel?",
+        "a": "Ja — das ist seit 2015 einer unserer Hauptbereiche. Wir restaurieren Antiquitäten, Gartenmöbel und architektonische Elemente."
       },
       {
-        "q": "In welchem Gebiet sind Sie tätig?",
-        "a": "Hauptsächlich in den Woiwodschaften Niederschlesien und Lebus, aber wir führen Aufträge in ganz Polen aus. Fahrtkosten werden individuell bei der Kalkulation vereinbart."
-      },
-      {
-        "q": "Wie lange dauert die Projektrealisierung?",
-        "a": "Einfache Projekte schließen wir in wenigen Tagen ab. Größere Konstruktionen dauern einige Wochen bis Monate. Den genauen Termin nennen wir stets vor Vertragsunterzeichnung."
+        "q": "Wie läuft die Kostenabschätzung ab?",
+        "a": "Die Kostenabschätzung ist kostenlos. Beschreiben Sie das Projekt telefonisch oder per E-Mail — wir antworten innerhalb von 24 Stunden mit einem Terminvorschlag."
       }
     ]
   }

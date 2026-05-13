@@ -1,0 +1,1 @@
+export { TechSvg } from './TechSvg'
