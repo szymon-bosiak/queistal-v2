@@ -1,0 +1,111 @@
+import { useTranslation } from 'react-i18next'
+import { useInView } from '../../../hooks/useInView'
+import img3  from '../../../assets/showcase/3.jpg'
+import img13 from '../../../assets/showcase/13.jpg'
+import img15 from '../../../assets/showcase/15.jpg'
+import img14 from '../../../assets/showcase/14.jpg'
+
+const BP_GRID = {
+  backgroundImage:
+    'linear-gradient(rgba(227,235,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(227,235,212,.04) 1px,transparent 1px)',
+  backgroundSize: '48px 48px',
+}
+
+const STEP_IMGS = [img3, img13, img15, img14]
+
+interface Step { n: string; title: string; desc: string }
+
+interface ProcRowProps {
+  step: Step
+  img: string
+  idx: number
+  last: boolean
+}
+
+const ProcRow = ({ step, img, idx, last }: ProcRowProps) => {
+  const [ref, seen] = useInView()
+
+  return (
+    <div
+      ref={ref}
+      className="proc-row"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '80px 1fr 1fr',
+        gap: '2rem',
+        alignItems: 'center',
+        padding: '2.5rem 0',
+        borderTop: '1px dashed rgba(227,235,212,.12)',
+        borderBottom: last ? '1px dashed rgba(227,235,212,.12)' : 'none',
+        opacity: seen ? 1 : 0,
+        transform: seen ? 'translateX(0)' : 'translateX(-30px)',
+        transition: 'opacity .8s var(--ease), transform .8s var(--ease)',
+        transitionDelay: `${idx * 120}ms`,
+      }}
+    >
+      <div style={{ fontSize: 'clamp(32px,4vw,52px)', fontWeight: 200, color: 'var(--sage)', opacity: 0.25, lineHeight: 1 }}>
+        {step.n}
+      </div>
+      <div>
+        <div style={{ fontSize: 'clamp(18px,2vw,24px)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: 1, marginBottom: '.75rem' }}>
+          {step.title}
+        </div>
+        <p style={{ fontSize: 'clamp(13px,1.2vw,16px)', fontWeight: 300, lineHeight: 1.8, opacity: 0.55 }}>
+          {step.desc}
+        </p>
+      </div>
+      <div style={{ position: 'relative', height: 160, overflow: 'hidden' }}>
+        <img
+          src={img}
+          alt={step.title}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: 0.7,
+            transform: seen ? 'scale(1)' : 'scale(1.1)',
+            transition: `transform 1.2s ${idx * 120 + 200}ms var(--ease)`,
+          }}
+        />
+        <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(227,235,212,.15)' }} />
+      </div>
+    </div>
+  )
+}
+
+export const Process = () => {
+  const { t } = useTranslation('cleaning')
+  const steps = t('process.steps', { returnObjects: true }) as Step[]
+
+  return (
+    <section
+      id="proces"
+      style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: 'var(--bp)', color: 'var(--white)', ...BP_GRID }}
+    >
+      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+        <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
+          {t('process.label')}
+        </div>
+        <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 500, textTransform: 'uppercase', marginBottom: '3.5rem' }}>
+          {t('process.heading')}
+        </h2>
+
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {steps.map((step, i) => (
+            <ProcRow key={i} step={step} img={STEP_IMGS[i]} idx={i} last={i === steps.length - 1} />
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .proc-row { grid-template-columns: 60px 1fr !important; }
+          .proc-row > div:last-child { display: none !important; }
+        }
+        @media (max-width: 480px) {
+          .proc-row { grid-template-columns: 1fr !important; gap: .75rem !important; }
+        }
+      `}</style>
+    </section>
+  )
+}

@@ -1,32 +1,105 @@
 {
   "hero": {
-    "line1": "LASER UND",
-    "line2": "SANDSTRAHLEN"
-  },
-  "services": {
-    "label": "//LEISTUNGEN",
-    "laser": {
-      "title": "LASERREINIGUNG",
-      "body": "Präzises Entfernen von Rost, Farbe und Verunreinigungen mit dem Laserstrahl."
-    },
-    "sandblasting": {
-      "title": "SANDSTRAHLEN",
-      "body": "Effektive Oberflächenreinigung mit einem Schleifmittelstrahl."
+    "label": "MODERNES REINIGEN",
+    "line1": "LASER",
+    "line2": "UND STRAHLEN",
+    "tagline": "Schonende und effektive Reinigung von Stein-, Metall-, Holz- und Betonoberflächen.",
+    "cta1": "UNSERE LEISTUNGEN",
+    "cta2": "WIE WIR ARBEITEN",
+    "spec": {
+      "label": "TECHNISCHE SPEZIFIKATION",
+      "rows": [
+        { "l": "TECHNOLOGIE", "v": "Nd:YAG / CO₂ LASER" },
+        { "l": "MATERIALIEN",  "v": "Stein, Metall, Holz, Beton" },
+        { "l": "PRÄZISION",    "v": "Bis 0,1 mm" },
+        { "l": "METHODEN",     "v": "Laser + Strahlen" }
+      ]
     }
   },
+  "services": {
+    "label": "LEISTUNGEN",
+    "heading": "Zwei Technologien — ein Ziel",
+    "items": [
+      {
+        "code": "01",
+        "title": "LASERREINIGUNG",
+        "sub": "Berührungslose Präzision",
+        "desc": "Die Lasertechnologie entfernt Rost, Farbe und Verunreinigungen ohne Oberflächenkontakt. Ideal für historische Objekte, Metalle und architektonische Details.",
+        "specs": ["Ohne Chemikalien", "Präzision bis 0,1 mm", "Keine Oberflächenschäden", "Geräuscharmer Betrieb"]
+      },
+      {
+        "code": "02",
+        "title": "SANDSTRAHLEN",
+        "sub": "Intensivreinigung",
+        "desc": "Das Strahlverfahren entfernt effektiv dickere Korrosions- und Beschichtungsschichten. Vorbereitung der Oberflächen für neue Schutz- oder Farbbeschichtungen.",
+        "specs": ["Große Flächen", "Tiefenreinigung", "Vorbereitung für Beschichtungen", "Verschiedene Strahlmittel"]
+      }
+    ]
+  },
   "beforeAfter": {
-    "label": "//VORHER & NACHHER"
+    "label": "ERGEBNISSE",
+    "heading": "Vorher und nachher",
+    "hint": "Fahren Sie mit der Maus über das Bild, um den Unterschied zu sehen",
+    "before": "VORHER",
+    "after": "NACHHER",
+    "pairs": [
+      { "label": "HOLZFASSADE" },
+      { "label": "METALLELEMENT" },
+      { "label": "STEINFASSADE" }
+    ]
+  },
+  "video": {
+    "label": "TRANSFORMATION",
+    "heading": "Sehen Sie, wie wir arbeiten",
+    "placeholder": "VIDEO — DEMNÄCHST"
   },
   "applications": {
-    "label": "//ANWENDUNGEN"
+    "label": "ANWENDUNGEN",
+    "heading": "Was wir reinigen",
+    "items": [
+      { "label": "Stein & Beton",       "note": "Fassaden, Denkmäler, Gehwege" },
+      { "label": "Metalle",             "note": "Stahl, Gusseisen, Aluminium" },
+      { "label": "Holz",                "note": "Balken, Fassaden, Möbel" },
+      { "label": "Ziegel",              "note": "Historische Gebäude" },
+      { "label": "Historische Objekte", "note": "Konservatorische Präzision" },
+      { "label": "Industrie",           "note": "Maschinen, Anlagen" }
+    ]
   },
   "process": {
-    "label": "//PROZESS"
+    "label": "PROZESS",
+    "heading": "So arbeiten wir",
+    "steps": [
+      { "n": "01", "title": "Besichtigung & Angebot", "desc": "Wir kommen vor Ort, bewerten den Zustand der Oberfläche und wählen die Methode." },
+      { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Test an einer Probe." },
+      { "n": "03", "title": "Reinigung",               "desc": "Wir führen den Auftrag plangemäß durch und überwachen kontinuierlich die Ergebnisse." },
+      { "n": "04", "title": "Qualitätskontrolle",      "desc": "Wir prüfen das Endergebnis. Optional tragen wir Schutzschichten auf." }
+    ]
   },
-  "testimonials": {
-    "label": "//MEINUNGEN"
+  "whyUs": {
+    "label": "WARUM WIR",
+    "heading": "Was uns auszeichnet",
+    "items": [
+      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten." },
+      { "n": "02", "title": "ÖKOLOGIE",   "text": "Laserreinigung benötigt keine Chemikalien. Minimaler Abfall, keine schädlichen Emissionen." },
+      { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen." }
+    ]
   },
   "faq": {
-    "label": "//FAQ"
+    "label": "FAQ",
+    "heading": "Häufig gestellte Fragen",
+    "items": [
+      { "q": "Ist die Laserreinigung sicher für historische Oberflächen?", "a": "Ja — der Laser entfernt präzise nur Verunreinigungen, ohne das Grundmaterial zu beschädigen. Wir verwenden geeignete Parameter für jedes Material." },
+      { "q": "Wie läuft die Vorbereitung ab?", "a": "Kostenlose Besichtigung, Zustandsbewertung, Methodenwahl und Parametrierung. Wir testen an einer kleinen Probe vor Beginn der Arbeiten." },
+      { "q": "Wie lange dauert die Reinigung?", "a": "Kleine Elemente — einige Stunden. Gebäudefassaden — einige Tage. Den genauen Termin nennen wir nach der Besichtigung." },
+      { "q": "Hinterlassen Sie Abfälle nach der Reinigung?", "a": "Minimal. Beim Sandstrahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel. Wir räumen den Bereich nach der Arbeit immer auf." }
+    ]
+  },
+  "nav": {
+    "services":     "LEISTUNGEN",
+    "beforeAfter":  "VORHER & NACH",
+    "applications": "ANWENDUNGEN",
+    "process":      "PROZESS",
+    "testimonials": "BEWERTUNGEN",
+    "faq":          "FAQ"
   }
 }

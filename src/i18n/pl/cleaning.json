@@ -1,32 +1,105 @@
 {
   "hero": {
-    "line1": "LASER I",
-    "line2": "PIASKOWANIE"
-  },
-  "services": {
-    "label": "//USŁUGI",
-    "laser": {
-      "title": "CZYSZCZENIE LASEROWE",
-      "body": "Precyzyjne usuwanie rdzy, farby i zanieczyszczeń wiązką lasera."
-    },
-    "sandblasting": {
-      "title": "PIASKOWANIE",
-      "body": "Skuteczne oczyszczanie powierzchni strumieniem ścierniwa."
+    "label": "NOWOCZESNE CZYSZCZENIE",
+    "line1": "LASER",
+    "line2": "I PIASKOWANIE",
+    "tagline": "Bezinwazyjna i skuteczna metoda czyszczenia powierzchni kamiennych, metalowych, drewnianych i betonowych.",
+    "cta1": "NASZE USŁUGI",
+    "cta2": "JAK DZIAŁAMY",
+    "spec": {
+      "label": "SPECYFIKACJA TECHNICZNA",
+      "rows": [
+        { "l": "TECHNOLOGIA", "v": "Nd:YAG / CO₂ LASER" },
+        { "l": "MATERIAŁY",   "v": "Kamień, metal, drewno, beton" },
+        { "l": "PRECYZJA",    "v": "Do 0.1 mm" },
+        { "l": "METODY",      "v": "Laser + Piaskowanie" }
+      ]
     }
   },
+  "services": {
+    "label": "USŁUGI",
+    "heading": "Dwie technologie — jeden cel",
+    "items": [
+      {
+        "code": "01",
+        "title": "CZYSZCZENIE LASEROWE",
+        "sub": "Bezinwazyjna precyzja",
+        "desc": "Technologia laserowa usuwa rdzę, farbę, naloty bez dotykania powierzchni. Idealna do obiektów zabytkowych, metali i detali architektonicznych.",
+        "specs": ["Bez środków chemicznych", "Precyzja do 0.1mm", "Brak uszkodzeń powierzchni", "Cicha praca"]
+      },
+      {
+        "code": "02",
+        "title": "PIASKOWANIE",
+        "sub": "Intensywne oczyszczanie",
+        "desc": "Strumieniowanie ścierne skutecznie usuwa grubsze warstwy korozji i powłok. Przygotowanie powierzchni pod nowe powłoki ochronne lub malarskie.",
+        "specs": ["Duże powierzchnie", "Głębokie oczyszczanie", "Przygotowanie pod powłoki", "Różne media ścierne"]
+      }
+    ]
+  },
   "beforeAfter": {
-    "label": "//ZANIM I PO"
+    "label": "EFEKTY",
+    "heading": "Zanim i po",
+    "hint": "Najedź kursorem na zdjęcie, aby zobaczyć różnicę",
+    "before": "PRZED",
+    "after": "PO",
+    "pairs": [
+      { "label": "FASADA DREWNIANA" },
+      { "label": "ELEMENT METALOWY" },
+      { "label": "KAMIEŃ ELEWACYJNY" }
+    ]
+  },
+  "video": {
+    "label": "TRANSFORMACJA",
+    "heading": "Zobacz jak działamy",
+    "placeholder": "WIDEO — WKRÓTCE"
   },
   "applications": {
-    "label": "//ZASTOSOWANIA"
+    "label": "ZASTOSOWANIA",
+    "heading": "Co czyścimy",
+    "items": [
+      { "label": "Kamień & Beton",      "note": "Elewacje, pomniki, chodniki" },
+      { "label": "Metale",              "note": "Stal, żeliwo, aluminium" },
+      { "label": "Drewno",              "note": "Belki, fasady, meble" },
+      { "label": "Cegła",               "note": "Historyczna zabudowa" },
+      { "label": "Obiekty zabytkowe",   "note": "Konserwatorska precyzja" },
+      { "label": "Przemysł",            "note": "Maszyny, instalacje" }
+    ]
   },
   "process": {
-    "label": "//PROCES"
+    "label": "PROCES",
+    "heading": "Jak działamy",
+    "steps": [
+      { "n": "01", "title": "Wycena i oględziny",  "desc": "Przyjeżdżamy na miejsce, oceniamy stan powierzchni i dobieramy metodę." },
+      { "n": "02", "title": "Przygotowanie",        "desc": "Zabezpieczamy otoczenie i przygotowujemy sprzęt. Testujemy na próbce." },
+      { "n": "03", "title": "Czyszczenie",          "desc": "Realizujemy zlecenie zgodnie z ustalonym planem, monitorując efekty." },
+      { "n": "04", "title": "Kontrola jakości",     "desc": "Sprawdzamy efekt końcowy. Opcjonalnie nakładamy powłoki ochronne." }
+    ]
   },
-  "testimonials": {
-    "label": "//OPINIE"
+  "whyUs": {
+    "label": "DLACZEGO MY",
+    "heading": "Co nas wyróżnia",
+    "items": [
+      { "n": "01", "title": "PRECYZJA",      "text": "Technologia laserowa pozwala na usunięcie zanieczyszczeń bez uszkadzania powierzchni, nawet na delikatnych obiektach zabytkowych." },
+      { "n": "02", "title": "EKOLOGIA",      "text": "Czyszczenie laserowe nie wymaga środków chemicznych. Minimalne odpady, brak szkodliwych emisji." },
+      { "n": "03", "title": "DOŚWIADCZENIE", "text": "Wieloletnie doświadczenie w branży budowlanej i renowacyjnej pozwala nam dobrać właściwą metodę do każdego projektu." }
+    ]
   },
   "faq": {
-    "label": "//FAQ"
+    "label": "FAQ",
+    "heading": "Często zadawane pytania",
+    "items": [
+      { "q": "Czy czyszczenie laserowe jest bezpieczne dla zabytkowych powierzchni?", "a": "Tak — laser precyzyjnie usuwa tylko zanieczyszczenia, nie ingerując w materiał bazowy. Stosujemy odpowiednie parametry dla każdego materiału." },
+      { "q": "Jak wygląda przygotowanie do usługi?", "a": "Bezpłatne oględziny, ocena stanu, dobór metody i parametrów. Testujemy na małej próbce przed rozpoczęciem prac." },
+      { "q": "Ile trwa czyszczenie?", "a": "Małe elementy — kilka godzin. Elewacje budynków — kilka dni. Podajemy dokładny termin po oględzinach." },
+      { "q": "Czy zostawiacie odpady po czyszczeniu?", "a": "Minimalne. Przy piaskowaniu stosujemy systemy odzysku medium ściernego. Zawsze porządkujemy teren po pracy." }
+    ]
+  },
+  "nav": {
+    "services":      "USŁUGI",
+    "beforeAfter":   "ZANIM I PO",
+    "applications":  "ZASTOSOWANIA",
+    "process":       "PROCES",
+    "testimonials":  "OPINIE",
+    "faq":           "FAQ"
   }
 }
