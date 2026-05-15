@@ -95,6 +95,23 @@ body {
   0%, 100% { opacity: .6; }
   50%       { opacity: .15; }
 }
+@keyframes gritFly {
+  0%   { transform: translateX(-30px); opacity: 0; }
+  12%  { opacity: .65; }
+  80%  { opacity: .45; }
+  100% { transform: translateX(70px); opacity: 0; }
+}
+@keyframes gritJitter {
+  0%,  100% { transform: translate(0, 0); }
+  25%        { transform: translate(1px, -1.5px); }
+  50%        { transform: translate(-1px, 1px); }
+  75%        { transform: translate(1.5px, .5px); }
+}
+@keyframes streamFlow  { to { stroke-dashoffset: -200; } }
+@keyframes nozzlePulse {
+  0%, 100% { opacity: .35; transform: scaleX(1); }
+  50%      { opacity: .75; transform: scaleX(1.15); }
+}
 @keyframes rotateSlow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }

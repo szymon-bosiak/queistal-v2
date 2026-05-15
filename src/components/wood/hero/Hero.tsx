@@ -26,6 +26,7 @@ export const Hero = () => {
           flexDirection: 'column',
           justifyContent: 'flex-end',
           padding: 'clamp(6rem,10vw,9rem) clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,5rem)',
+          paddingLeft: 'max(clamp(1.5rem,5vw,5rem), calc((100vw - 1400px) / 2 + clamp(1.5rem,5vw,5rem)))',
           position: 'relative',
           zIndex: 2,
         }}

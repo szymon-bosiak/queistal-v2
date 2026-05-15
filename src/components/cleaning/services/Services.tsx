@@ -75,27 +75,70 @@ const CleanServiceCard = ({ s, idx }: { s: ServiceItem; idx: number }) => {
               />
             </svg>
           ) : (
-            /* Sandblast — scatter dots + curved dashed paths */
+            /* Sandblast — nozzle cone + drifting grit + jitter + animated streams */
             <svg
               viewBox="0 0 400 200"
               preserveAspectRatio="xMidYMid slice"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
             >
+              {/* Nozzle pressure cone */}
+              <g style={{ transformOrigin: '-10px 100px', animation: 'nozzlePulse 1.2s ease-in-out infinite' }}>
+                <path d="M -10 80 L 60 96 L 60 104 L -10 120 Z" fill="rgba(227,235,212,.08)" />
+                <path d="M -10 70 L 80 96 L 80 104 L -10 130 Z" fill="rgba(227,235,212,.05)" />
+              </g>
+
+              {/* Drifting grit particles */}
               {Array.from({ length: 60 }).map((_, i) => {
                 const x = (i * 37) % 400
                 const y = (i * 71) % 200
                 const r = (i % 4) + 0.6
+                const dur = (1.4 + (i % 7) * 0.35).toFixed(2)
+                const delay = (-((i * 0.17) % 4)).toFixed(2)
                 return (
                   <circle
                     key={i}
                     cx={x} cy={y} r={r}
-                    fill="rgba(227,235,212,.22)"
-                    opacity={(i % 5) * 0.15 + 0.25}
+                    fill="rgba(227,235,212,.28)"
+                    style={{
+                      transformBox: 'fill-box',
+                      transformOrigin: 'center',
+                      animation: `gritFly ${dur}s linear ${delay}s infinite`,
+                    }}
                   />
                 )
               })}
-              <path d="M -10 60 Q 100 30 200 80 T 410 110"  stroke="rgba(227,235,212,.25)" strokeWidth="1"  strokeDasharray="6 4" fill="none" />
-              <path d="M -10 130 Q 120 100 220 140 T 410 160" stroke="rgba(227,235,212,.18)" strokeWidth=".8" strokeDasharray="4 5" fill="none" />
+
+              {/* Jittering background grit */}
+              {Array.from({ length: 18 }).map((_, i) => {
+                const x = (i * 53 + 11) % 400
+                const y = (i * 89 + 17) % 200
+                const r = (i % 3) * 0.4 + 0.5
+                const dur = (0.6 + (i % 5) * 0.18).toFixed(2)
+                return (
+                  <circle
+                    key={'j' + i}
+                    cx={x} cy={y} r={r}
+                    fill="rgba(227,235,212,.18)"
+                    style={{
+                      transformBox: 'fill-box',
+                      transformOrigin: 'center',
+                      animation: `gritJitter ${dur}s ease-in-out ${-i * 0.1}s infinite`,
+                    }}
+                  />
+                )
+              })}
+
+              {/* Animated flow streams */}
+              <path
+                d="M -10 60 Q 100 30 200 80 T 410 110"
+                stroke="rgba(227,235,212,.28)" strokeWidth="1" strokeDasharray="6 4" fill="none"
+                style={{ animation: 'streamFlow 1.6s linear infinite' }}
+              />
+              <path
+                d="M -10 130 Q 120 100 220 140 T 410 160"
+                stroke="rgba(227,235,212,.2)" strokeWidth=".8" strokeDasharray="4 5" fill="none"
+                style={{ animation: 'streamFlow 2.2s linear infinite reverse' }}
+              />
             </svg>
           )}
 
