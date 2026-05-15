@@ -14,7 +14,8 @@
       "Bash(sort -t' ' -k6 -r)",
       "Bash(sort -k6 -r)",
       "Bash(ls -la \"/c/Users/fourt/.claude/projects/\" 2>/dev/null | head -20)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx tsc *)"
     ]
   }
 }

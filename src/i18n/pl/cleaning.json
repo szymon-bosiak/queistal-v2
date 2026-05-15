@@ -79,9 +79,9 @@
     "label": "DLACZEGO MY",
     "heading": "Co nas wyróżnia",
     "items": [
-      { "n": "01", "title": "PRECYZJA",      "text": "Technologia laserowa pozwala na usunięcie zanieczyszczeń bez uszkadzania powierzchni, nawet na delikatnych obiektach zabytkowych." },
-      { "n": "02", "title": "EKOLOGIA",      "text": "Czyszczenie laserowe nie wymaga środków chemicznych. Minimalne odpady, brak szkodliwych emisji." },
-      { "n": "03", "title": "DOŚWIADCZENIE", "text": "Wieloletnie doświadczenie w branży budowlanej i renowacyjnej pozwala nam dobrać właściwą metodę do każdego projektu." }
+      { "n": "01", "title": "PRECYZJA",      "text": "Technologia laserowa pozwala na usunięcie zanieczyszczeń bez uszkadzania powierzchni, nawet na delikatnych obiektach zabytkowych.", "tag": "0.1MM" },
+      { "n": "02", "title": "EKOLOGIA",      "text": "Czyszczenie laserowe nie wymaga środków chemicznych. Minimalne odpady, brak szkodliwych emisji.", "tag": "ZERO CHEM." },
+      { "n": "03", "title": "DOŚWIADCZENIE", "text": "Wieloletnie doświadczenie w branży budowlanej i renowacyjnej pozwala nam dobrać właściwą metodę do każdego projektu.", "tag": "OD 2015" }
     ]
   },
   "faq": {

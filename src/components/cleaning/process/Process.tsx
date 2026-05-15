@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useInView } from '../../../hooks/useInView'
+import { Reveal } from '../../shared/reveal/Reveal'
+import { WordReveal } from '../../shared/reveal/WordReveal'
 import img3  from '../../../assets/showcase/3.jpg'
 import img13 from '../../../assets/showcase/13.jpg'
 import img15 from '../../../assets/showcase/15.jpg'
@@ -83,11 +85,13 @@ export const Process = () => {
       style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: 'var(--bp)', color: 'var(--white)', ...BP_GRID }}
     >
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
-          {t('process.label')}
-        </div>
+        <Reveal kind="up">
+          <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
+            {t('process.label')}
+          </div>
+        </Reveal>
         <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 500, textTransform: 'uppercase', marginBottom: '3.5rem' }}>
-          {t('process.heading')}
+          <WordReveal text={t('process.heading')} />
         </h2>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>

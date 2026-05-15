@@ -79,9 +79,9 @@
     "label": "WARUM WIR",
     "heading": "Was uns auszeichnet",
     "items": [
-      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten." },
-      { "n": "02", "title": "ÖKOLOGIE",   "text": "Laserreinigung benötigt keine Chemikalien. Minimaler Abfall, keine schädlichen Emissionen." },
-      { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen." }
+      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten.", "tag": "0.1MM" },
+      { "n": "02", "title": "ÖKOLOGIE",   "text": "Laserreinigung benötigt keine Chemikalien. Minimaler Abfall, keine schädlichen Emissionen.", "tag": "ZERO CHEM." },
+      { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen.", "tag": "SEIT 2015" }
     ]
   },
   "faq": {
