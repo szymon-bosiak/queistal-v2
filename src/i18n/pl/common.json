@@ -10,9 +10,11 @@
     "cleaning": {
       "services": "//USŁUGI",
       "beforeAfter": "//ZANIM I PO",
+      "transformation": "//TRANSFORMACJA",
       "applications": "//ZASTOSOWANIA",
       "process": "//PROCES",
       "testimonials": "//OPINIE",
+      "whyUs": "//DLACZEGO MY",
       "faq": "//FAQ"
     }
   },
@@ -44,5 +46,9 @@
   "services": {
     "wood": "DREWNO",
     "cleaning": "CZYSZCZENIE"
+  },
+  "pageTitle": {
+    "wood": "Queistal – Architektura Drewniana",
+    "cleaning": "Queistal – Czyszczenie Laserowe"
   }
 }

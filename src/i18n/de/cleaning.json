@@ -94,6 +94,27 @@
       { "q": "Hinterlassen Sie Abfälle nach der Reinigung?", "a": "Minimal. Beim Sandstrahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel. Wir räumen den Bereich nach der Arbeit immer auf." }
     ]
   },
+  "testimonials": {
+    "label": "BEWERTUNGEN",
+    "heading": "Was unsere Kunden sagen",
+    "items": [
+      {
+        "initials": "MK",
+        "name": "Marek Kowalski",
+        "text": "Professionelle Herangehensweise und ein hervorragendes Ergebnis. Die Gebäudefassade sieht nach der Laserreinigung wie neu aus. Sehr empfehlenswert."
+      },
+      {
+        "initials": "AN",
+        "name": "Anna Nowak",
+        "text": "Ich war überrascht, wie gut der Laser mit dem Rost an einem historischen Tor umgegangen ist. Die Arbeit wurde präzise und ohne Oberflächenschäden ausgeführt."
+      },
+      {
+        "initials": "PW",
+        "name": "Piotr Wiśniewski",
+        "text": "Schnelle Ausführung, faire Preise und ein Ergebnis, das die Erwartungen übertrifft. Definitiv das beste Reinigungsunternehmen, mit dem ich je zusammengearbeitet habe."
+      }
+    ]
+  },
   "nav": {
     "services":     "LEISTUNGEN",
     "beforeAfter":  "VORHER & NACH",

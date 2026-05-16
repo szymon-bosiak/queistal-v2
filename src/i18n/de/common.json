@@ -10,9 +10,11 @@
     "cleaning": {
       "services": "//LEISTUNGEN",
       "beforeAfter": "//VORHER & NACHHER",
+      "transformation": "//TRANSFORMATION",
       "applications": "//ANWENDUNGEN",
       "process": "//PROZESS",
       "testimonials": "//MEINUNGEN",
+      "whyUs": "//WARUM WIR",
       "faq": "//FAQ"
     }
   },
@@ -44,5 +46,9 @@
   "services": {
     "wood": "HOLZ",
     "cleaning": "REINIGUNG"
+  },
+  "pageTitle": {
+    "wood": "Queistal – Holzarchitektur",
+    "cleaning": "Queistal – Laserreinigung"
   }
 }

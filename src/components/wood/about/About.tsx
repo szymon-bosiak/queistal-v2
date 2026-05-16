@@ -30,25 +30,21 @@ export const About = () => {
     <section
       id="o-nas"
       style={{
-        paddingTop: '6rem',
+        padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
         overflow: 'visible',
-        display: 'flex',
-        justifyContent: 'center',
         background: 'var(--sage)',
         borderBottom: '1px dashed rgba(40,37,34,.18)',
       }}
     >
       <div
         style={{
-          width: '100%',
           maxWidth: 1400,
-          padding: '0 clamp(1.5rem,5vw,5rem) 6rem',
+          margin: '0 auto',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
           gap: '3rem',
-          boxSizing: 'border-box',
         }}
       >
         {/* Text column */}

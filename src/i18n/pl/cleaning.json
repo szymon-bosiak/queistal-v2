@@ -94,6 +94,27 @@
       { "q": "Czy zostawiacie odpady po czyszczeniu?", "a": "Minimalne. Przy piaskowaniu stosujemy systemy odzysku medium ściernego. Zawsze porządkujemy teren po pracy." }
     ]
   },
+  "testimonials": {
+    "label": "OPINIE",
+    "heading": "Co mówią klienci",
+    "items": [
+      {
+        "initials": "MK",
+        "name": "Marek Kowalski",
+        "text": "Profesjonalne podejście i świetny efekt końcowy. Elewacja budynku wygląda jak nowa po czyszczeniu laserowym. Polecam każdemu."
+      },
+      {
+        "initials": "AN",
+        "name": "Anna Nowak",
+        "text": "Byłam zaskoczona jak bardzo laser poradził sobie z rdzą na zabytkowej bramie. Praca wykonana dokładnie i bez uszkodzeń powierzchni."
+      },
+      {
+        "initials": "PW",
+        "name": "Piotr Wiśniewski",
+        "text": "Szybka realizacja, uczciwa wycena i efekt przekraczający oczekiwania. Zdecydowanie najlepsza firma czyszcząca z jaką współpracowałem."
+      }
+    ]
+  },
   "nav": {
     "services":      "USŁUGI",
     "beforeAfter":   "ZANIM I PO",

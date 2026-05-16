@@ -1,26 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useParams, useRouterState } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
-import logoLight from '../../../assets/logos/queistal_logo_dark.svg'
+import logoLight from '../../../assets/logos/queistal_logo_txt.svg'
 import logoDark from '../../../assets/logos/queistal_logo_txt_wht.svg'
 
 /* ─── Nav link definitions ───────────────────────────────────── */
 const WOOD_LINKS = [
-  { key: 'nav.about',           anchor: '#about' },
-  { key: 'nav.projects',        anchor: '#projects' },
-  { key: 'nav.whyUs',           anchor: '#why-us' },
-  { key: 'nav.transformations', anchor: '#transformations' },
-  { key: 'nav.testimonials',    anchor: '#testimonials' },
+  { key: 'nav.about',           anchor: '#o-nas' },
+  { key: 'nav.projects',        anchor: '#realizacje' },
+  { key: 'nav.whyUs',           anchor: '#dlaczego-my' },
+  { key: 'nav.transformations', anchor: '#transformacje' },
+  { key: 'nav.testimonials',    anchor: '#opinie' },
   { key: 'nav.faq',             anchor: '#faq' },
 ] as const
 
 const CLEAN_LINKS = [
-  { key: 'nav.cleaning.services',    anchor: '#services' },
-  { key: 'nav.cleaning.beforeAfter', anchor: '#before-after' },
-  { key: 'nav.cleaning.applications',anchor: '#applications' },
-  { key: 'nav.cleaning.process',     anchor: '#process' },
-  { key: 'nav.cleaning.testimonials',anchor: '#testimonials' },
-  { key: 'nav.cleaning.faq',         anchor: '#faq' },
+  { key: 'nav.cleaning.services',       anchor: '#uslugi' },
+  { key: 'nav.cleaning.beforeAfter',    anchor: '#before-after' },
+  { key: 'nav.cleaning.transformation', anchor: '#video' },
+  { key: 'nav.cleaning.applications',   anchor: '#zastosowania' },
+  { key: 'nav.cleaning.process',        anchor: '#proces' },
+  { key: 'nav.cleaning.testimonials',   anchor: '#opinie-clean' },
+  { key: 'nav.cleaning.whyUs',          anchor: '#dlaczego-my-clean' },
+  { key: 'nav.cleaning.faq',            anchor: '#faq-clean' },
 ] as const
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
@@ -116,9 +118,13 @@ export const Nav = () => {
         }}>
 
           {/* Logo */}
-          <Link to="/$lang/wood" params={{ lang }} style={{ flexShrink: 0 }}>
+          <a
+            href="#"
+            onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+            style={{ flexShrink: 0 }}
+          >
             <img src={logo} alt="Queistal" style={{ height: 32, display: 'block' }} />
-          </Link>
+          </a>
 
           {/* Service switcher pill */}
           <div style={{
