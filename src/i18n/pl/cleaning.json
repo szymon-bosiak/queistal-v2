@@ -19,11 +19,15 @@
   "services": {
     "label": "USŁUGI",
     "heading": "Dwie technologie — jeden cel",
+    "priceLabel": "//SZACOWANA CENA",
+    "priceUnit": "zł / m²",
+    "priceDisclaimer": "cena netto · ostateczna wycena po oględzinach",
     "items": [
       {
         "code": "01",
         "title": "CZYSZCZENIE LASEROWE",
         "sub": "Bezinwazyjna precyzja",
+        "price": "od 120",
         "desc": "Technologia laserowa usuwa rdzę, farbę, naloty bez dotykania powierzchni. Idealna do obiektów zabytkowych, metali i detali architektonicznych.",
         "specs": ["Bez środków chemicznych", "Precyzja do 0.1mm", "Brak uszkodzeń powierzchni", "Cicha praca"]
       },
@@ -31,6 +35,7 @@
         "code": "02",
         "title": "PIASKOWANIE",
         "sub": "Intensywne oczyszczanie",
+        "price": "od 55",
         "desc": "Strumieniowanie ścierne skutecznie usuwa grubsze warstwy korozji i powłok. Przygotowanie powierzchni pod nowe powłoki ochronne lub malarskie.",
         "specs": ["Duże powierzchnie", "Głębokie oczyszczanie", "Przygotowanie pod powłoki", "Różne media ścierne"]
       }

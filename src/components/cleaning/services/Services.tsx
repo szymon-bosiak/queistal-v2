@@ -15,11 +15,12 @@ interface ServiceItem {
   code:  string
   title: string
   sub:   string
+  price: string
   desc:  string
   specs: string[]
 }
 
-const CleanServiceCard = ({ s, idx }: { s: ServiceItem; idx: number }) => {
+const CleanServiceCard = ({ s, idx, priceLabel, priceUnit, priceDisclaimer }: { s: ServiceItem; idx: number; priceLabel: string; priceUnit: string; priceDisclaimer: string }) => {
   const [ref, seen] = useInView()
   const [hov, setHov] = useState(false)
 
@@ -162,6 +163,34 @@ const CleanServiceCard = ({ s, idx }: { s: ServiceItem; idx: number }) => {
           <p style={{ fontSize: 'clamp(14px,1.3vw,17px)', fontWeight: 300, lineHeight: 1.8, opacity: 0.6, marginBottom: '2rem' }}>
             {s.desc}
           </p>
+
+          {/* ── Price estimation ── */}
+          <div style={{
+            display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
+            gap: '1rem', padding: '1.25rem 0 1.5rem', marginBottom: '1.5rem',
+            borderTop: '1px dashed rgba(227,235,212,.18)', borderBottom: '1px dashed rgba(227,235,212,.18)',
+          }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '.35rem' }}>
+              <span style={{ fontSize: 10, fontWeight: 400, letterSpacing: 3, opacity: 0.4, color: 'var(--sage)' }}>
+                {priceLabel}
+              </span>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '.5rem' }}>
+                <span style={{ fontSize: 11, fontWeight: 300, opacity: 0.45, letterSpacing: 1, textTransform: 'uppercase' }}>
+                  {s.price.split(' ')[0]}
+                </span>
+                <span style={{ fontSize: 'clamp(34px,4.5vw,52px)', fontWeight: 400, lineHeight: 1, color: 'var(--sage)', letterSpacing: -1 }}>
+                  {s.price.split(' ')[1]}
+                </span>
+                <span style={{ fontSize: 'clamp(15px,1.5vw,18px)', fontWeight: 300, opacity: 0.7, letterSpacing: 0.5 }}>
+                  {priceUnit}
+                </span>
+              </div>
+            </div>
+            <div style={{ fontSize: 10, fontWeight: 300, letterSpacing: 2, opacity: 0.32, textTransform: 'uppercase', textAlign: 'right', maxWidth: 140, lineHeight: 1.5 }}>
+              {priceDisclaimer}
+            </div>
+          </div>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '.6rem' }}>
             {s.specs.map((sp, j) => (
               <div key={j} style={{ display: 'flex', alignItems: 'center', gap: '.75rem', fontSize: 13, fontWeight: 300, opacity: 0.6 }}>
@@ -200,7 +229,12 @@ export const Services = () => {
 
         <div className="csvc" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
           {items.map((s, i) => (
-            <CleanServiceCard key={i} s={s} idx={i} />
+            <CleanServiceCard
+              key={i} s={s} idx={i}
+              priceLabel={t('services.priceLabel')}
+              priceUnit={t('services.priceUnit')}
+              priceDisclaimer={t('services.priceDisclaimer')}
+            />
           ))}
         </div>
 
