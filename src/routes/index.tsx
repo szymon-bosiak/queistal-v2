@@ -10,6 +10,6 @@ function detectLanguage(): 'pl' | 'de' {
 export const Route = createFileRoute('/')({
   beforeLoad: () => {
     const lang = detectLanguage()
-    throw redirect({ to: '/$lang/wood', params: { lang } })
+    throw redirect({ to: '/$lang/cleaning', params: { lang } })
   },
 })
