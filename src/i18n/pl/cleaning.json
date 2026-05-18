@@ -3,7 +3,7 @@
     "label": "NOWOCZESNE CZYSZCZENIE",
     "line1": "LASER",
     "line2": "I PIASKOWANIE",
-    "tagline": "Bezinwazyjna i skuteczna metoda czyszczenia powierzchni kamiennych, metalowych, drewnianych i betonowych.",
+    "tagline": "Bezinwazyjne i skuteczne metody czyszczenia powierzchni kamiennych, metalowych, drewnianych i betonowych.",
     "cta1": "NASZE USŁUGI",
     "cta2": "JAK DZIAŁAMY",
     "spec": {
@@ -28,7 +28,7 @@
         "title": "CZYSZCZENIE LASEROWE",
         "sub": "Bezinwazyjna precyzja",
         "price": "od 120",
-        "desc": "Technologia laserowa usuwa rdzę, farbę, naloty bez dotykania powierzchni. Idealna do obiektów zabytkowych, metali i detali architektonicznych.",
+        "desc": "Technologia laserowa usuwa rdzę, farbę, naloty bez kontaktu z powierzchnią. Idealna do obiektów zabytkowych, metali i detali architektonicznych.",
         "specs": ["Bez środków chemicznych", "Precyzja do 0.1mm", "Brak uszkodzeń powierzchni", "Cicha praca"]
       },
       {
@@ -36,14 +36,14 @@
         "title": "PIASKOWANIE",
         "sub": "Intensywne oczyszczanie",
         "price": "od 55",
-        "desc": "Strumieniowanie ścierne skutecznie usuwa grubsze warstwy korozji i powłok. Przygotowanie powierzchni pod nowe powłoki ochronne lub malarskie.",
+        "desc": "Strumieniowanie ścierne skutecznie usuwa grubsze warstwy korozji i powłok. Przygotowuje powierzchnię pod nowe powłoki ochronne lub malarskie.",
         "specs": ["Duże powierzchnie", "Głębokie oczyszczanie", "Przygotowanie pod powłoki", "Różne media ścierne"]
       }
     ]
   },
   "beforeAfter": {
     "label": "EFEKTY",
-    "heading": "Zanim i po",
+    "heading": "Przed i po",
     "hint": "Najedź kursorem na zdjęcie, aby zobaczyć różnicę",
     "before": "PRZED",
     "after": "PO",
@@ -122,7 +122,7 @@
   },
   "nav": {
     "services":      "USŁUGI",
-    "beforeAfter":   "ZANIM I PO",
+    "beforeAfter":   "PRZED I PO",
     "applications":  "ZASTOSOWANIA",
     "process":       "PROCES",
     "testimonials":  "OPINIE",

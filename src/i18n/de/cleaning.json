@@ -1,6 +1,6 @@
 {
   "hero": {
-    "label": "MODERNES REINIGEN",
+    "label": "MODERNE REINIGUNG",
     "line1": "LASER",
     "line2": "UND STRAHLEN",
     "tagline": "Schonende und effektive Reinigung von Stein-, Metall-, Holz- und Betonoberflächen.",
@@ -12,7 +12,7 @@
         { "l": "TECHNOLOGIE", "v": "Nd:YAG / CO₂ LASER" },
         { "l": "MATERIALIEN",  "v": "Stein, Metall, Holz, Beton" },
         { "l": "PRÄZISION",    "v": "Bis 0,1 mm" },
-        { "l": "METHODEN",     "v": "Laser + Strahlen" }
+        { "l": "METHODEN",     "v": "Laser + Sandstrahlen" }
       ]
     }
   },
@@ -36,7 +36,7 @@
         "title": "SANDSTRAHLEN",
         "sub": "Intensivreinigung",
         "price": "ab 55",
-        "desc": "Das Strahlverfahren entfernt effektiv dickere Korrosions- und Beschichtungsschichten. Vorbereitung der Oberflächen für neue Schutz- oder Farbbeschichtungen.",
+        "desc": "Das Strahlverfahren entfernt effektiv dickere Korrosions- und Beschichtungsschichten. Es bereitet die Oberflächen für neue Schutz- oder Farbbeschichtungen vor.",
         "specs": ["Große Flächen", "Tiefenreinigung", "Vorbereitung für Beschichtungen", "Verschiedene Strahlmittel"]
       }
     ]
@@ -66,7 +66,7 @@
       { "label": "Metalle",             "note": "Stahl, Gusseisen, Aluminium" },
       { "label": "Holz",                "note": "Balken, Fassaden, Möbel" },
       { "label": "Ziegel",              "note": "Historische Gebäude" },
-      { "label": "Historische Objekte", "note": "Konservatorische Präzision" },
+      { "label": "Historische Objekte", "note": "Restauratorische Präzision" },
       { "label": "Industrie",           "note": "Maschinen, Anlagen" }
     ]
   },
@@ -75,7 +75,7 @@
     "heading": "So arbeiten wir",
     "steps": [
       { "n": "01", "title": "Besichtigung & Angebot", "desc": "Wir kommen vor Ort, bewerten den Zustand der Oberfläche und wählen die Methode." },
-      { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Test an einer Probe." },
+      { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Wir testen die Methode an einer Probe." },
       { "n": "03", "title": "Reinigung",               "desc": "Wir führen den Auftrag plangemäß durch und überwachen kontinuierlich die Ergebnisse." },
       { "n": "04", "title": "Qualitätskontrolle",      "desc": "Wir prüfen das Endergebnis. Optional tragen wir Schutzschichten auf." }
     ]
@@ -84,7 +84,7 @@
     "label": "WARUM WIR",
     "heading": "Was uns auszeichnet",
     "items": [
-      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten.", "tag": "0.1MM" },
+      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten.", "tag": "0,1 MM" },
       { "n": "02", "title": "ÖKOLOGIE",   "text": "Laserreinigung benötigt keine Chemikalien. Minimaler Abfall, keine schädlichen Emissionen.", "tag": "ZERO CHEM." },
       { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen.", "tag": "SEIT 2015" }
     ]
@@ -122,7 +122,7 @@
   },
   "nav": {
     "services":     "LEISTUNGEN",
-    "beforeAfter":  "VORHER & NACH",
+    "beforeAfter":  "VORHER & NACHHER",
     "applications": "ANWENDUNGEN",
     "process":      "PROZESS",
     "testimonials": "BEWERTUNGEN",

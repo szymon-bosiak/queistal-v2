@@ -4,7 +4,7 @@
     "line1": "ARCHI-",
     "line2": "TEKTURA",
     "line3": "DREWNIANA",
-    "tagline": "Projektujemy i tworzymy zabudowę drewnianą skrojoną na Twoje potrzeby — nowe projekty i renowacja antyków.",
+    "tagline": "Projektujemy i tworzymy konstrukcje drewniane skrojone na Twoje potrzeby — nowe projekty i renowacja antyków.",
     "cta": {
       "projects": "NASZE PROJEKTY",
       "about": "O NAS"
@@ -16,7 +16,7 @@
     "servicesLabel": "USŁUGI",
     "services": {
       "antique": "Renowacje antyków",
-      "construction": "Konstrukcje budynków",
+      "construction": "Konstrukcje drewniane",
       "roofing": "Więźby dachowe",
       "furniture": "Meble ogrodowe",
       "other": "Inne projekty"
@@ -33,7 +33,7 @@
       {
         "n": "01",
         "title": "WYSOKA JAKOŚĆ",
-        "body": "Jesteśmy zespołem specjalistów z bogatym doświadczeniem. Każda praca wykonywana z dbałością o najmniejszy szczegół."
+        "body": "Jesteśmy zespołem specjalistów z bogatym doświadczeniem. Każda praca jest wykonywana z dbałością o najmniejszy szczegół."
       },
       {
         "n": "02",
@@ -59,7 +59,7 @@
       {
         "name": "Robert Woźniak",
         "initials": "RW",
-        "text": "Jestem zachwycony z wykonanej drewnianej altany w moim ogrodzie. Cały projekt był zrealizowany bardzo profesjonalnie."
+        "text": "Jestem zachwycony wykonaną drewnianą altaną w moim ogrodzie. Cały projekt był zrealizowany bardzo profesjonalnie."
       },
       {
         "name": "Julia Sadowska",
@@ -69,7 +69,7 @@
       {
         "name": "Asia Kozłowska",
         "initials": "AK",
-        "text": "Firma Queis Tal zrobiła wspaniałą robotę przy budowie mojego domu. Wszystkie prace wykonywane terminowo."
+        "text": "Firma Queis Tal zrobiła wspaniałą robotę przy budowie mojego domu. Wszystkie prace wykonano terminowo."
       },
       {
         "name": "Maria Kubiak",
