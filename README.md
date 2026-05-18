@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Queistal v2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Bilingual (PL / DE) marketing website for two service businesses — professional cleaning and wood restoration. Built with React 19, Vite, and TanStack Router.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Bilingual** — Polish and German, auto-detected from domain extension or browser language
+- **Two service verticals** — dedicated pages for Cleaning and Wood services
+- **Animations** — Framer Motion page transitions and scroll-reveal effects
+- **File-based routing** — TanStack React Router with `/:lang/cleaning` and `/:lang/wood` routes
+- **Fully typed** — TypeScript strict mode throughout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Category       | Tool                                      |
+| -------------- | ----------------------------------------- |
+| Framework      | React 19 + Vite 5                         |
+| Language       | TypeScript 6                              |
+| Routing        | TanStack React Router                     |
+| Styling        | Tailwind CSS v4                           |
+| Animations     | Framer Motion                             |
+| i18n           | i18next + react-i18next                   |
+| UI Primitives  | Radix UI (Accordion, Dialog, Popover)     |
+| Scroll Reveal  | react-intersection-observer               |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # dev server at http://localhost:5173
+npm run build    # type-check + production build → dist/
+npm run preview  # serve the production build locally
+npm run lint     # ESLint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── cleaning/     # Hero, Services, Before/After, Process, FAQ, …
+│   ├── wood/         # Hero, About, Projects, Transformations, FAQ, …
+│   └── shared/       # Nav, Footer, BpBox, Reveal
+├── routes/
+│   ├── __root.tsx    # Root layout
+│   ├── index.tsx     # Language detector & redirect
+│   └── $lang/
+│       ├── cleaning/ # /pl/cleaning, /de/cleaning
+│       └── wood/     # /pl/wood, /de/wood
+├── i18n/
+│   ├── pl/           # common.json, cleaning.json, wood.json
+│   └── de/           # common.json, cleaning.json, wood.json
+├── hooks/
+│   └── useInView.ts  # IntersectionObserver hook for scroll reveals
+└── assets/           # Images, icons, logos
+```
+
+---
+
+## Language Detection
+
+Language is resolved in this order:
+
+1. Domain extension — `.pl` → Polish, `.de` → German
+2. Browser language — `de*` → German
+3. Default → Polish
+
+The resolved language becomes the `/:lang` route prefix.
+
+---
+
+## Design Tokens
+
+Defined in `src/index.css` via Tailwind's `@theme`:
+
+| Token                  | Value     | Usage                  |
+| ---------------------- | --------- | ---------------------- |
+| `--color-sage`         | `#E3EBD4` | Light background       |
+| `--color-ink`          | `#282522` | Primary text           |
+| `--color-blueprint`    | `#0d1117` | Dark section bg        |
+| `--color-white`        | `#ffffff` | White                  |
+
+**Font:** Oswald (weights 200 – 500, Google Fonts)
