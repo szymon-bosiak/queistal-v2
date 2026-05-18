@@ -15,7 +15,7 @@
     "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein.",
     "servicesLabel": "LEISTUNGEN",
     "services": {
-      "antique": "Antiquitäten",
+      "antique": "Antiquitätenrenovierung",
       "construction": "Holzkonstruktionen",
       "roofing": "Dachstühle",
       "furniture": "Gartenmöbel",
@@ -54,7 +54,7 @@
   },
   "testimonials": {
     "label": "EMPFEHLUNGEN",
-    "heading": "Was Kunden sagen",
+    "heading": "Was unsere Kunden sagen",
     "items": [
       {
         "name": "Robert Woźniak",
