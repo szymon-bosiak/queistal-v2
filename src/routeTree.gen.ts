@@ -12,8 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteRouteImport } from './routes/$lang/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as LangWoodIndexRouteImport } from './routes/$lang/wood/index'
-import { Route as LangCleaningIndexRouteImport } from './routes/$lang/cleaning/index'
+import { Route as LangStructuresIndexRouteImport } from './routes/$lang/structures/index'
+import { Route as LangRenovationIndexRouteImport } from './routes/$lang/renovation/index'
 
 const LangRouteRoute = LangRouteRouteImport.update({
   id: '/$lang',
@@ -30,14 +30,14 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const LangWoodIndexRoute = LangWoodIndexRouteImport.update({
-  id: '/wood/',
-  path: '/wood/',
+const LangStructuresIndexRoute = LangStructuresIndexRouteImport.update({
+  id: '/structures/',
+  path: '/structures/',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const LangCleaningIndexRoute = LangCleaningIndexRouteImport.update({
-  id: '/cleaning/',
-  path: '/cleaning/',
+const LangRenovationIndexRoute = LangRenovationIndexRouteImport.update({
+  id: '/renovation/',
+  path: '/renovation/',
   getParentRoute: () => LangRouteRoute,
 } as any)
 
@@ -45,35 +45,40 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteRouteWithChildren
   '/$lang/': typeof LangIndexRoute
-  '/$lang/cleaning/': typeof LangCleaningIndexRoute
-  '/$lang/wood/': typeof LangWoodIndexRoute
+  '/$lang/renovation/': typeof LangRenovationIndexRoute
+  '/$lang/structures/': typeof LangStructuresIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang': typeof LangIndexRoute
-  '/$lang/cleaning': typeof LangCleaningIndexRoute
-  '/$lang/wood': typeof LangWoodIndexRoute
+  '/$lang/renovation': typeof LangRenovationIndexRoute
+  '/$lang/structures': typeof LangStructuresIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteRouteWithChildren
   '/$lang/': typeof LangIndexRoute
-  '/$lang/cleaning/': typeof LangCleaningIndexRoute
-  '/$lang/wood/': typeof LangWoodIndexRoute
+  '/$lang/renovation/': typeof LangRenovationIndexRoute
+  '/$lang/structures/': typeof LangStructuresIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lang' | '/$lang/' | '/$lang/cleaning/' | '/$lang/wood/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/'
+    | '/$lang/renovation/'
+    | '/$lang/structures/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lang' | '/$lang/cleaning' | '/$lang/wood'
+  to: '/' | '/$lang' | '/$lang/renovation' | '/$lang/structures'
   id:
     | '__root__'
     | '/'
     | '/$lang'
     | '/$lang/'
-    | '/$lang/cleaning/'
-    | '/$lang/wood/'
+    | '/$lang/renovation/'
+    | '/$lang/structures/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -104,18 +109,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/$lang/wood/': {
-      id: '/$lang/wood/'
-      path: '/wood'
-      fullPath: '/$lang/wood/'
-      preLoaderRoute: typeof LangWoodIndexRouteImport
+    '/$lang/structures/': {
+      id: '/$lang/structures/'
+      path: '/structures'
+      fullPath: '/$lang/structures/'
+      preLoaderRoute: typeof LangStructuresIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/$lang/cleaning/': {
-      id: '/$lang/cleaning/'
-      path: '/cleaning'
-      fullPath: '/$lang/cleaning/'
-      preLoaderRoute: typeof LangCleaningIndexRouteImport
+    '/$lang/renovation/': {
+      id: '/$lang/renovation/'
+      path: '/renovation'
+      fullPath: '/$lang/renovation/'
+      preLoaderRoute: typeof LangRenovationIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
   }
@@ -123,14 +128,14 @@ declare module '@tanstack/react-router' {
 
 interface LangRouteRouteChildren {
   LangIndexRoute: typeof LangIndexRoute
-  LangCleaningIndexRoute: typeof LangCleaningIndexRoute
-  LangWoodIndexRoute: typeof LangWoodIndexRoute
+  LangRenovationIndexRoute: typeof LangRenovationIndexRoute
+  LangStructuresIndexRoute: typeof LangStructuresIndexRoute
 }
 
 const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangIndexRoute: LangIndexRoute,
-  LangCleaningIndexRoute: LangCleaningIndexRoute,
-  LangWoodIndexRoute: LangWoodIndexRoute,
+  LangRenovationIndexRoute: LangRenovationIndexRoute,
+  LangStructuresIndexRoute: LangStructuresIndexRoute,
 }
 
 const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(

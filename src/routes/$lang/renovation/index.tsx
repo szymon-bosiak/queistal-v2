@@ -12,7 +12,7 @@ import { WhyUs }        from '../../../components/cleaning/why-us'
 import { Gallery }      from '../../../components/cleaning/gallery'
 import { Faq }          from '../../../components/cleaning/faq'
 
-const CleaningPage = () => {
+const RenovationPage = () => {
   const { t } = useTranslation('common')
   useEffect(() => { document.title = t('pageTitle.cleaning') }, [t])
 
@@ -32,6 +32,6 @@ const CleaningPage = () => {
   )
 }
 
-export const Route = createFileRoute('/$lang/cleaning/')({
-  component: CleaningPage,
+export const Route = createFileRoute('/$lang/renovation/')({
+  component: RenovationPage,
 })

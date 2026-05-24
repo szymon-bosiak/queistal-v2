@@ -1,9 +1,9 @@
 {
   "hero": {
-    "label": "NOWOCZESNE CZYSZCZENIE",
+    "label": "NOWOCZESNA RENOWACJA",
     "line1": "LASER",
     "line2": "I PIASKOWANIE",
-    "tagline": "Bezinwazyjne i skuteczne metody czyszczenia powierzchni kamiennych, metalowych, drewnianych i betonowych.",
+    "tagline": "Bezinwazyjne i skuteczne metody renowacji powierzchni kamiennych, metalowych, drewnianych i betonowych.",
     "cta1": "NASZE USŁUGI",
     "cta2": "JAK DZIAŁAMY",
     "spec": {
@@ -76,7 +76,7 @@
     "steps": [
       { "n": "01", "title": "Wycena i oględziny",  "desc": "Przyjeżdżamy na miejsce, oceniamy stan powierzchni i dobieramy metodę." },
       { "n": "02", "title": "Przygotowanie",        "desc": "Zabezpieczamy otoczenie i przygotowujemy sprzęt. Testujemy na próbce." },
-      { "n": "03", "title": "Czyszczenie",          "desc": "Realizujemy zlecenie zgodnie z ustalonym planem, monitorując efekty." },
+      { "n": "03", "title": "Renowacja",           "desc": "Realizujemy zlecenie zgodnie z ustalonym planem, monitorując efekty." },
       { "n": "04", "title": "Kontrola jakości",     "desc": "Sprawdzamy efekt końcowy. Opcjonalnie nakładamy powłoki ochronne." }
     ]
   },
@@ -99,8 +99,8 @@
     "items": [
       { "q": "Czy czyszczenie laserowe jest bezpieczne dla zabytkowych powierzchni?", "a": "Tak — laser precyzyjnie usuwa tylko zanieczyszczenia, nie ingerując w materiał bazowy. Stosujemy odpowiednie parametry dla każdego materiału." },
       { "q": "Jak wygląda przygotowanie do usługi?", "a": "Bezpłatne oględziny, ocena stanu, dobór metody i parametrów. Testujemy na małej próbce przed rozpoczęciem prac." },
-      { "q": "Ile trwa czyszczenie?", "a": "Małe elementy — kilka godzin. Elewacje budynków — kilka dni. Podajemy dokładny termin po oględzinach." },
-      { "q": "Czy zostawiacie odpady po czyszczeniu?", "a": "Minimalne. Przy piaskowaniu stosujemy systemy odzysku medium ściernego. Zawsze porządkujemy teren po pracy." }
+      { "q": "Ile trwa renowacja?", "a": "Małe elementy — kilka godzin. Elewacje budynków — kilka dni. Podajemy dokładny termin po oględzinach." },
+      { "q": "Czy zostawiacie odpady po renowacji?", "a": "Minimalne. Przy piaskowaniu stosujemy systemy odzysku medium ściernego. Zawsze porządkujemy teren po pracy." }
     ]
   },
   "testimonials": {

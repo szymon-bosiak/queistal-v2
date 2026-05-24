@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate, useParams, useRouterState } from '@tanstack/react-router'
+import { useNavigate, useParams, useRouterState } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import logoLight from '../../../assets/logos/queistal_logo_txt.svg'
 import logoDark from '../../../assets/logos/queistal_logo_txt_wht.svg'
@@ -37,7 +37,7 @@ export const Nav = () => {
   const routerState = useRouterState()
   const currentPath = routerState.location.pathname
 
-  const isWood = !currentPath.includes('/cleaning')
+  const isWood = !currentPath.includes('/renovation')
   const links = isWood ? WOOD_LINKS : CLEAN_LINKS
 
   const [scrolled, setScrolled]       = useState(false)
@@ -77,12 +77,13 @@ export const Nav = () => {
   }, [contactOpen])
 
   const switchLang = (newLang: 'pl' | 'de') => {
-    const service = isWood ? 'wood' : 'cleaning'
+    const service = isWood ? 'structures' : 'renovation'
     navigate({ to: '/$lang/' + service, params: { lang: newLang } })
   }
 
   const switchService = (service: 'wood' | 'cleaning') => {
-    navigate({ to: '/$lang/' + service, params: { lang } })
+    const routeSegment = service === 'wood' ? 'structures' : 'renovation'
+    navigate({ to: '/$lang/' + routeSegment, params: { lang } })
     window.scrollTo(0, 0)
     setMenuOpen(false)
   }

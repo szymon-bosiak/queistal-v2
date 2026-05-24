@@ -36,7 +36,7 @@
     "servicesLabel": "USŁUGI",
     "navLabel": "NAWIGACJA",
     "services": [
-      "Architektura drewniana",
+      "Konstrukcje drewniane",
       "Renowacje antyków",
       "Więźby dachowe",
       "Meble ogrodowe",
@@ -45,11 +45,11 @@
     ]
   },
   "services": {
-    "wood": "DREWNO",
-    "cleaning": "CZYSZCZENIE"
+    "wood": "KONSTRUKCJE",
+    "cleaning": "RENOWACJA"
   },
   "pageTitle": {
-    "wood": "Queistal – Architektura Drewniana",
-    "cleaning": "Queistal – Czyszczenie Laserowe"
+    "wood": "Queistal – Konstrukcje Drewniane",
+    "cleaning": "Queistal – Renowacja Powierzchni"
   }
 }

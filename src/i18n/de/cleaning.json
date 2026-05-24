@@ -1,9 +1,9 @@
 {
   "hero": {
-    "label": "MODERNE REINIGUNG",
+    "label": "MODERNE RESTAURIERUNG",
     "line1": "LASER",
     "line2": "UND STRAHLEN",
-    "tagline": "Schonende und effektive Reinigung von Stein-, Metall-, Holz- und Betonoberflächen.",
+    "tagline": "Schonende und effektive Restaurierung von Stein-, Metall-, Holz- und Betonoberflächen.",
     "cta1": "UNSERE LEISTUNGEN",
     "cta2": "WIE WIR ARBEITEN",
     "spec": {
@@ -76,7 +76,7 @@
     "steps": [
       { "n": "01", "title": "Besichtigung & Angebot", "desc": "Wir kommen vor Ort, bewerten den Zustand der Oberfläche und wählen die Methode." },
       { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Wir testen die Methode an einer Probe." },
-      { "n": "03", "title": "Reinigung",               "desc": "Wir führen den Auftrag plangemäß durch und überwachen kontinuierlich die Ergebnisse." },
+      { "n": "03", "title": "Restaurierung",            "desc": "Wir führen den Auftrag plangemäß durch und überwachen kontinuierlich die Ergebnisse." },
       { "n": "04", "title": "Qualitätskontrolle",      "desc": "Wir prüfen das Endergebnis. Optional tragen wir Schutzschichten auf." }
     ]
   },
@@ -99,8 +99,8 @@
     "items": [
       { "q": "Ist die Laserreinigung sicher für historische Oberflächen?", "a": "Ja — der Laser entfernt präzise nur Verunreinigungen, ohne das Grundmaterial zu beschädigen. Wir verwenden geeignete Parameter für jedes Material." },
       { "q": "Wie läuft die Vorbereitung ab?", "a": "Kostenlose Besichtigung, Zustandsbewertung, Methodenwahl und Parametrierung. Wir testen an einer kleinen Probe vor Beginn der Arbeiten." },
-      { "q": "Wie lange dauert die Reinigung?", "a": "Kleine Elemente — einige Stunden. Gebäudefassaden — einige Tage. Den genauen Termin nennen wir nach der Besichtigung." },
-      { "q": "Hinterlassen Sie Abfälle nach der Reinigung?", "a": "Minimal. Beim Sandstrahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel. Wir räumen den Bereich nach der Arbeit immer auf." }
+      { "q": "Wie lange dauert die Restaurierung?", "a": "Kleine Elemente — einige Stunden. Gebäudefassaden — einige Tage. Den genauen Termin nennen wir nach der Besichtigung." },
+      { "q": "Hinterlassen Sie Abfälle nach der Restaurierung?", "a": "Minimal. Beim Sandstrahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel. Wir räumen den Bereich nach der Arbeit immer auf." }
     ]
   },
   "testimonials": {
@@ -120,7 +120,7 @@
       {
         "initials": "PW",
         "name": "Piotr Wiśniewski",
-        "text": "Schnelle Ausführung, faire Preise und ein Ergebnis, das die Erwartungen übertrifft. Definitiv das beste Reinigungsunternehmen, mit dem ich je zusammengearbeitet habe."
+        "text": "Schnelle Ausführung, faire Preise und ein Ergebnis, das die Erwartungen übertrifft. Definitiv das beste Restaurierungsunternehmen, mit dem ich je zusammengearbeitet habe."
       }
     ]
   },

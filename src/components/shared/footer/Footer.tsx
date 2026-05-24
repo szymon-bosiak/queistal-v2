@@ -1,35 +1,34 @@
 import { useTranslation } from 'react-i18next'
-import { useRouterState, useParams } from '@tanstack/react-router'
+import { useRouterState } from '@tanstack/react-router'
 import logoWhite from '../../../assets/logos/queistal_logo_txt_wht.svg'
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
 const TEL2 = { num: '602 345 678', href: 'tel:+48602345678' }
 
 const WOOD_NAV = [
-  ['DREWNO — O NAS',        '#about'],
-  ['DREWNO — REALIZACJE',   '#projects'],
-  ['DREWNO — DLACZEGO MY',  '#why-us'],
-  ['DREWNO — TRANSFORMACJE','#transformations'],
-  ['DREWNO — OPINIE',       '#testimonials'],
-  ['CZYSZCZENIE — USŁUGI',  '#services'],
-  ['CZYSZCZENIE — ZANIM I PO','#before-after'],
+  ['KONSTRUKCJE — O NAS',        '#about'],
+  ['KONSTRUKCJE — REALIZACJE',   '#projects'],
+  ['KONSTRUKCJE — DLACZEGO MY',  '#why-us'],
+  ['KONSTRUKCJE — TRANSFORMACJE','#transformations'],
+  ['KONSTRUKCJE — OPINIE',       '#testimonials'],
+  ['RENOWACJA — USŁUGI',  '#services'],
+  ['RENOWACJA — ZANIM I PO','#before-after'],
 ] as const
 
 const CLEAN_NAV = [
-  ['CZYSZCZENIE — USŁUGI',    '#services'],
-  ['CZYSZCZENIE — ZANIM I PO','#before-after'],
-  ['CZYSZCZENIE — ZASTOSOWANIA','#applications'],
-  ['CZYSZCZENIE — PROCES',    '#process'],
-  ['CZYSZCZENIE — OPINIE',    '#testimonials'],
-  ['DREWNO — O NAS',          '#about'],
-  ['DREWNO — REALIZACJE',     '#projects'],
+  ['RENOWACJA — USŁUGI',    '#services'],
+  ['RENOWACJA — ZANIM I PO','#before-after'],
+  ['RENOWACJA — ZASTOSOWANIA','#applications'],
+  ['RENOWACJA — PROCES',    '#process'],
+  ['RENOWACJA — OPINIE',    '#testimonials'],
+  ['KONSTRUKCJE — O NAS',          '#about'],
+  ['KONSTRUKCJE — REALIZACJE',     '#projects'],
 ] as const
 
 export const Footer = () => {
   const { t } = useTranslation('common')
-  const { lang } = useParams({ strict: false }) as { lang: 'pl' | 'de' }
   const routerState = useRouterState()
-  const isWood = !routerState.location.pathname.includes('/cleaning')
+  const isWood = !routerState.location.pathname.includes('/renovation')
 
   const bg      = isWood ? 'var(--color-ink)' : '#0d1117'
   const borderC = isWood ? 'rgba(255,255,255,.1)' : 'rgba(227,235,212,.1)'

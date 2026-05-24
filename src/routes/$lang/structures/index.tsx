@@ -9,7 +9,7 @@ import { Transformations } from '../../../components/wood/transformations'
 import { Testimonials }    from '../../../components/wood/testimonials'
 import { Faq }             from '../../../components/wood/faq'
 
-const WoodPage = () => {
+const StructuresPage = () => {
   const { t } = useTranslation('common')
   useEffect(() => { document.title = t('pageTitle.wood') }, [t])
 
@@ -26,6 +26,6 @@ const WoodPage = () => {
   )
 }
 
-export const Route = createFileRoute('/$lang/wood/')({
-  component: WoodPage,
+export const Route = createFileRoute('/$lang/structures/')({
+  component: StructuresPage,
 })

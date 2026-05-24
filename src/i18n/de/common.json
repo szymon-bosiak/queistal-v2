@@ -36,7 +36,7 @@
     "servicesLabel": "LEISTUNGEN",
     "navLabel": "NAVIGATION",
     "services": [
-      "Holzarchitektur",
+      "Holzkonstruktionen",
       "Antiquitätenrenovierung",
       "Dachstühle",
       "Gartenmöbel",
@@ -45,11 +45,11 @@
     ]
   },
   "services": {
-    "wood": "HOLZ",
-    "cleaning": "REINIGUNG"
+    "wood": "KONSTRUKTIONEN",
+    "cleaning": "RESTAURIERUNG"
   },
   "pageTitle": {
-    "wood": "Queistal – Holzarchitektur",
-    "cleaning": "Queistal – Laserreinigung"
+    "wood": "Queistal – Holzkonstruktionen",
+    "cleaning": "Queistal – Oberflächenrestaurierung"
   }
 }

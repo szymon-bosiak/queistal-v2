@@ -47,7 +47,7 @@ export const Hero = () => {
           animation: 'fadeIn 1.4s .6s var(--ease) forwards',
         }}
       >
-        CZYSZCZENIE
+        RENOWACJA
       </div>
 
       <div className="chi" style={{ maxWidth: 1400, margin: '0 auto', width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'end' }}>
