@@ -89,6 +89,10 @@
       { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen.", "tag": "SEIT 2015" }
     ]
   },
+  "gallery": {
+    "label": "GALERIE",
+    "heading": "Weitere Projekte"
+  },
   "faq": {
     "label": "FAQ",
     "heading": "Häufig gestellte Fragen",

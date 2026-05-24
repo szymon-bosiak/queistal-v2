@@ -4,12 +4,11 @@ import { useInView } from '../../../../../hooks/useInView'
 interface ProjectTileProps {
   src: string
   alt: string
-  area: string
   idx?: number
   onClick: () => void
 }
 
-export const ProjectTile = ({ src, alt, area, idx = 0, onClick }: ProjectTileProps) => {
+export const ProjectTile = ({ src, alt, idx = 0, onClick }: ProjectTileProps) => {
   const [hov, setHov] = useState(false)
   const [ref, seen] = useInView({ threshold: 0.1 })
 
@@ -20,7 +19,6 @@ export const ProjectTile = ({ src, alt, area, idx = 0, onClick }: ProjectTilePro
       onMouseLeave={() => setHov(false)}
       onClick={onClick}
       style={{
-        gridArea: area,
         position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer',
@@ -35,8 +33,8 @@ export const ProjectTile = ({ src, alt, area, idx = 0, onClick }: ProjectTilePro
         alt={alt}
         style={{
           width: '100%',
-          height: '100%',
-          objectFit: 'cover',
+          height: 'auto',
+          display: 'block',
           transform: hov ? 'scale(1.08)' : 'scale(1)',
           transition: 'transform .7s var(--ease)',
         }}

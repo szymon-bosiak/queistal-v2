@@ -27,7 +27,9 @@
       "Bash(Get-ChildItem \"C:\\\\Users\\\\fourt\\\\Desktop\\\\Queistal\\\\zdjęcia\")",
       "Bash(Select-Object Name, Length, LastWriteTime)",
       "Bash(Sort-Object Name)",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\fourt\\\\Desktop\\\\Queistal\\\\zdjęcia\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,0\\)}} | Sort-Object Name | Format-Table -AutoSize)"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\fourt\\\\Desktop\\\\Queistal\\\\zdjęcia\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,0\\)}} | Sort-Object Name | Format-Table -AutoSize)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"src\\\\components\\\\cleaning\\\\gallery\\\\components\\\\gallery-tile\")",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"src\\\\assets\\\\gallery\")"
     ]
   }
 }

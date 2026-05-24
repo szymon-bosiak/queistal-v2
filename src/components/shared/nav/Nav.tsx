@@ -22,6 +22,7 @@ const CLEAN_LINKS = [
   { key: 'nav.cleaning.process',        anchor: '#proces' },
   { key: 'nav.cleaning.testimonials',   anchor: '#opinie-clean' },
   { key: 'nav.cleaning.whyUs',          anchor: '#dlaczego-my-clean' },
+  { key: 'nav.cleaning.gallery',        anchor: '#galeria' },
   { key: 'nav.cleaning.faq',            anchor: '#faq-clean' },
 ] as const
 

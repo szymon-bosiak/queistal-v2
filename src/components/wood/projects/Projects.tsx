@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Masonry from 'react-masonry-css'
 import { ProjectTile } from './components/project-tile'
 import p1  from '../../../assets/showcase/1.jpg'
 import p3  from '../../../assets/showcase/3.jpg'
@@ -12,18 +13,20 @@ import p17 from '../../../assets/showcase/17.jpg'
 import p7  from '../../../assets/showcase/7.jpg'
 import p16 from '../../../assets/showcase/16.jpg'
 
+const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 1 }
+
 const TILES = [
-  { src: p1,  alt: 'Drewniana elewacja', area: 'a' },
-  { src: p3,  alt: 'Wiata parkowa',      area: 'b' },
-  { src: p15, alt: 'Tężnia',             area: 'c' },
-  { src: p5,  alt: 'Przystanek',         area: 'd' },
-  { src: p13, alt: 'Gont',               area: 'e' },
-  { src: p8,  alt: 'Taras widokowy',     area: 'f' },
-  { src: p14, alt: 'Altana',             area: 'g' },
-  { src: p17, alt: 'Budka',              area: 'h' },
-  { src: p7,  alt: 'Budka handlowa',     area: 'i' },
-  { src: p16, alt: 'Ławki',              area: 'j' },
-] as const
+  { src: p1,  alt: 'Drewniana elewacja' },
+  { src: p3,  alt: 'Wiata parkowa'      },
+  { src: p15, alt: 'Tężnia'             },
+  { src: p5,  alt: 'Przystanek'         },
+  { src: p13, alt: 'Gont'               },
+  { src: p8,  alt: 'Taras widokowy'     },
+  { src: p14, alt: 'Altana'             },
+  { src: p17, alt: 'Budka'              },
+  { src: p7,  alt: 'Budka handlowa'     },
+  { src: p16, alt: 'Ławki'              },
+]
 
 export const Projects = () => {
   const { t } = useTranslation('wood')
@@ -52,28 +55,22 @@ export const Projects = () => {
           </div>
         </div>
 
-        {/* Bento grid */}
-        <div
-          className="bento"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gridTemplateRows: 'repeat(4, 200px)',
-            gridTemplateAreas: '"a a b c" "a a d e" "f g h i" "f j j i"',
-            gap: 6,
-          }}
+        {/* Masonry grid */}
+        <Masonry
+          breakpointCols={BREAKPOINTS}
+          className="wd-masonry"
+          columnClassName="wd-masonry-col"
         >
           {TILES.map((tile, i) => (
             <ProjectTile
-              key={tile.area}
+              key={tile.src}
               src={tile.src}
               alt={tile.alt}
-              area={tile.area}
               idx={i}
               onClick={() => setZoom(tile.src)}
             />
           ))}
-        </div>
+        </Masonry>
       </div>
 
       {/* Lightbox */}
@@ -112,19 +109,16 @@ export const Projects = () => {
       )}
 
       <style>{`
-        @media (max-width: 768px) {
-          .bento {
-            grid-template-columns: repeat(2, 1fr) !important;
-            grid-template-rows: repeat(7, 160px) !important;
-            grid-template-areas:
-              "a a"
-              "a a"
-              "b c"
-              "d e"
-              "f g"
-              "h i"
-              "j j" !important;
-          }
+        .wd-masonry {
+          display: flex;
+          gap: 6px;
+          width: 100%;
+        }
+        .wd-masonry-col {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          gap: 6px;
         }
       `}</style>
     </section>

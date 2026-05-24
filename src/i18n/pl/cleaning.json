@@ -89,6 +89,10 @@
       { "n": "03", "title": "DOŚWIADCZENIE", "text": "Wieloletnie doświadczenie w branży budowlanej i renowacyjnej pozwala nam dobrać właściwą metodę do każdego projektu.", "tag": "OD 2015" }
     ]
   },
+  "gallery": {
+    "label": "GALERIA",
+    "heading": "Pozostałe realizacje"
+  },
   "faq": {
     "label": "FAQ",
     "heading": "Często zadawane pytania",
