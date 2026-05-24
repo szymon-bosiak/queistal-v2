@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
 import { useInView } from '../../../hooks/useInView'
-import img8  from '../../../assets/showcase/8.jpg'
-import img5  from '../../../assets/showcase/5.jpg'
-import img1  from '../../../assets/showcase/1.jpg'
-import img14 from '../../../assets/showcase/14.jpg'
-import img4  from '../../../assets/showcase/4.jpg'
-import img10 from '../../../assets/showcase/10.jpg'
+import restorationDoor from '../../../assets/applications/restoration-door.jpg'
+import restoratioCobblestone from '../../../assets/applications/restoration-cobblestone.jpg'
+import restorationDrawer from '../../../assets/applications/restoration-drawer.jpg'
+import restorationWall from '../../../assets/applications/restoration-wall.jpg'
+import restorationMetal from '../../../assets/applications/restoration-metal.jpg'
+import restorationIndustrial from '../../../assets/applications/restoration-industrial.jpg'
 
-const APP_IMGS = [img8, img5, img1, img14, img4, img10]
+const APP_IMGS = [restoratioCobblestone, restorationMetal, restorationDrawer, restorationWall, restorationDoor, restorationIndustrial]
 const APP_TAGS = ['01', '02', '03', '04', '05', '06']
 
 interface AppItem { label: string; note: string }

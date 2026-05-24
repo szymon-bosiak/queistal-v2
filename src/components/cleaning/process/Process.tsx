@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next'
 import { useInView } from '../../../hooks/useInView'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
-import img3  from '../../../assets/showcase/3.jpg'
-import img13 from '../../../assets/showcase/13.jpg'
-import img15 from '../../../assets/showcase/15.jpg'
-import img14 from '../../../assets/showcase/14.jpg'
+import img1  from '../../../assets/process/1.jpg'
+import img2 from '../../../assets/process/2.jpg'
+import img3 from '../../../assets/process/3.jpg'
+import img4 from '../../../assets/process/4.jpg'
 
 const BP_GRID = {
   backgroundImage:
@@ -13,7 +13,7 @@ const BP_GRID = {
   backgroundSize: '48px 48px',
 }
 
-const STEP_IMGS = [img3, img13, img15, img14]
+const STEP_IMGS = [img1, img2, img3, img4]
 
 interface Step { n: string; title: string; desc: string }
 
@@ -35,7 +35,7 @@ const ProcRow = ({ step, img, idx, last }: ProcRowProps) => {
         display: 'grid',
         gridTemplateColumns: '80px 1fr 1fr',
         gap: '2rem',
-        alignItems: 'center',
+        alignItems: 'start',
         padding: '2.5rem 0',
         borderTop: '1px dashed rgba(227,235,212,.12)',
         borderBottom: last ? '1px dashed rgba(227,235,212,.12)' : 'none',
@@ -56,20 +56,40 @@ const ProcRow = ({ step, img, idx, last }: ProcRowProps) => {
           {step.desc}
         </p>
       </div>
-      <div style={{ position: 'relative', height: 160, overflow: 'hidden' }}>
+      <div style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
         <img
           src={img}
           alt={step.title}
           style={{
+            position: 'absolute',
+            inset: 0,
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            opacity: 0.7,
-            transform: seen ? 'scale(1)' : 'scale(1.1)',
-            transition: `transform 1.2s ${idx * 120 + 200}ms var(--ease)`,
+            objectPosition: 'center center',
+            opacity: 0.75,
+            transform: seen ? 'scale(1)' : 'scale(1.08)',
+            transition: `transform 1.4s ${idx * 120 + 200}ms var(--ease), opacity .6s ${idx * 120}ms var(--ease)`,
           }}
         />
-        <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(227,235,212,.15)' }} />
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          border: '1px dashed rgba(227,235,212,.15)',
+          background: 'linear-gradient(135deg, rgba(0,0,0,.18) 0%, transparent 60%)',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 10,
+          right: 12,
+          fontSize: 10,
+          letterSpacing: 2,
+          textTransform: 'uppercase',
+          color: 'rgba(227,235,212,.35)',
+          fontWeight: 300,
+        }}>
+          {step.n}
+        </div>
       </div>
     </div>
   )

@@ -3,17 +3,17 @@ import { BpBox } from '../../shared/bp-box'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
 import { Slider } from './components/slider'
-import img1 from '../../../assets/showcase/1.jpg'
-import img3 from '../../../assets/showcase/3.jpg'
-import img5 from '../../../assets/showcase/5.jpg'
-import img15 from '../../../assets/showcase/15.jpg'
-import img8 from '../../../assets/showcase/8.jpg'
-import img14 from '../../../assets/showcase/14.jpg'
+import beforeMetal from '../../../assets/before-after/metal-before.jpg'
+import afterMetal from '../../../assets/before-after/metal-after.jpg'
+import beforeBrick from '../../../assets/before-after/brick-before.jpg'
+import afterBrick from '../../../assets/before-after/brick-after.jpg'
+import beforeFacade from '../../../assets/before-after/facade-before.jpg'
+import afterFacade from '../../../assets/before-after/facade-after.jpg'
 
 const PAIRS = [
-  { before: img1,  after: img3  },
-  { before: img5,  after: img15 },
-  { before: img8,  after: img14 },
+  { before: beforeFacade,  after: afterFacade },
+  { before: beforeMetal,  after: afterMetal },
+  { before: beforeBrick,  after: afterBrick },
 ]
 
 interface PairLabel { label: string }
