@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { Nav } from '../../components/shared/nav'
 import { Footer } from '../../components/shared/footer'
 
-const SUPPORTED_LANGUAGES = ['pl', 'de'] as const
-export type Language = (typeof SUPPORTED_LANGUAGES)[number]
+const SUPPORTED_LANGUAGES = ['de'] as const
+export type Language = 'pl' | 'de'
 
 function LangLayout() {
   const { lang } = Route.useParams()
@@ -28,8 +28,12 @@ function LangLayout() {
 }
 
 export const Route = createFileRoute('/$lang')({
-  beforeLoad: ({ params }) => {
-    if (!SUPPORTED_LANGUAGES.includes(params.lang as Language)) {
+  beforeLoad: ({ params, location }) => {
+    if (params.lang === 'pl') {
+      const isStructures = location.pathname.includes('/structures')
+      throw redirect({ to: isStructures ? '/structures' : '/renovation' })
+    }
+    if (!SUPPORTED_LANGUAGES.includes(params.lang as (typeof SUPPORTED_LANGUAGES)[number])) {
       throw redirect({ to: '/' })
     }
   },

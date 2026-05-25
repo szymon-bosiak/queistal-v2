@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useNavigate, useParams, useRouterState } from '@tanstack/react-router'
+import { useNavigate, useRouterState } from '@tanstack/react-router'
 import { useTranslation } from 'react-i18next'
 import logoLight from '../../../assets/logos/queistal_logo_txt.svg'
 import logoDark from '../../../assets/logos/queistal_logo_txt_wht.svg'
@@ -32,11 +32,11 @@ const TEL2 = { num: '602 345 678', href: 'tel:+48602345678' }
 /* ─── Component ─────────────────────────────────────────────── */
 export const Nav = () => {
   const { t } = useTranslation('common')
-  const { lang } = useParams({ strict: false }) as { lang: 'pl' | 'de' }
   const navigate = useNavigate()
   const routerState = useRouterState()
   const currentPath = routerState.location.pathname
 
+  const lang: 'pl' | 'de' = currentPath.startsWith('/de') ? 'de' : 'pl'
   const isWood = !currentPath.includes('/renovation')
   const links = isWood ? WOOD_LINKS : CLEAN_LINKS
 
@@ -93,12 +93,20 @@ export const Nav = () => {
 
   const switchLang = (newLang: 'pl' | 'de') => {
     const service = isWood ? 'structures' : 'renovation'
-    navigate({ to: '/$lang/' + service, params: { lang: newLang } })
+    if (newLang === 'de') {
+      navigate({ to: '/$lang/' + service, params: { lang: 'de' } })
+    } else {
+      navigate({ to: '/' + service })
+    }
   }
 
   const switchService = (service: 'wood' | 'cleaning') => {
     const routeSegment = service === 'wood' ? 'structures' : 'renovation'
-    navigate({ to: '/$lang/' + routeSegment, params: { lang } })
+    if (lang === 'de') {
+      navigate({ to: '/$lang/' + routeSegment, params: { lang: 'de' } })
+    } else {
+      navigate({ to: '/' + routeSegment })
+    }
     window.scrollTo(0, 0)
     setMenuOpen(false)
   }

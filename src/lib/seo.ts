@@ -54,7 +54,7 @@ const SERVICE_SCHEMA_TYPE: Record<Service, string> = {
 }
 
 export const getCanonicalUrl = (lang: Language, service: Service) =>
-  `${SITE_URL}/${lang}/${service}`
+  lang === 'pl' ? `${SITE_URL}/${service}` : `${SITE_URL}/${lang}/${service}`
 
 export const getSeo = (lang: Language, service: Service) => {
   const seo = SEO_COPY[lang][service]
