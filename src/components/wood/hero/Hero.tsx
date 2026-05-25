@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import heroDesktop from '../../../assets/hero.jpg'
-import heroMobile from '../../../assets/hero-mobile.jpg'
+import hero from '../../../assets/hero.jpg'
 
 export const Hero = () => {
   const { t } = useTranslation('wood')
@@ -34,9 +33,9 @@ export const Hero = () => {
         }}
       >
         <picture>
-          <source media="(max-width: 768px)" srcSet={heroMobile} />
+          <source media="(max-width: 768px)" srcSet={hero} />
           <img
-            src={heroDesktop}
+            src={hero}
             alt="Queistal — architektura drewniana"
             onLoad={() => setLoaded(true)}
             style={{
