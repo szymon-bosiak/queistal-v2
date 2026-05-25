@@ -1,7 +1,9 @@
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BpBox } from '../../shared/bp-box'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
+import videoSrc from '../../../assets/video.mp4'
 
 const BP_GRID = {
   backgroundImage:
@@ -11,6 +13,16 @@ const BP_GRID = {
 
 export const Video = () => {
   const { t } = useTranslation('cleaning')
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [playing, setPlaying] = useState(false)
+  const [hov, setHov] = useState(false)
+
+  const toggle = () => {
+    const v = videoRef.current
+    if (!v) return
+    if (v.paused) { v.play(); setPlaying(true) }
+    else          { v.pause(); setPlaying(false) }
+  }
 
   return (
     <section
@@ -31,44 +43,57 @@ export const Video = () => {
 
         <Reveal kind="scale" delay={150}>
           <BpBox>
-            <div style={{ width: '100%', paddingTop: '56.25%', position: 'relative', background: 'rgba(227,235,212,.03)' }}>
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '1.5rem',
-                }}
-              >
-                <div
-                  style={{
-                    width: 72,
-                    height: 72,
-                    borderRadius: '50%',
-                    border: '1px dashed rgba(227,235,212,.3)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    animation: 'pulseRing 2.4s ease-out infinite',
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 0,
-                      height: 0,
+            <div
+              style={{ position: 'relative', cursor: 'pointer', lineHeight: 0 }}
+              onClick={toggle}
+              onMouseEnter={() => setHov(true)}
+              onMouseLeave={() => setHov(false)}
+            >
+              <video
+                ref={videoRef}
+                src={videoSrc}
+                loop
+                playsInline
+                style={{ width: '100%', display: 'block' }}
+                onPlay={() => setPlaying(true)}
+                onPause={() => setPlaying(false)}
+              />
+
+              {/* Overlay — fades out when playing and not hovered */}
+              <div style={{
+                position: 'absolute', inset: 0,
+                display: 'flex', flexDirection: 'column',
+                alignItems: 'center', justifyContent: 'center', gap: '1.5rem',
+                background: playing && !hov ? 'transparent' : 'rgba(6,8,5,.35)',
+                opacity: playing && !hov ? 0 : 1,
+                transition: 'opacity .3s, background .3s',
+                pointerEvents: 'none',
+              }}>
+                <div style={{
+                  width: 72, height: 72, borderRadius: '50%',
+                  border: '1px dashed rgba(227,235,212,.3)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  animation: !playing ? 'pulseRing 2.4s ease-out infinite' : 'none',
+                  transform: hov ? 'scale(1.1)' : 'scale(1)',
+                  transition: 'transform .25s var(--ease)',
+                }}>
+                  {playing ? (
+                    /* Pause icon — two bars */
+                    <div style={{ display: 'flex', gap: 5 }}>
+                      <div style={{ width: 4, height: 18, background: 'rgba(227,235,212,.7)', borderRadius: 1 }} />
+                      <div style={{ width: 4, height: 18, background: 'rgba(227,235,212,.7)', borderRadius: 1 }} />
+                    </div>
+                  ) : (
+                    /* Play triangle */
+                    <div style={{
+                      width: 0, height: 0,
                       borderTop: '12px solid transparent',
                       borderBottom: '12px solid transparent',
                       borderLeft: '20px solid rgba(227,235,212,.6)',
                       marginLeft: 6,
-                    }}
-                  />
+                    }} />
+                  )}
                 </div>
-                <p style={{ fontSize: 13, fontWeight: 400, letterSpacing: 3, opacity: 0.3, textTransform: 'uppercase' }}>
-                  {t('video.placeholder')}
-                </p>
               </div>
             </div>
           </BpBox>
