@@ -26,7 +26,7 @@ const ALT_BY_FILE: Record<string, string> = {
   "gazeebo.jpg": "Altana",
   "graduation-tower.jpg": "T\u0119\u017cnia",
   "lounge.jpg": "Strefa wypoczynku",
-  "pavilion-2.png": "Pawilon",
+  "pavilion-2.jpg": "Pawilon",
   "pavilion-3.jpg": "Zadaszenie",
   "pavilion-4.jpg": "Pawilon",
   "pavilion-5.jpg": "Pawilon",
