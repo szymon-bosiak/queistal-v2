@@ -1,4 +1,5 @@
 import { useInView } from '../../../hooks/useInView'
+import type { CSSProperties, ElementType, ReactNode } from 'react'
 
 type RevealKind = 'up' | 'left' | 'right' | 'scale' | 'fade'
 
@@ -11,11 +12,11 @@ const kindClass: Record<RevealKind, string> = {
 }
 
 interface RevealProps {
-  children: React.ReactNode
+  children: ReactNode
   kind?: RevealKind
   delay?: number
   className?: string
-  style?: React.CSSProperties
+  style?: CSSProperties
   as?: keyof React.JSX.IntrinsicElements
 }
 
@@ -25,14 +26,15 @@ export const Reveal = ({
   delay = 0,
   className = '',
   style,
-  as: Tag = 'div',
+  as,
 }: RevealProps) => {
   const [ref, seen] = useInView()
   const cls = kindClass[kind]
+  const Tag = (as ?? 'div') as ElementType
 
   return (
     <Tag
-      ref={ref as React.RefObject<HTMLDivElement>}
+      ref={ref}
       className={`${cls}${seen ? ' visible' : ''} ${className}`}
       style={{ animationDelay: `${delay}ms`, ...style }}
     >

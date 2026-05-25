@@ -5,8 +5,8 @@ interface Options {
   rootMargin?: string
 }
 
-export function useInView(opts: Options = {}): [React.RefObject<HTMLElement | null>, boolean] {
-  const ref = useRef<HTMLElement>(null)
+export function useInView<T extends HTMLElement = HTMLElement>(opts: Options = {}): [React.RefObject<T | null>, boolean] {
+  const ref = useRef<T>(null)
   const [seen, setSeen] = useState(false)
 
   useEffect(() => {

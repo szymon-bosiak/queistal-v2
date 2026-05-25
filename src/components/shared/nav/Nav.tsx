@@ -66,8 +66,11 @@ export const Nav = () => {
 
   /* Close mobile menu on route change */
   useEffect(() => {
-    setMenuOpen(false)
-    setContactOpen(false)
+    const timeoutId = window.setTimeout(() => {
+      setMenuOpen(false)
+      setContactOpen(false)
+    }, 0)
+    return () => window.clearTimeout(timeoutId)
   }, [currentPath])
 
   /* Lock body scroll when mobile menu open */

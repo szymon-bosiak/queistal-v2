@@ -100,8 +100,6 @@ export const Testimonials = () => {
           name={r.name}
           text={r.text}
           fade={fade}
-          onPrev={() => go(idx - 1)}
-          onNext={() => go(idx + 1)}
         />
 
         {/* Dots */}

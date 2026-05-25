@@ -86,8 +86,6 @@ export const Testimonials = () => {
           name={r.name}
           text={r.text}
           fade={fade}
-          onPrev={() => go(idx - 1)}
-          onNext={() => go(idx + 1)}
         />
 
         <div style={{ display: 'flex', gap: 6, marginTop: '2rem' }}>

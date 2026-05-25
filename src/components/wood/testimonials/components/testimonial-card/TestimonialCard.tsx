@@ -1,15 +1,11 @@
-import iconArrow from '../../../../../assets/icons/arrow.svg'
-
 interface TestimonialCardProps {
   initials: string
   name: string
   text: string
   fade: boolean
-  onPrev: () => void
-  onNext: () => void
 }
 
-export const TestimonialCard = ({ initials, name, text, fade, onPrev, onNext }: TestimonialCardProps) => (
+export const TestimonialCard = ({ initials, name, text, fade }: TestimonialCardProps) => (
   <div
     style={{
       background: 'rgba(255,255,255,.04)',

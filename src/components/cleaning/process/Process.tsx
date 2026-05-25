@@ -25,7 +25,7 @@ interface ProcRowProps {
 }
 
 const ProcRow = ({ step, img, idx, last }: ProcRowProps) => {
-  const [ref, seen] = useInView()
+  const [ref, seen] = useInView<HTMLDivElement>()
 
   return (
     <div
