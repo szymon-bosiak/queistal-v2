@@ -43,7 +43,19 @@ export const Nav = () => {
   const [scrolled, setScrolled]       = useState(false)
   const [menuOpen, setMenuOpen]       = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
+  const [navOverflow, setNavOverflow] = useState(false)
   const contactRef                    = useRef<HTMLDivElement>(null)
+  const linksRef                      = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = linksRef.current
+    if (!el) return
+    const check = () => setNavOverflow(el.scrollWidth > el.clientWidth)
+    check()
+    const ro = new ResizeObserver(check)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [links])
 
   /* Scroll listener */
   useEffect(() => {
@@ -114,57 +126,62 @@ export const Nav = () => {
       >
         <div style={{
           maxWidth: 1400, margin: '0 auto',
-          padding: '0 1.5rem', height: 64,
+          padding: '0 1.5rem', height: navOverflow ? 76 : 64,
+          transition: 'height .2s var(--ease)',
           display: 'flex', alignItems: 'center',
           justifyContent: 'space-between', gap: '1rem',
         }}>
 
-          {/* Logo */}
-          <a
-            href="#"
-            onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-            style={{ flexShrink: 0 }}
-          >
-            <img src={logo} alt="Queistal" style={{ height: 32, display: 'block' }} />
-          </a>
+          {/* Logo + Service switcher — pinned left on all viewports */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
+            <a
+              href="#"
+              onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+            >
+              <img src={logo} alt="Queistal" style={{ height: 32, display: 'block' }} />
+            </a>
 
-          {/* Service switcher pill */}
-          <div style={{
-            display: 'flex', borderRadius: 40, overflow: 'hidden', flexShrink: 0,
-            border: `1.5px solid ${isWood ? 'rgba(40,37,34,.22)' : 'rgba(255,255,255,.18)'}`,
-          }}>
-            {(['wood', 'cleaning'] as const).map(s => {
-              const active = isWood ? s === 'wood' : s === 'cleaning'
-              return (
-                <button
-                  key={s}
-                  onClick={() => switchService(s)}
-                  style={{
-                    padding: '6px 14px',
-                    fontSize: 11, fontWeight: 400, letterSpacing: 2,
-                    background: active
-                      ? (isWood ? 'var(--color-ink)' : 'var(--color-sage)')
-                      : 'transparent',
-                    color: active
-                      ? (isWood ? '#fff' : 'var(--color-ink)')
-                      : navColor,
-                    transition: 'background .2s, color .2s',
-                    fontFamily: 'Oswald, sans-serif',
-                    cursor: 'pointer', border: 'none',
-                  }}
-                >
-                  {t(`services.${s}`)}
-                </button>
-              )
-            })}
+            <div style={{
+              display: 'flex', borderRadius: 40, overflow: 'hidden',
+              border: `1.5px solid ${isWood ? 'rgba(40,37,34,.22)' : 'rgba(255,255,255,.18)'}`,
+            }}>
+              {(['wood', 'cleaning'] as const).map(s => {
+                const active = isWood ? s === 'wood' : s === 'cleaning'
+                return (
+                  <button
+                    key={s}
+                    onClick={() => switchService(s)}
+                    style={{
+                      padding: '6px 14px',
+                      fontSize: 11, fontWeight: 400, letterSpacing: 2,
+                      background: active
+                        ? (isWood ? 'var(--color-ink)' : 'var(--color-sage)')
+                        : 'transparent',
+                      color: active
+                        ? (isWood ? '#fff' : 'var(--color-ink)')
+                        : navColor,
+                      transition: 'background .2s, color .2s',
+                      fontFamily: 'Oswald, sans-serif',
+                      cursor: 'pointer', border: 'none',
+                    }}
+                  >
+                    {t(`services.${s}`)}
+                  </button>
+                )
+              })}
+            </div>
           </div>
 
           {/* Desktop nav links */}
           <div
+            ref={linksRef}
             className="desk-links"
             style={{
               display: 'flex', gap: '1.5rem',
-              flex: 1, justifyContent: 'center', overflow: 'hidden',
+              flex: 1, justifyContent: 'flex-start',
+              overflowX: 'auto', scrollbarWidth: 'thin',
+              scrollbarColor: `${isWood ? 'rgba(40,37,34,.25)' : 'rgba(255,255,255,.2)'} transparent`,
+              paddingBottom: navOverflow ? 1 : 0,
             }}
           >
             {links.map(({ key, anchor }) => (
@@ -380,48 +397,34 @@ export const Nav = () => {
           </a>
         </div>
 
-        {/* Service + lang switcher */}
-        <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          {(['wood', 'cleaning'] as const).map(s => (
-            <button
-              key={s}
-              onClick={() => switchService(s)}
-              style={{
-                padding: '7px 16px', borderRadius: 40,
-                fontSize: 11, fontWeight: 400, letterSpacing: 2,
-                border: '1px solid rgba(255,255,255,.22)',
-                background: (isWood ? s === 'wood' : s === 'cleaning') ? 'var(--color-sage)' : 'transparent',
-                color: (isWood ? s === 'wood' : s === 'cleaning') ? 'var(--color-ink)' : 'rgba(255,255,255,.6)',
-                transition: 'all .2s', fontFamily: 'Oswald, sans-serif', cursor: 'pointer',
-              }}
-            >
-              {t(`services.${s}`)}
-            </button>
+        {/* Lang switcher */}
+        <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: 8 }}>
+          {(['pl', 'de'] as const).map((l, i) => (
+            <React.Fragment key={l}>
+              {i > 0 && <span style={{ color: 'rgba(255,255,255,.2)', fontSize: 12 }}>|</span>}
+              <button
+                onClick={() => { switchLang(l); setMenuOpen(false) }}
+                style={{
+                  fontSize: 11, fontWeight: 400, letterSpacing: 2,
+                  color: lang === l ? '#fff' : 'rgba(255,255,255,.35)',
+                  fontFamily: 'Oswald, sans-serif',
+                  cursor: 'pointer', border: 'none', background: 'none', padding: 0,
+                  transition: 'color .2s',
+                }}
+              >
+                {l.toUpperCase()}
+              </button>
+            </React.Fragment>
           ))}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {(['pl', 'de'] as const).map((l, i) => (
-              <React.Fragment key={l}>
-                {i > 0 && <span style={{ color: 'rgba(255,255,255,.2)', fontSize: 12 }}>|</span>}
-                <button
-                  onClick={() => { switchLang(l); setMenuOpen(false) }}
-                  style={{
-                    fontSize: 11, fontWeight: 400, letterSpacing: 2,
-                    color: lang === l ? '#fff' : 'rgba(255,255,255,.35)',
-                    fontFamily: 'Oswald, sans-serif',
-                    cursor: 'pointer', border: 'none', background: 'none', padding: 0,
-                    transition: 'color .2s',
-                  }}
-                >
-                  {l.toUpperCase()}
-                </button>
-              </React.Fragment>
-            ))}
-          </div>
         </div>
       </div>
 
       {/* Breakpoint rules */}
       <style>{`
+        .desk-links::-webkit-scrollbar { height: 3px; }
+        .desk-links::-webkit-scrollbar-track { background: transparent; }
+        .desk-links::-webkit-scrollbar-thumb { background: rgba(150,150,150,.3); border-radius: 2px; }
+        .desk-links::-webkit-scrollbar-thumb:hover { background: rgba(150,150,150,.55); }
         @media (min-width: 900px) { .ham { display: none !important; } }
         @media (max-width: 899px) { .desk-links { display: none !important; } }
         @media (max-width: 600px) {

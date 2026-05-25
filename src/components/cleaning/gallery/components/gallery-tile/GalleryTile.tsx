@@ -25,8 +25,8 @@ export const GalleryTile = ({ src, alt, idx = 0, onClick }: GalleryTileProps) =>
         background: 'rgba(0,0,0,.4)',
         marginBottom: 5,
         opacity: seen ? 1 : 0,
-        transform: seen ? 'translateY(0) scale(1)' : 'translateY(20px) scale(.98)',
-        transition: `opacity .6s ${idx * 60}ms var(--ease), transform .6s ${idx * 60}ms var(--ease)`,
+        transform: seen ? 'translateY(0) scale(1)' : 'translateY(12px) scale(.99)',
+        transition: `opacity .35s ${Math.min(idx * 40, 160)}ms var(--ease), transform .35s ${Math.min(idx * 40, 160)}ms var(--ease)`,
       }}
     >
       <img
