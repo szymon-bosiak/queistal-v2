@@ -1,6 +1,4 @@
-import { useEffect } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
 import { Hero }         from '../../../components/cleaning/hero'
 import { Services }     from '../../../components/cleaning/services'
 import { BeforeAfter }  from '../../../components/cleaning/before-after'
@@ -11,11 +9,10 @@ import { Testimonials } from '../../../components/cleaning/testimonials'
 import { WhyUs }        from '../../../components/cleaning/why-us'
 import { Gallery }      from '../../../components/cleaning/gallery'
 import { Faq }          from '../../../components/cleaning/faq'
+import { getSeo }       from '../../../lib/seo'
+import type { Language } from '../route'
 
 const RenovationPage = () => {
-  const { t } = useTranslation('common')
-  useEffect(() => { document.title = t('pageTitle.cleaning') }, [t])
-
   return (
     <>
       <Hero />
@@ -33,5 +30,6 @@ const RenovationPage = () => {
 }
 
 export const Route = createFileRoute('/$lang/renovation/')({
+  head: ({ params }) => getSeo(params.lang as Language, 'renovation'),
   component: RenovationPage,
 })

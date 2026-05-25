@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://queistal.pl/pl/renovation</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://queistal.pl/pl/renovation" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://queistal.pl/de/renovation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queistal.pl/pl/renovation" />
+  </url>
+  <url>
+    <loc>https://queistal.pl/de/renovation</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://queistal.pl/pl/renovation" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://queistal.pl/de/renovation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queistal.pl/pl/renovation" />
+  </url>
+  <url>
+    <loc>https://queistal.pl/pl/structures</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://queistal.pl/pl/structures" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://queistal.pl/de/structures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queistal.pl/pl/structures" />
+  </url>
+  <url>
+    <loc>https://queistal.pl/de/structures</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://queistal.pl/pl/structures" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://queistal.pl/de/structures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queistal.pl/pl/structures" />
+  </url>
+</urlset>

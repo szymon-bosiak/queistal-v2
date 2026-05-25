@@ -13,6 +13,7 @@ function LangLayout() {
 
   useEffect(() => {
     i18n.changeLanguage(lang)
+    document.documentElement.lang = lang
   }, [lang, i18n])
 
   return (
