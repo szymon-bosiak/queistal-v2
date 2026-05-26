@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import Masonry from "react-masonry-css"
 import { GalleryTile } from "../../shared/gallery-tile"
 
-const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 1 }
+const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 2 }
 
 const constructionImages = import.meta.glob(
   "../../../assets/gallery/construction/*.{jpg,png}",

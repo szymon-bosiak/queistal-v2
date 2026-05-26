@@ -73,10 +73,28 @@ export const Nav = () => {
     return () => window.clearTimeout(timeoutId)
   }, [currentPath])
 
-  /* Lock body scroll when mobile menu open */
+  /* Lock body scroll when mobile menu open (iOS-safe) */
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (menuOpen) {
+      const scrollY = window.scrollY
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+    } else {
+      const scrollY = Math.abs(parseInt(document.body.style.top || '0'))
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      window.scrollTo(0, scrollY)
+    }
+    return () => {
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+    }
   }, [menuOpen])
 
   /* Close contact dropdown when clicking outside */

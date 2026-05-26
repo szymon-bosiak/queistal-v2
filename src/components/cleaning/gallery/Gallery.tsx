@@ -23,7 +23,7 @@ const BP_GRID = {
   backgroundSize: "48px 48px",
 }
 
-const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 1 }
+const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 2 }
 
 const TILES = [
   { src: g6, alt: "Drzwi" },
