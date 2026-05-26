@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import Masonry from "react-masonry-css"
-import { ProjectTile } from "./components/project-tile"
+import { GalleryTile } from "../../shared/gallery-tile"
 
 const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 1 }
 
@@ -106,11 +106,12 @@ export const Projects = () => {
           columnClassName="wd-masonry-col"
         >
           {TILES.map((tile, i) => (
-            <ProjectTile
+            <GalleryTile
               key={tile.src}
               src={tile.src}
               alt={tile.alt}
               idx={i}
+              variant="construction"
               onClick={() => setZoom(tile.src)}
             />
           ))}

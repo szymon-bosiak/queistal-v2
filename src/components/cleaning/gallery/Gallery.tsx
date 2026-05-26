@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import Masonry from "react-masonry-css"
 import { Reveal } from "../../shared/reveal/Reveal"
 import { WordReveal } from "../../shared/reveal/WordReveal"
-import { GalleryTile } from "./components/gallery-tile"
+import { GalleryTile } from "../../shared/gallery-tile"
 
 import g1 from "../../../assets/gallery/restoration/door.jpg"
 import g2 from "../../../assets/gallery/restoration/door-2.jpg"
@@ -91,6 +91,7 @@ export const Gallery = () => {
               src={tile.src}
               alt={tile.alt}
               idx={i}
+              variant="restoration"
               onClick={() => setZoom(tile.src)}
             />
           ))}
