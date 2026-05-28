@@ -3,7 +3,7 @@
     "label": "MODERNE RESTAURIERUNG",
     "line1": "LASER",
     "line2": "UND STRAHLEN",
-    "tagline": "Schonende und effektive Restaurierung von Stein-, Metall-, Holz- und Betonoberflächen.",
+    "tagline": "Laser, Korund-, Soda- oder Glasperlen-Strahlen — das passende Strahlmittel für jede Oberfläche.",
     "cta1": "UNSERE LEISTUNGEN",
     "cta2": "WIE WIR ARBEITEN",
     "spec": {
@@ -12,32 +12,62 @@
         { "l": "TECHNOLOGIE", "v": "Nd:YAG / CO₂ LASER" },
         { "l": "MATERIALIEN",  "v": "Stein, Metall, Holz, Beton" },
         { "l": "PRÄZISION",    "v": "Bis 0,1 mm" },
-        { "l": "METHODEN",     "v": "Laser + Sandstrahlen" }
+        { "l": "METHODEN",     "v": "Laser + 3 Strahlmittel" }
       ]
     }
   },
   "services": {
     "label": "LEISTUNGEN",
-    "heading": "Zwei Technologien — ein Ziel",
+    "heading": "Vier Technologien — ein Ziel",
+    "intro": "Jede Oberfläche erfordert einen anderen Ansatz. Wir haben den Laser für Präzision und drei Strahlmittel — vom aggressiven Korund bis zum sanften Soda. Das passende Mittel wählen wir gemeinsam nach der Besichtigung.",
     "priceLabel": "//GESCHÄTZTER PREIS",
     "priceUnit": "€ / m²",
     "priceDisclaimer": "Nettopreis · endgültige Kalkulation nach Besichtigung",
+    "bestForLabel": "//IDEAL FÜR",
     "items": [
       {
         "code": "01",
+        "method": "laser",
         "title": "LASERREINIGUNG",
         "sub": "Berührungslose Präzision",
+        "media": "Nd:YAG · CO₂",
         "price": "ab 120",
-        "desc": "Die Lasertechnologie entfernt Rost, Farbe und Verunreinigungen ohne Oberflächenkontakt. Ideal für historische Objekte, Metalle und architektonische Details.",
-        "specs": ["Ohne Chemikalien", "Präzision bis 0,1 mm", "Keine Oberflächenschäden", "Geräuscharmer Betrieb"]
+        "desc": "Die Lasertechnologie entfernt Rost, Farbe und Verunreinigungen ohne Kontakt mit der Oberfläche. Höchste Präzision bei historischen Objekten, Metallen und architektonischen Details.",
+        "bestFor": "Denkmäler · Edelmetalle · Details",
+        "specs": ["Ohne Chemikalien", "Präzision bis 0,1 mm", "Keine Untergrundschäden", "Leiser, sauberer Betrieb"]
       },
       {
         "code": "02",
-        "title": "SANDSTRAHLEN",
+        "method": "sand",
+        "title": "KORUNDSTRAHLEN",
         "sub": "Intensivreinigung",
+        "media": "Korund · Granat · Schlacke",
         "price": "ab 55",
-        "desc": "Das Strahlverfahren entfernt effektiv dickere Korrosions- und Beschichtungsschichten. Es bereitet die Oberflächen für neue Schutz- oder Farbbeschichtungen vor.",
-        "specs": ["Große Flächen", "Tiefenreinigung", "Vorbereitung für Beschichtungen", "Verschiedene Strahlmittel"]
+        "desc": "Der Strahlstrahl entfernt schnell dicke Korrosionsschichten, alte Beschichtungen und starke Verschmutzungen. Standardwahl für Stahlkonstruktionen, Betonfassaden und die Vorbereitung für neue Schutzschichten.",
+        "bestFor": "Stahl · Beton · Fassaden · Konstruktionen",
+        "specs": ["Große Flächen", "Tiefenreinigung", "Ideal für Schutzschichten", "Wirksam bei starkem Rost"]
+      },
+      {
+        "code": "03",
+        "method": "soda",
+        "title": "SODA-STRAHLEN",
+        "sub": "Sanft und ökologisch",
+        "media": "Natriumbikarbonat",
+        "price": "ab 85",
+        "desc": "Dasselbe Mittel, mit dem die Freiheitsstatue restauriert wurde. Löst sich in Wasser auf, erzeugt keine Hitze, hinterlässt keine Spuren auf dem Untergrund. Sicher für antikes Holz, Weichmetalle, historischen Ziegel und Graffiti.",
+        "bestFor": "Antiquitäten · Holz · Ziegel · Graffiti",
+        "specs": ["Sicher für Antiquitäten", "FDA · biologisch abbaubar", "Keine Metallverformung", "Neutralisiert Ruß und Schimmel"]
+      },
+      {
+        "code": "04",
+        "method": "glass",
+        "title": "GLASPERLEN-STRAHLEN",
+        "sub": "Satiniertes Finish",
+        "media": "Glasmikrokugeln",
+        "price": "ab 75",
+        "desc": "Sphärische Mikrokugeln reinigen und polieren in einem Durchgang — ohne die Maße des Bauteils zu verändern. Die Wahl für Fahrzeugrestaurierung, Motorteile, Edelstahl und Aluminium sowie die Vorbereitung für Pulverbeschichtung.",
+        "bestFor": "Oldtimer · Edelstahl · Aluminium",
+        "specs": ["Satiniertes, mattes Finish", "Erhält Bauteilmaße", "Ideal für Pulverbeschichtung", "Mehrfach verwendbares Strahlmittel"]
       }
     ]
   },
@@ -62,20 +92,20 @@
     "label": "ANWENDUNGEN",
     "heading": "Was wir reinigen",
     "items": [
-      { "label": "Stein & Beton",       "note": "Fassaden, Denkmäler, Gehwege" },
-      { "label": "Metalle",             "note": "Stahl, Gusseisen, Aluminium" },
-      { "label": "Holz",                "note": "Balken, Fassaden, Möbel" },
-      { "label": "Ziegel",              "note": "Historische Gebäude" },
-      { "label": "Historische Objekte", "note": "Restauratorische Präzision" },
-      { "label": "Industrie",           "note": "Maschinen, Anlagen" }
+      { "label": "Stein & Beton",       "note": "Fassaden, Denkmäler, Gehwege — Korund oder Laser" },
+      { "label": "Metalle",             "note": "Stahl, Gusseisen, Aluminium — Glas oder Soda" },
+      { "label": "Holz",                "note": "Balken, Fassaden, Möbel — Soda schützt die Maserung" },
+      { "label": "Ziegel",              "note": "Historische Gebäude — Soda oder Laser" },
+      { "label": "Historische Objekte", "note": "Restauratorische Präzision — Laser und Soda" },
+      { "label": "Industrie",           "note": "Maschinen, Anlagen — Korund und Glas" }
     ]
   },
   "process": {
     "label": "PROZESS",
     "heading": "So arbeiten wir",
     "steps": [
-      { "n": "01", "title": "Besichtigung & Angebot", "desc": "Wir kommen vor Ort, bewerten den Zustand der Oberfläche und wählen die Methode." },
-      { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Wir testen die Methode an einer Probe." },
+      { "n": "01", "title": "Besichtigung & Angebot", "desc": "Wir kommen vor Ort, bewerten den Zustand der Oberfläche und wählen Methode und Strahlmittel." },
+      { "n": "02", "title": "Vorbereitung",            "desc": "Wir sichern die Umgebung und bereiten das Equipment vor. Wir testen das gewählte Strahlmittel an einer Probe." },
       { "n": "03", "title": "Restaurierung",            "desc": "Wir führen den Auftrag plangemäß durch und überwachen kontinuierlich die Ergebnisse." },
       { "n": "04", "title": "Qualitätskontrolle",      "desc": "Wir prüfen das Endergebnis. Optional tragen wir Schutzschichten auf." }
     ]
@@ -84,9 +114,10 @@
     "label": "WARUM WIR",
     "heading": "Was uns auszeichnet",
     "items": [
-      { "n": "01", "title": "PRÄZISION",  "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten.", "tag": "0,1 MM" },
-      { "n": "02", "title": "ÖKOLOGIE",   "text": "Laserreinigung benötigt keine Chemikalien. Minimaler Abfall, keine schädlichen Emissionen.", "tag": "ZERO CHEM." },
-      { "n": "03", "title": "ERFAHRUNG",  "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche ermöglicht es uns, die richtige Methode für jedes Projekt zu wählen.", "tag": "SEIT 2015" }
+      { "n": "01", "title": "PRÄZISION",        "text": "Die Lasertechnologie ermöglicht die Entfernung von Verunreinigungen ohne Oberflächenschäden, auch bei empfindlichen historischen Objekten.", "tag": "0,1 MM" },
+      { "n": "02", "title": "WAHL DES MITTELS", "text": "Drei Strahlmittel — Korund, Soda und Glasperlen — plus Laser. Für jede Oberfläche wählen wir die passende Aggressivität und Oberflächengüte, ohne Kompromisse.", "tag": "4 METHODEN" },
+      { "n": "03", "title": "ÖKOLOGIE",         "text": "Soda ist biologisch abbaubar und ungiftig (FDA), Glas und Korund werden zur Wiederverwendung zurückgewonnen. Keine aggressiven Chemikalien, minimaler Abfall.", "tag": "ZERO CHEM." },
+      { "n": "04", "title": "ERFAHRUNG",        "text": "Langjährige Erfahrung in der Bau- und Renovierungsbranche — wir wählen die richtige Methode für jedes Projekt und jede Oberfläche.", "tag": "SEIT 2015" }
     ]
   },
   "gallery": {
@@ -97,10 +128,14 @@
     "label": "FAQ",
     "heading": "Häufig gestellte Fragen",
     "items": [
-      { "q": "Ist die Laserreinigung sicher für historische Oberflächen?", "a": "Ja — der Laser entfernt präzise nur Verunreinigungen, ohne das Grundmaterial zu beschädigen. Wir verwenden geeignete Parameter für jedes Material." },
-      { "q": "Wie läuft die Vorbereitung ab?", "a": "Kostenlose Besichtigung, Zustandsbewertung, Methodenwahl und Parametrierung. Wir testen an einer kleinen Probe vor Beginn der Arbeiten." },
-      { "q": "Wie lange dauert die Restaurierung?", "a": "Kleine Elemente — einige Stunden. Gebäudefassaden — einige Tage. Den genauen Termin nennen wir nach der Besichtigung." },
-      { "q": "Hinterlassen Sie Abfälle nach der Restaurierung?", "a": "Minimal. Beim Sandstrahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel. Wir räumen den Bereich nach der Arbeit immer auf." }
+      { "q": "Welche Methode soll ich wählen — Laser, Korund, Soda oder Glas?", "a": "Das hängt vom Material und Ziel ab. Korund — starker Rost, Beton, Konstruktionen. Soda — Antiquitäten, Holz, historischer Ziegel, Graffiti, Brandschäden. Glas — Stahl- und Aluminiumteile, Fahrzeugrestaurierung, Vorbereitung für Pulverbeschichtung. Laser — höchste Präzision bei empfindlichen Details. Nach der Besichtigung empfehlen wir das konkrete Mittel und die Parameter." },
+      { "q": "Beschädigt Soda-Strahlen wirklich nicht die Oberfläche?", "a": "Nein — Natriumbikarbonat zerfällt beim Aufprall und erodiert den Untergrund nicht. Dasselbe Mittel wurde u. a. für die Freiheitsstatue verwendet. Sicher für Holz, Weichmetalle (Kupfer, Aluminium), Ziegel, sogar Glas und Chrom. Zusätzlich neutralisiert es Ruß, Schimmel und unangenehme Gerüche nach Brandschäden." },
+      { "q": "Was bringt das Glasperlen-Strahlen?", "a": "Sphärische Kugeln schneiden die Oberfläche nicht — sie reinigen, polieren und verfestigen die Deckschicht leicht (Peening). Das Ergebnis ist ein glattes, mattes, satiniertes Finish, ohne die Maße des Bauteils zu verändern. Beste Wahl für Pulverbeschichtung, Motorteile, Oldtimer-Restaurierung und Edelstahlteile." },
+      { "q": "Sind diese Methoden ökologisch?", "a": "Soda ist biologisch abbaubar, ungiftig und FDA-zertifiziert. Glasmikrokugeln werden aus recyceltem Kalk-Natron-Glas hergestellt und können mehrfach verwendet werden. Korund wird ebenfalls zurückgewonnen. Keine Silikose, keine aggressiven Chemikalien." },
+      { "q": "Ist die Laserreinigung sicher für historische Oberflächen?", "a": "Ja — der Laser entfernt präzise nur Verunreinigungen, ohne das Grundmaterial zu beschädigen. Wir verwenden geeignete Parameter für jedes Material. Oft setzen wir ihn ergänzend zum Soda-Strahlen bei den empfindlichsten Details ein." },
+      { "q": "Wie läuft die Vorbereitung ab?", "a": "Kostenlose Besichtigung, Zustandsbewertung, Wahl von Methode und Strahlmittel. Wir testen das gewählte Mittel an einer Probe, bevor die Arbeiten beginnen." },
+      { "q": "Wie lange dauert die Restaurierung?", "a": "Kleine Elemente und Möbel — einige Stunden. Einzelnes Fahrzeug — 1–2 Tage. Gebäudefassaden — einige Tage. Den genauen Termin nennen wir nach der Besichtigung." },
+      { "q": "Hinterlassen Sie Abfälle nach der Restaurierung?", "a": "Minimal. Beim Strahlen verwenden wir Rückgewinnungssysteme für das Strahlmittel, Soda ist vollständig wasserlöslich. Wir räumen den Bereich nach der Arbeit immer auf." }
     ]
   },
   "testimonials": {
@@ -115,12 +150,12 @@
       {
         "initials": "AN",
         "name": "Anna Nowak",
-        "text": "Ich war überrascht, wie gut der Laser mit dem Rost an einem historischen Tor umgegangen ist. Die Arbeit wurde präzise und ohne Oberflächenschäden ausgeführt."
+        "text": "Ich war überrascht, wie gut das Soda-Strahlen die Farbe von einem historischen Tor entfernt hat. Die Arbeit wurde präzise und ohne Oberflächenschäden ausgeführt."
       },
       {
         "initials": "PW",
         "name": "Piotr Wiśniewski",
-        "text": "Schnelle Ausführung, faire Preise und ein Ergebnis, das die Erwartungen übertrifft. Definitiv das beste Restaurierungsunternehmen, mit dem ich je zusammengearbeitet habe."
+        "text": "Motor und Felgen meines Alfa Romeo — Glasperlen haben ein werksfrisches Ergebnis geliefert. Schnelle Ausführung, faire Preise. Das beste Unternehmen, mit dem ich je zusammengearbeitet habe."
       }
     ]
   },

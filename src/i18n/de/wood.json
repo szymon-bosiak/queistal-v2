@@ -12,7 +12,7 @@
   },
   "about": {
     "label": "ÜBER UNS",
-    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein.",
+    "body": "Seit 2015 arbeiten wir mit Holz. Wir realisieren neue Projekte und hauchen Antiquitäten neues Leben ein. Besonders empfindliche Oberflächen reinigen wir mit Soda-Strahlen — schonend für Holzmaserung und Patina.",
     "servicesLabel": "LEISTUNGEN",
     "services": {
       "antique": "Antiquitätenrenovierung",
@@ -106,6 +106,10 @@
       {
         "q": "Wie läuft die Kostenabschätzung ab?",
         "a": "Die Kostenabschätzung ist kostenlos. Beschreiben Sie das Projekt telefonisch oder per E-Mail — wir antworten innerhalb von 24 Stunden mit einem Terminvorschlag."
+      },
+      {
+        "q": "Wie reinigen Sie Antiquitäten vor der Restaurierung?",
+        "a": "Für empfindliche Antiquitäten, antikes Holz und Weichmetalle verwenden wir Soda-Strahlen. Soda löst sich in Wasser auf, erzeugt keine Hitze und hinterlässt keine Spuren auf dem Untergrund — dasselbe Verfahren, mit dem die Freiheitsstatue restauriert wurde. Details finden Sie auf unserer Restaurierungsseite."
       }
     ]
   }

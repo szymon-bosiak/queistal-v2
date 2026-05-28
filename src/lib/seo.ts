@@ -14,10 +14,10 @@ type SeoEntry = {
 const SEO_COPY: Record<Language, Record<Service, SeoEntry>> = {
   pl: {
     renovation: {
-      title: 'Queistal - Czyszczenie laserowe i piaskowanie',
+      title: 'Queistal — Czyszczenie laserowe, piaskowanie i renowacja powierzchni',
       description:
-        'Profesjonalna renowacja powierzchni: czyszczenie laserowe, piaskowanie i usuwanie rdzy, farb oraz nalotow z kamienia, metalu, drewna i betonu.',
-      serviceName: 'Czyszczenie laserowe i piaskowanie',
+        'Profesjonalna renowacja: czyszczenie laserowe i piaskowanie korundem, sodą lub mikrokulkami szklanymi. Usuwanie rdzy, farb i nalotów z kamienia, metalu, drewna i betonu.',
+      serviceName: 'Czyszczenie laserowe i piaskowanie powierzchni',
       imageAlt: 'Renowacja powierzchni Queistal',
     },
     structures: {
@@ -30,10 +30,10 @@ const SEO_COPY: Record<Language, Record<Service, SeoEntry>> = {
   },
   de: {
     renovation: {
-      title: 'Queistal - Laserreinigung und Sandstrahlen',
+      title: 'Queistal — Laserreinigung, Sandstrahlen und Oberflächenrestaurierung',
       description:
-        'Professionelle Oberflaechenrestaurierung: Laserreinigung, Sandstrahlen und Entfernung von Rost, Farbe und Belag auf Stein, Metall, Holz und Beton.',
-      serviceName: 'Laserreinigung und Sandstrahlen',
+        'Professionelle Restaurierung: Laserreinigung und Strahlen mit Korund, Soda oder Glasperlen. Entfernung von Rost, Farbe und Ablagerungen auf Stein, Metall, Holz und Beton.',
+      serviceName: 'Laserreinigung und Oberflächenstrahlen',
       imageAlt: 'Oberflaechenrestaurierung von Queistal',
     },
     structures: {

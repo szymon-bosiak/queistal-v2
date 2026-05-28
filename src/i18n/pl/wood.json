@@ -12,7 +12,7 @@
   },
   "about": {
     "label": "O NAS",
-    "body": "Od 2015 roku zajmujemy się drewnem. Wykonujemy nowe projekty, jak również dajemy nowe życie antykom.",
+    "body": "Od 2015 roku zajmujemy się drewnem. Wykonujemy nowe projekty, jak również dajemy nowe życie antykom. Najdelikatniejsze powierzchnie czyścimy sodą — bez ingerencji w słoje drewna i patynę.",
     "servicesLabel": "USŁUGI",
     "services": {
       "antique": "Renowacje antyków",
@@ -106,6 +106,10 @@
       {
         "q": "Jak wygląda wycena?",
         "a": "Wycena jest bezpłatna. Opisz projekt telefonicznie lub mailowo — odpiszemy w ciągu 24h z propozycją terminu oględzin."
+      },
+      {
+        "q": "Jak czyścicie powierzchnię antyku przed renowacją?",
+        "a": "Do delikatnych antyków, drewna antykwarycznego i miękkich metali używamy piaskowania sodą (soda blasting). Soda rozpuszcza się w wodzie, nie generuje ciepła i nie pozostawia śladu na podłożu — identyczna metoda, którą odnowiono Statuę Wolności. Szczegóły znajdziesz na stronie renowacji."
       }
     ]
   }
