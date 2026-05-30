@@ -3,13 +3,14 @@ interface TestimonialCardProps {
   name: string
   text: string
   fade: boolean
+  onLight?: boolean
 }
 
-export const TestimonialCard = ({ initials, name, text, fade }: TestimonialCardProps) => (
+export const TestimonialCard = ({ initials, name, text, fade, onLight }: TestimonialCardProps) => (
   <div
     style={{
-      background: 'rgba(255,255,255,.04)',
-      border: '1px dashed rgba(255,255,255,.12)',
+      background: onLight ? 'rgba(40,37,34,.06)' : 'rgba(255,255,255,.04)',
+      border: `1px dashed ${onLight ? 'rgba(40,37,34,.18)' : 'rgba(255,255,255,.12)'}`,
       padding: 'clamp(2rem,4vw,3.5rem)',
       opacity: fade ? 1 : 0,
       transition: 'opacity .2s',
@@ -26,14 +27,14 @@ export const TestimonialCard = ({ initials, name, text, fade }: TestimonialCardP
         width: 68,
         height: 68,
         borderRadius: '50%',
-        background: 'rgba(227,235,212,.1)',
-        border: '1px solid rgba(255,255,255,.12)',
+        background: onLight ? 'rgba(40,37,34,.08)' : 'rgba(227,235,212,.1)',
+        border: `1px solid ${onLight ? 'rgba(40,37,34,.18)' : 'rgba(255,255,255,.12)'}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: 20,
         fontWeight: 400,
-        color: 'var(--sage)',
+        color: onLight ? 'var(--ink)' : 'var(--sage)',
         flexShrink: 0,
       }}
     >

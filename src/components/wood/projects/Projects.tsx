@@ -64,7 +64,9 @@ export const Projects = () => {
       id="realizacje"
       style={{
         padding: "clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)",
-        background: "var(--ink)",
+        background: "var(--bp)",
+        backgroundImage: "linear-gradient(rgba(227,235,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(227,235,212,.04) 1px,transparent 1px)",
+        backgroundSize: "48px 48px",
         color: "var(--white)",
       }}
     >

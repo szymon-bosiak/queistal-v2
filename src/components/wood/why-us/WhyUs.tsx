@@ -16,7 +16,7 @@ export const WhyUs = () => {
     <section
       id="dlaczego-my"
       style={{
-        padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
+        padding: 'clamp(7rem,11vw,11rem) clamp(1.5rem,5vw,5rem)',
         background: 'var(--sage)',
         borderTop: '1px dashed rgba(40,37,34,.18)',
         position: 'relative',

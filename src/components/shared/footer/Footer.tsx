@@ -1,44 +1,26 @@
 import { useTranslation } from 'react-i18next'
 import { useRouterState } from '@tanstack/react-router'
+import logoDefault from '../../../assets/logos/queistal_logo_txt.svg'
 import logoWhite from '../../../assets/logos/queistal_logo_txt_wht.svg'
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
 const TEL2 = { num: '602 345 678', href: 'tel:+48602345678' }
 
-const WOOD_NAV = [
-  ['KONSTRUKCJE — O NAS',        '#about'],
-  ['KONSTRUKCJE — REALIZACJE',   '#projects'],
-  ['KONSTRUKCJE — DLACZEGO MY',  '#why-us'],
-  ['KONSTRUKCJE — TRANSFORMACJE','#transformations'],
-  ['KONSTRUKCJE — OPINIE',       '#testimonials'],
-  ['RENOWACJA — USŁUGI',  '#services'],
-  ['RENOWACJA — ZANIM I PO','#przed-i-po'],
-] as const
-
-const CLEAN_NAV = [
-  ['RENOWACJA — USŁUGI',    '#services'],
-  ['RENOWACJA — ZANIM I PO','#przed-i-po'],
-  ['RENOWACJA — ZASTOSOWANIA','#applications'],
-  ['RENOWACJA — PROCES',    '#process'],
-  ['RENOWACJA — OPINIE',    '#testimonials'],
-  ['KONSTRUKCJE — O NAS',          '#about'],
-  ['KONSTRUKCJE — REALIZACJE',     '#projects'],
-] as const
-
 export const Footer = () => {
   const { t } = useTranslation('common')
   const routerState = useRouterState()
-  const isWood = !routerState.location.pathname.includes('/renovation')
+  const isWood = routerState.location.pathname.includes('/konstrukcje')
 
-  const bg      = isWood ? 'var(--color-ink)' : '#0d1117'
-  const borderC = isWood ? 'rgba(255,255,255,.1)' : 'rgba(227,235,212,.1)'
+  const bg      = isWood ? 'var(--sage)' : '#0d1117'
+  const textC   = isWood ? 'rgb(10,13,18)' : '#fff'
+  const borderC = isWood ? 'rgba(10,13,18,.1)' : 'rgba(227,235,212,.1)'
+  const logo    = isWood ? logoDefault : logoWhite
   const dash    = (c: string) => `1px dashed ${c}`
-  const navRows = isWood ? WOOD_NAV : CLEAN_NAV
 
   const services: string[] = t('footer.services', { returnObjects: true }) as string[]
 
   return (
-    <footer style={{ background: bg, color: '#fff', fontFamily: 'Oswald, sans-serif' }}>
+    <footer style={{ background: bg, color: textC, fontFamily: 'Oswald, sans-serif' }}>
 
       {/* ── Contact hero band ── */}
       <div style={{ borderBottom: dash(borderC), padding: 'clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5rem)' }}>
@@ -57,7 +39,7 @@ export const Footer = () => {
             <a
               href={TEL1.href}
               style={{
-                fontSize: 'clamp(32px,5vw,60px)', fontWeight: 500, color: '#fff',
+                fontSize: 'clamp(32px,5vw,60px)', fontWeight: 500, color: textC,
                 letterSpacing: -1, display: 'inline-block', lineHeight: 1,
                 transition: 'opacity .2s, transform .3s var(--ease)',
                 textDecoration: 'none',
@@ -78,7 +60,7 @@ export const Footer = () => {
               style={{
                 fontSize: 'clamp(18px,2.5vw,28px)', fontWeight: 300, opacity: .45,
                 display: 'block', marginTop: '.4rem',
-                transition: 'opacity .2s', color: '#fff', textDecoration: 'none',
+                transition: 'opacity .2s', color: textC, textDecoration: 'none',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '.8' }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '.45' }}
@@ -90,7 +72,7 @@ export const Footer = () => {
               style={{
                 fontSize: 'clamp(13px,1.4vw,18px)', fontWeight: 300, opacity: .38,
                 marginTop: '.5rem', display: 'block',
-                transition: 'opacity .2s', color: '#fff', textDecoration: 'none',
+                transition: 'opacity .2s', color: textC, textDecoration: 'none',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '.7' }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '.38' }}
@@ -98,7 +80,7 @@ export const Footer = () => {
               queistal@gmail.com
             </a>
           </div>
-          <img src={logoWhite} alt="Queistal" style={{ height: 42, opacity: .85, flexShrink: 0 }} />
+          <img src={logo} alt="Queistal" style={{ height: 42, opacity: isWood ? 1 : .85, flexShrink: 0 }} />
         </div>
       </div>
 
@@ -149,20 +131,21 @@ export const Footer = () => {
           </div>
 
           {/* Scroll to top */}
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end',  }}>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               aria-label="Przewiń na górę"
               style={{
                 background: 'transparent',
                 border: `1px solid ${borderC}`,
-                color: '#fff',
+                color: textC,
                 width: 48, height: 48,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 cursor: 'pointer',
                 transition: 'opacity .2s, border-color .2s',
                 opacity: .5,
                 flexShrink: 0,
+                borderRadius: '100%'
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.opacity = '1' }}
               onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.opacity = '.5' }}

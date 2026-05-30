@@ -31,8 +31,8 @@ export const Testimonials = () => {
       id="opinie"
       style={{
         padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
-        background: 'var(--ink)',
-        color: 'var(--white)',
+        background: 'var(--sage)',
+        color: 'var(--ink)',
         position: 'relative',
       }}
     >
@@ -43,7 +43,7 @@ export const Testimonials = () => {
           top: 0,
           left: 'clamp(1.5rem,5vw,5rem)',
           right: 'clamp(1.5rem,5vw,5rem)',
-          borderTop: '1px dashed rgba(255,255,255,.12)',
+          borderTop: '1px dashed rgba(40,37,34,.18)',
         }}
       />
 
@@ -69,7 +69,7 @@ export const Testimonials = () => {
                   width: 44,
                   height: 44,
                   borderRadius: '50%',
-                  border: '1px solid rgba(255,255,255,.12)',
+                  border: '1px solid rgba(40,37,34,.18)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -77,7 +77,7 @@ export const Testimonials = () => {
                   cursor: 'pointer',
                   transition: 'background .2s',
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,.08)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(40,37,34,.08)' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent' }}
               >
                 <img
@@ -85,7 +85,7 @@ export const Testimonials = () => {
                   alt=""
                   style={{
                     width: 18,
-                    filter: 'brightness(0) invert(1)',
+                    filter: 'brightness(0)',
                     transform: d < 0 ? 'rotate(180deg)' : '',
                   }}
                 />
@@ -100,6 +100,7 @@ export const Testimonials = () => {
           name={r.name}
           text={r.text}
           fade={fade}
+          onLight
         />
 
         {/* Dots */}
@@ -112,7 +113,7 @@ export const Testimonials = () => {
                 width: i === idx ? 28 : 8,
                 height: 8,
                 borderRadius: 4,
-                background: i === idx ? 'var(--sage)' : 'rgba(227,235,212,.2)',
+                background: i === idx ? 'var(--ink)' : 'rgba(40,37,34,.2)',
                 transition: 'width .3s var(--ease)',
                 border: 'none',
                 cursor: 'pointer',
