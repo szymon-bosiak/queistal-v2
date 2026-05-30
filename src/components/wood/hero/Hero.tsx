@@ -124,20 +124,13 @@ export const Hero = () => {
                 fontWeight: 400,
                 letterSpacing: '1.5px',
                 borderRadius: 40,
-                transition: 'transform .3s var(--ease), box-shadow .3s var(--ease)',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLAnchorElement
-                el.style.transform = 'translateY(-2px)'
-                el.style.boxShadow = '0 8px 24px rgba(40,37,34,.25)'
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLAnchorElement
-                el.style.transform = ''
-                el.style.boxShadow = ''
+                border: '1px solid rgba(40,37,34,.2)',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease)',
               }}
             >
-              {t('hero.cta.projects')}
+              <span>{t('hero.cta.projects')}</span>
             </a>
             <a
               href="#o-nas"
@@ -189,6 +182,15 @@ export const Hero = () => {
           .whg > div:first-child .stag { color: var(--white) !important; }
           .hero-btn-primary { background: var(--sage) !important; color: var(--ink) !important; }
           .hero-btn-secondary { border-color: rgba(255,255,255,.55) !important; color: var(--white) !important; }
+        }
+        .hero-btn-primary:hover {
+          transform: translateY(-2px);
+          border-color: rgba(40,37,34,.45) !important;
+        }
+        @media (max-width: 768px) {
+          .hero-btn-primary:hover {
+            border-color: rgba(40,37,34,.45) !important;
+          }
         }
       `}</style>
     </section>

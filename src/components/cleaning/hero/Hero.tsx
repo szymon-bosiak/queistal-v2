@@ -78,11 +78,10 @@ export const Hero = () => {
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', opacity: 0, animation: 'fadeUp .8s .75s var(--ease) forwards' }}>
             <a
               href="#uslugi"
-              style={{ background: 'var(--sage)', color: 'var(--ink)', padding: '13px 28px', fontSize: 14, fontWeight: 500, letterSpacing: 1.5, borderRadius: 40, transition: 'transform .3s var(--ease), box-shadow .3s var(--ease)' }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(227,235,212,.18)' }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '' }}
+              className="cleaning-hero-btn-primary"
+              style={{ background: 'var(--sage)', color: 'var(--ink)', padding: '13px 28px', fontSize: 14, fontWeight: 500, letterSpacing: 1.5, borderRadius: 40, border: '1px solid rgba(227,235,212,.4)', position: 'relative', overflow: 'hidden', transition: 'transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease)' }}
             >
-              {t('hero.cta1')}
+              <span>{t('hero.cta1')}</span>
             </a>
             <a
               href="#proces"
@@ -116,6 +115,10 @@ export const Hero = () => {
 
       <style>{`
         .chi { grid-template-columns: 1fr 1fr; }
+        .cleaning-hero-btn-primary:hover {
+          transform: translateY(-2px);
+          border-color: rgba(227,235,212,.85) !important;
+        }
         @media (max-width: 768px) {
           .chi { grid-template-columns: 1fr !important; gap: 2rem !important; }
         }
