@@ -108,7 +108,8 @@ export const Footer = () => {
           className="fmid"
           style={{
             maxWidth: 1400, margin: '0 auto',
-            display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '2rem',
+            display: 'grid', gridTemplateColumns: '1fr 2fr auto', gap: '2rem',
+            alignItems: 'start',
           }}
         >
           {/* Company */}
@@ -123,38 +124,53 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
-          <div>
-            <div style={{ fontSize: 10, letterSpacing: 3, opacity: .28, marginBottom: '.75rem', fontWeight: 400 }}>
-              {t('footer.servicesLabel')}
-            </div>
-            {services.map((s, i) => (
-              <div key={i} style={{ fontSize: 13, fontWeight: 300, opacity: .38, marginBottom: '.35rem' }}>
-                {s}
+          {/* Services – two tight sub-columns */}
+          <div style={{ display: 'flex', gap: '2rem' }}>
+            <div>
+              <div style={{ fontSize: 10, letterSpacing: 3, opacity: .28, marginBottom: '.75rem', fontWeight: 400 }}>
+                {t('footer.servicesLabel')}
               </div>
-            ))}
+              {services.slice(0, 4).map((s, i) => (
+                <div key={i} style={{ fontSize: 13, fontWeight: 300, opacity: .38, marginBottom: '.35rem' }}>
+                  {s}
+                </div>
+              ))}
+            </div>
+            <div>
+              <div style={{ fontSize: 10, letterSpacing: 3, opacity: .28, marginBottom: '.75rem', fontWeight: 400, visibility: 'hidden' }}>
+                &nbsp;
+              </div>
+              {services.slice(4).map((s, i) => (
+                <div key={i} style={{ fontSize: 13, fontWeight: 300, opacity: .38, marginBottom: '.35rem' }}>
+                  {s}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <div style={{ fontSize: 10, letterSpacing: 3, opacity: .28, marginBottom: '.75rem', fontWeight: 400 }}>
-              {t('footer.navLabel')}
-            </div>
-            {navRows.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                style={{
-                  display: 'block', fontSize: 13, fontWeight: 300, opacity: .38,
-                  marginBottom: '.35rem', color: '#fff', textDecoration: 'none',
-                  transition: 'opacity .2s',
-                }}
-                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = '.38' }}
-              >
-                //{label}
-              </a>
-            ))}
+          {/* Scroll to top */}
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end' }}>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              aria-label="Przewiń na górę"
+              style={{
+                background: 'transparent',
+                border: `1px solid ${borderC}`,
+                color: '#fff',
+                width: 48, height: 48,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'opacity .2s, border-color .2s',
+                opacity: .5,
+                flexShrink: 0,
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.opacity = '1' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.opacity = '.5' }}
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="4 13 10 7 16 13" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
