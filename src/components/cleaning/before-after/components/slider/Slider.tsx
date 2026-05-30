@@ -84,13 +84,19 @@ export const Slider = ({ before, after, labelBefore, labelAfter, label }: Slider
           style={{
             position: 'absolute', top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
-            width: 36, height: 36, borderRadius: '50%',
+            width: 40, height: 40, borderRadius: '50%',
             background: 'var(--sage)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
+            gap: 2,
             animation: 'pulseRing 2s ease-out infinite',
           }}
         >
-          <span style={{ color: 'var(--ink)', fontSize: 14, fontWeight: 400, letterSpacing: -1 }}>◀▶</span>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="13 4 7 10 13 16" />
+          </svg>
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="7 4 13 10 7 16" />
+          </svg>
         </div>
       </motion.div>
 
