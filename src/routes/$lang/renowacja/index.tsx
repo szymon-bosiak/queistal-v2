@@ -29,7 +29,7 @@ const RenovationPage = () => {
   )
 }
 
-export const Route = createFileRoute('/$lang/renovation/')({
+export const Route = createFileRoute('/$lang/renowacja/')({
   head: ({ params }) => getSeo(params.lang as Language, 'renovation'),
   component: RenovationPage,
 })

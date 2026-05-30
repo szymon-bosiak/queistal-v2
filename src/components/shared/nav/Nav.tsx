@@ -16,14 +16,14 @@ const WOOD_LINKS = [
 
 const CLEAN_LINKS = [
   { key: 'nav.cleaning.services',       anchor: '#uslugi' },
-  { key: 'nav.cleaning.beforeAfter',    anchor: '#before-after' },
-  { key: 'nav.cleaning.transformation', anchor: '#video' },
+  { key: 'nav.cleaning.beforeAfter',    anchor: '#przed-i-po' },
+  { key: 'nav.cleaning.transformation', anchor: '#jak-dzialamy' },
   { key: 'nav.cleaning.applications',   anchor: '#zastosowania' },
   { key: 'nav.cleaning.process',        anchor: '#proces' },
-  { key: 'nav.cleaning.testimonials',   anchor: '#opinie-clean' },
-  { key: 'nav.cleaning.whyUs',          anchor: '#dlaczego-my-clean' },
+  { key: 'nav.cleaning.testimonials',   anchor: '#opinie' },
+  { key: 'nav.cleaning.whyUs',          anchor: '#dlaczego-my' },
   { key: 'nav.cleaning.gallery',        anchor: '#galeria' },
-  { key: 'nav.cleaning.faq',            anchor: '#faq-clean' },
+  { key: 'nav.cleaning.faq',            anchor: '#faq' },
 ] as const
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
@@ -37,7 +37,7 @@ export const Nav = () => {
   const currentPath = routerState.location.pathname
 
   const lang: 'pl' | 'de' = currentPath.startsWith('/de') ? 'de' : 'pl'
-  const isWood = !currentPath.includes('/renovation')
+  const isWood = !currentPath.includes('/renowacja')
   const links = isWood ? WOOD_LINKS : CLEAN_LINKS
 
   const [scrolled, setScrolled]       = useState(false)
@@ -110,7 +110,7 @@ export const Nav = () => {
   }, [contactOpen])
 
   const switchLang = (newLang: 'pl' | 'de') => {
-    const service = isWood ? 'structures' : 'renovation'
+    const service = isWood ? 'konstrukcje' : 'renowacja'
     if (newLang === 'de') {
       navigate({ to: '/$lang/' + service, params: { lang: 'de' } })
     } else {
@@ -119,7 +119,7 @@ export const Nav = () => {
   }
 
   const switchService = (service: 'wood' | 'cleaning') => {
-    const routeSegment = service === 'wood' ? 'structures' : 'renovation'
+    const routeSegment = service === 'wood' ? 'konstrukcje' : 'renowacja'
     if (lang === 'de') {
       navigate({ to: '/$lang/' + routeSegment, params: { lang: 'de' } })
     } else {
@@ -164,8 +164,8 @@ export const Nav = () => {
           {/* Logo + Service switcher — pinned left on all viewports */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
             <a
-              href="#"
-              onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+              href="."
+              onClick={e => { e.preventDefault(); window.history.replaceState(null, '', window.location.pathname); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             >
               <img src={logo} alt="Queistal" style={{ height: 32, display: 'block' }} />
             </a>

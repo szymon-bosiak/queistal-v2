@@ -7,6 +7,7 @@ import { Transformations } from '../../../components/wood/transformations'
 import { Testimonials }    from '../../../components/wood/testimonials'
 import { Faq }             from '../../../components/wood/faq'
 import { getSeo }          from '../../../lib/seo'
+import type { Language }   from '../route'
 
 const StructuresPage = () => {
   return (
@@ -22,7 +23,7 @@ const StructuresPage = () => {
   )
 }
 
-export const Route = createFileRoute('/_pl/structures/')({
-  head: () => getSeo('pl', 'structures'),
+export const Route = createFileRoute('/$lang/konstrukcje/')({
+  head: ({ params }) => getSeo(params.lang as Language, 'structures'),
   component: StructuresPage,
 })

@@ -101,7 +101,7 @@ export const WhyUs = () => {
 
   return (
     <section
-      id="dlaczego-my-clean"
+      id="dlaczego-my"
       style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: '#0a0d12', color: 'var(--white)' }}
     >
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>

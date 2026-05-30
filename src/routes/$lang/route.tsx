@@ -30,8 +30,8 @@ function LangLayout() {
 export const Route = createFileRoute('/$lang')({
   beforeLoad: ({ params, location }) => {
     if (params.lang === 'pl') {
-      const isStructures = location.pathname.includes('/structures')
-      throw redirect({ to: isStructures ? '/structures' : '/renovation' })
+      const isStructures = location.pathname.includes('/konstrukcje')
+      throw redirect({ to: isStructures ? '/konstrukcje' : '/renowacja' })
     }
     if (!SUPPORTED_LANGUAGES.includes(params.lang as (typeof SUPPORTED_LANGUAGES)[number])) {
       throw redirect({ to: '/' })

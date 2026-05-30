@@ -11,8 +11,8 @@ export const Route = createFileRoute('/')({
   beforeLoad: () => {
     const lang = detectLanguage()
     if (lang === 'de') {
-      throw redirect({ to: '/$lang/renovation', params: { lang: 'de' } })
+      throw redirect({ to: '/$lang/renowacja', params: { lang: 'de' } })
     }
-    throw redirect({ to: '/renovation' })
+    throw redirect({ to: '/renowacja' })
   },
 })

@@ -12,12 +12,12 @@ const WOOD_NAV = [
   ['KONSTRUKCJE — TRANSFORMACJE','#transformations'],
   ['KONSTRUKCJE — OPINIE',       '#testimonials'],
   ['RENOWACJA — USŁUGI',  '#services'],
-  ['RENOWACJA — ZANIM I PO','#before-after'],
+  ['RENOWACJA — ZANIM I PO','#przed-i-po'],
 ] as const
 
 const CLEAN_NAV = [
   ['RENOWACJA — USŁUGI',    '#services'],
-  ['RENOWACJA — ZANIM I PO','#before-after'],
+  ['RENOWACJA — ZANIM I PO','#przed-i-po'],
   ['RENOWACJA — ZASTOSOWANIA','#applications'],
   ['RENOWACJA — PROCES',    '#process'],
   ['RENOWACJA — OPINIE',    '#testimonials'],

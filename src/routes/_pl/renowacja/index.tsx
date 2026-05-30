@@ -28,7 +28,7 @@ const RenovationPage = () => {
   )
 }
 
-export const Route = createFileRoute('/_pl/renovation/')({
+export const Route = createFileRoute('/_pl/renowacja/')({
   head: () => getSeo('pl', 'renovation'),
   component: RenovationPage,
 })

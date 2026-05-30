@@ -13,10 +13,10 @@ import { Route as PlRouteImport } from './routes/_pl'
 import { Route as LangRouteRouteImport } from './routes/$lang/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang/index'
-import { Route as PlStructuresIndexRouteImport } from './routes/_pl/structures/index'
-import { Route as PlRenovationIndexRouteImport } from './routes/_pl/renovation/index'
-import { Route as LangStructuresIndexRouteImport } from './routes/$lang/structures/index'
-import { Route as LangRenovationIndexRouteImport } from './routes/$lang/renovation/index'
+import { Route as PlRenowacjaIndexRouteImport } from './routes/_pl/renowacja/index'
+import { Route as PlKonstrukcjeIndexRouteImport } from './routes/_pl/konstrukcje/index'
+import { Route as LangRenowacjaIndexRouteImport } from './routes/$lang/renowacja/index'
+import { Route as LangKonstrukcjeIndexRouteImport } from './routes/$lang/konstrukcje/index'
 
 const PlRoute = PlRouteImport.update({
   id: '/_pl',
@@ -37,24 +37,24 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const PlStructuresIndexRoute = PlStructuresIndexRouteImport.update({
-  id: '/structures/',
-  path: '/structures/',
+const PlRenowacjaIndexRoute = PlRenowacjaIndexRouteImport.update({
+  id: '/renowacja/',
+  path: '/renowacja/',
   getParentRoute: () => PlRoute,
 } as any)
-const PlRenovationIndexRoute = PlRenovationIndexRouteImport.update({
-  id: '/renovation/',
-  path: '/renovation/',
+const PlKonstrukcjeIndexRoute = PlKonstrukcjeIndexRouteImport.update({
+  id: '/konstrukcje/',
+  path: '/konstrukcje/',
   getParentRoute: () => PlRoute,
 } as any)
-const LangStructuresIndexRoute = LangStructuresIndexRouteImport.update({
-  id: '/structures/',
-  path: '/structures/',
+const LangRenowacjaIndexRoute = LangRenowacjaIndexRouteImport.update({
+  id: '/renowacja/',
+  path: '/renowacja/',
   getParentRoute: () => LangRouteRoute,
 } as any)
-const LangRenovationIndexRoute = LangRenovationIndexRouteImport.update({
-  id: '/renovation/',
-  path: '/renovation/',
+const LangKonstrukcjeIndexRoute = LangKonstrukcjeIndexRouteImport.update({
+  id: '/konstrukcje/',
+  path: '/konstrukcje/',
   getParentRoute: () => LangRouteRoute,
 } as any)
 
@@ -62,18 +62,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteRouteWithChildren
   '/$lang/': typeof LangIndexRoute
-  '/$lang/renovation/': typeof LangRenovationIndexRoute
-  '/$lang/structures/': typeof LangStructuresIndexRoute
-  '/renovation/': typeof PlRenovationIndexRoute
-  '/structures/': typeof PlStructuresIndexRoute
+  '/$lang/konstrukcje/': typeof LangKonstrukcjeIndexRoute
+  '/$lang/renowacja/': typeof LangRenowacjaIndexRoute
+  '/konstrukcje/': typeof PlKonstrukcjeIndexRoute
+  '/renowacja/': typeof PlRenowacjaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang': typeof LangIndexRoute
-  '/$lang/renovation': typeof LangRenovationIndexRoute
-  '/$lang/structures': typeof LangStructuresIndexRoute
-  '/renovation': typeof PlRenovationIndexRoute
-  '/structures': typeof PlStructuresIndexRoute
+  '/$lang/konstrukcje': typeof LangKonstrukcjeIndexRoute
+  '/$lang/renowacja': typeof LangRenowacjaIndexRoute
+  '/konstrukcje': typeof PlKonstrukcjeIndexRoute
+  '/renowacja': typeof PlRenowacjaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -81,10 +81,10 @@ export interface FileRoutesById {
   '/$lang': typeof LangRouteRouteWithChildren
   '/_pl': typeof PlRouteWithChildren
   '/$lang/': typeof LangIndexRoute
-  '/$lang/renovation/': typeof LangRenovationIndexRoute
-  '/$lang/structures/': typeof LangStructuresIndexRoute
-  '/_pl/renovation/': typeof PlRenovationIndexRoute
-  '/_pl/structures/': typeof PlStructuresIndexRoute
+  '/$lang/konstrukcje/': typeof LangKonstrukcjeIndexRoute
+  '/$lang/renowacja/': typeof LangRenowacjaIndexRoute
+  '/_pl/konstrukcje/': typeof PlKonstrukcjeIndexRoute
+  '/_pl/renowacja/': typeof PlRenowacjaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -92,28 +92,28 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang'
     | '/$lang/'
-    | '/$lang/renovation/'
-    | '/$lang/structures/'
-    | '/renovation/'
-    | '/structures/'
+    | '/$lang/konstrukcje/'
+    | '/$lang/renowacja/'
+    | '/konstrukcje/'
+    | '/renowacja/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$lang'
-    | '/$lang/renovation'
-    | '/$lang/structures'
-    | '/renovation'
-    | '/structures'
+    | '/$lang/konstrukcje'
+    | '/$lang/renowacja'
+    | '/konstrukcje'
+    | '/renowacja'
   id:
     | '__root__'
     | '/'
     | '/$lang'
     | '/_pl'
     | '/$lang/'
-    | '/$lang/renovation/'
-    | '/$lang/structures/'
-    | '/_pl/renovation/'
-    | '/_pl/structures/'
+    | '/$lang/konstrukcje/'
+    | '/$lang/renowacja/'
+    | '/_pl/konstrukcje/'
+    | '/_pl/renowacja/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -152,32 +152,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/_pl/structures/': {
-      id: '/_pl/structures/'
-      path: '/structures'
-      fullPath: '/structures/'
-      preLoaderRoute: typeof PlStructuresIndexRouteImport
+    '/_pl/renowacja/': {
+      id: '/_pl/renowacja/'
+      path: '/renowacja'
+      fullPath: '/renowacja/'
+      preLoaderRoute: typeof PlRenowacjaIndexRouteImport
       parentRoute: typeof PlRoute
     }
-    '/_pl/renovation/': {
-      id: '/_pl/renovation/'
-      path: '/renovation'
-      fullPath: '/renovation/'
-      preLoaderRoute: typeof PlRenovationIndexRouteImport
+    '/_pl/konstrukcje/': {
+      id: '/_pl/konstrukcje/'
+      path: '/konstrukcje'
+      fullPath: '/konstrukcje/'
+      preLoaderRoute: typeof PlKonstrukcjeIndexRouteImport
       parentRoute: typeof PlRoute
     }
-    '/$lang/structures/': {
-      id: '/$lang/structures/'
-      path: '/structures'
-      fullPath: '/$lang/structures/'
-      preLoaderRoute: typeof LangStructuresIndexRouteImport
+    '/$lang/renowacja/': {
+      id: '/$lang/renowacja/'
+      path: '/renowacja'
+      fullPath: '/$lang/renowacja/'
+      preLoaderRoute: typeof LangRenowacjaIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
-    '/$lang/renovation/': {
-      id: '/$lang/renovation/'
-      path: '/renovation'
-      fullPath: '/$lang/renovation/'
-      preLoaderRoute: typeof LangRenovationIndexRouteImport
+    '/$lang/konstrukcje/': {
+      id: '/$lang/konstrukcje/'
+      path: '/konstrukcje'
+      fullPath: '/$lang/konstrukcje/'
+      preLoaderRoute: typeof LangKonstrukcjeIndexRouteImport
       parentRoute: typeof LangRouteRoute
     }
   }
@@ -185,14 +185,14 @@ declare module '@tanstack/react-router' {
 
 interface LangRouteRouteChildren {
   LangIndexRoute: typeof LangIndexRoute
-  LangRenovationIndexRoute: typeof LangRenovationIndexRoute
-  LangStructuresIndexRoute: typeof LangStructuresIndexRoute
+  LangKonstrukcjeIndexRoute: typeof LangKonstrukcjeIndexRoute
+  LangRenowacjaIndexRoute: typeof LangRenowacjaIndexRoute
 }
 
 const LangRouteRouteChildren: LangRouteRouteChildren = {
   LangIndexRoute: LangIndexRoute,
-  LangRenovationIndexRoute: LangRenovationIndexRoute,
-  LangStructuresIndexRoute: LangStructuresIndexRoute,
+  LangKonstrukcjeIndexRoute: LangKonstrukcjeIndexRoute,
+  LangRenowacjaIndexRoute: LangRenowacjaIndexRoute,
 }
 
 const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
@@ -200,13 +200,13 @@ const LangRouteRouteWithChildren = LangRouteRoute._addFileChildren(
 )
 
 interface PlRouteChildren {
-  PlRenovationIndexRoute: typeof PlRenovationIndexRoute
-  PlStructuresIndexRoute: typeof PlStructuresIndexRoute
+  PlKonstrukcjeIndexRoute: typeof PlKonstrukcjeIndexRoute
+  PlRenowacjaIndexRoute: typeof PlRenowacjaIndexRoute
 }
 
 const PlRouteChildren: PlRouteChildren = {
-  PlRenovationIndexRoute: PlRenovationIndexRoute,
-  PlStructuresIndexRoute: PlStructuresIndexRoute,
+  PlKonstrukcjeIndexRoute: PlKonstrukcjeIndexRoute,
+  PlRenowacjaIndexRoute: PlRenowacjaIndexRoute,
 }
 
 const PlRouteWithChildren = PlRoute._addFileChildren(PlRouteChildren)

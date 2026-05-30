@@ -26,7 +26,7 @@ export const Video = () => {
 
   return (
     <section
-      id="video"
+      id="jak-dzialamy"
       style={{ background: 'var(--bp)', color: 'var(--white)', padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', ...BP_GRID }}
     >
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
