@@ -5,7 +5,7 @@ import { Nav } from '../../components/shared/nav'
 import { Footer } from '../../components/shared/footer'
 
 const SUPPORTED_LANGUAGES = ['de'] as const
-export type Language = 'pl' | 'de'
+export type { Language } from '../../lib/seo'
 
 function LangLayout() {
   const { lang } = Route.useParams()

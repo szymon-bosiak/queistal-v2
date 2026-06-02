@@ -1,4 +1,4 @@
-import type { Language } from '../routes/$lang/route'
+export type Language = 'pl' | 'de'
 
 const SITE_URL = 'https://queistal.pl'
 
@@ -48,13 +48,31 @@ const SEO_COPY: Record<Language, Record<Service, SeoEntry>> = {
 
 const LANGUAGES = ['pl', 'de'] as const
 
+export const SERVICES: Service[] = ['renovation', 'structures']
+export { LANGUAGES }
+
+/** Path part of the canonical URL (no domain), used for prerender output + sitemap. */
+export const getCanonicalPath = (lang: Language, service: Service) =>
+  getCanonicalUrl(lang, service).replace(SITE_URL, '') || '/'
+
 const SERVICE_SCHEMA_TYPE: Record<Service, string> = {
   renovation: 'HomeAndConstructionBusiness',
   structures: 'GeneralContractor',
 }
 
-export const getCanonicalUrl = (lang: Language, service: Service) =>
-  lang === 'pl' ? `${SITE_URL}/${service}` : `${SITE_URL}/${lang}/${service}`
+// Route slug for each service. Both languages share the Polish slug
+// (PL: /renowacja, DE: /de/renowacja) — must match src/routes.
+const SERVICE_SLUG: Record<Service, string> = {
+  renovation: 'renowacja',
+  structures: 'konstrukcje',
+}
+
+export const getCanonicalUrl = (lang: Language, service: Service) => {
+  const slug = SERVICE_SLUG[service]
+  return lang === 'pl' ? `${SITE_URL}/${slug}` : `${SITE_URL}/${lang}/${slug}`
+}
+
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`
 
 export const getSeo = (lang: Language, service: Service) => {
   const seo = SEO_COPY[lang][service]
@@ -71,10 +89,16 @@ export const getSeo = (lang: Language, service: Service) => {
       { property: 'og:title', content: seo.title },
       { property: 'og:description', content: seo.description },
       { property: 'og:url', content: canonical },
+      { property: 'og:image', content: OG_IMAGE },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:type', content: 'image/jpeg' },
       { property: 'og:image:alt', content: seo.imageAlt },
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: seo.title },
       { name: 'twitter:description', content: seo.description },
+      { name: 'twitter:image', content: OG_IMAGE },
+      { name: 'twitter:image:alt', content: seo.imageAlt },
       {
         'script:ld+json': {
           '@context': 'https://schema.org',
@@ -82,6 +106,9 @@ export const getSeo = (lang: Language, service: Service) => {
           name: `Queistal - ${seo.serviceName}`,
           url: canonical,
           description: seo.description,
+          image: OG_IMAGE,
+          logo: `${SITE_URL}/favicon.svg`,
+          priceRange: '$$',
           areaServed: ['PL', 'DE'],
           email: 'queistal@gmail.com',
           telephone: '+48782243640',
@@ -91,6 +118,17 @@ export const getSeo = (lang: Language, service: Service) => {
             postalCode: '67-320',
             addressLocality: 'Malomice',
             addressCountry: 'PL',
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 51.5588039,
+            longitude: 15.4484813,
+          },
+          openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '08:00',
+            closes: '16:00',
           },
         },
       },
