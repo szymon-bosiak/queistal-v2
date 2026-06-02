@@ -2,14 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "queistal-v2",
   "compatibility_date": "2026-05-29",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
   "observability": {
     "enabled": true
-  },
-  "assets": {
-    "directory": "dist",
-    "not_found_handling": "single-page-application"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+  }
 }

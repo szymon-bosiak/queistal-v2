@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "vite dev",
+    "build": "vite build && tsc -b",
     "lint": "eslint .",
-    "preview": "npm run build && wrangler dev",
+    "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.169.2",
+    "@tanstack/react-router": "^1.170.10",
+    "@tanstack/react-start": "^1.168.18",
     "framer-motion": "^12.38.0",
     "i18next": "^26.0.10",
     "react": "^19.2.5",
@@ -20,13 +21,13 @@
     "react-masonry-css": "^1.0.16"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.29.0",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.0",
-    "@tanstack/router-plugin": "^1.167.35",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.2.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
@@ -34,7 +35,7 @@
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
-    "vite": "^5.4.21",
+    "vite": "^8.0.14",
     "wrangler": "^4.95.0"
   }
 }
