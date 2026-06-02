@@ -4,7 +4,7 @@ import logoDefault from '../../../assets/logos/queistal_logo_txt.svg'
 import logoWhite from '../../../assets/logos/queistal_logo_txt_wht.svg'
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
-const TEL2 = { num: '602 345 678', href: 'tel:+48602345678' }
+const TEL2 = { num: '782 243 640', href: 'tel:+48782243640' }
 
 export const Footer = () => {
   const { t } = useTranslation('common')

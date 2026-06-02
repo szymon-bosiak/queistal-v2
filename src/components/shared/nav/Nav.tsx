@@ -27,7 +27,7 @@ const CLEAN_LINKS = [
 ] as const
 
 const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
-const TEL2 = { num: '602 345 678', href: 'tel:+48602345678' }
+const TEL2 = { num: '782 243 640', href: 'tel:+48602345678' }
 
 /* ─── Component ─────────────────────────────────────────────── */
 export const Nav = () => {
