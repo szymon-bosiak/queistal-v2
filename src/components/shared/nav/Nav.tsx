@@ -26,7 +26,7 @@ const CLEAN_LINKS = [
   { key: 'nav.cleaning.faq',            anchor: '#faq' },
 ] as const
 
-const TEL1 = { num: '782 243 640', href: 'tel:+48782243640' }
+const TEL1 = { num: '690 193 597', href: 'tel:+48782243640' }
 const TEL2 = { num: '782 243 640', href: 'tel:+48602345678' }
 
 /* ─── Component ─────────────────────────────────────────────── */
