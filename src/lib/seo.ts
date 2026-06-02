@@ -74,6 +74,13 @@ export const getCanonicalUrl = (lang: Language, service: Service) => {
 
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`
 
+// Realny obszar działania — sygnał dla local SEO (zamiast ogólnego PL/DE).
+// Niemcy: Brandenburgia i Saksonia graniczą z woj. lubuskim i dolnośląskim.
+const AREA_SERVED: Record<Language, string[]> = {
+  pl: ['województwo lubuskie', 'województwo dolnośląskie', 'Brandenburgia', 'Saksonia'],
+  de: ['Woiwodschaft Lebus', 'Woiwodschaft Niederschlesien', 'Brandenburg', 'Sachsen'],
+}
+
 export const getSeo = (lang: Language, service: Service) => {
   const seo = SEO_COPY[lang][service]
   const canonical = getCanonicalUrl(lang, service)
@@ -109,7 +116,7 @@ export const getSeo = (lang: Language, service: Service) => {
           image: OG_IMAGE,
           logo: `${SITE_URL}/favicon.svg`,
           priceRange: '$$',
-          areaServed: ['PL', 'DE'],
+          areaServed: AREA_SERVED[lang],
           email: 'queistal@gmail.com',
           telephone: '+48782243640',
           address: {
