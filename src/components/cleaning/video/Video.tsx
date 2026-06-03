@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { BpBox } from '../../shared/bp-box'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
-import videoSrc from '../../../assets/video.mp4'
+import videoSrc from '../../../assets/queistal_video.mp4'
 
 const BP_GRID = {
   backgroundImage:
@@ -29,20 +29,40 @@ export const Video = () => {
       id="jak-dzialamy"
       style={{ background: 'var(--bp)', color: 'var(--white)', padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', ...BP_GRID }}
     >
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <div
+        className="video-grid"
+        style={{
+          maxWidth: 1400,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'auto minmax(0,1fr)',
+          gap: 'clamp(2.5rem,6vw,7rem)',
+          alignItems: 'start',
+        }}
+      >
 
-        <Reveal kind="up">
-          <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
-            {t('video.label')}
-          </div>
-        </Reveal>
+        {/* Copy column */}
+        <div className="video-copy">
+          <Reveal kind="up">
+            <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
+              {t('video.label')}
+            </div>
+          </Reveal>
 
-        <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 500, textTransform: 'uppercase', marginBottom: '3rem' }}>
-          <WordReveal text={t('video.heading')} />
-        </h2>
+          <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 500, textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+            <WordReveal text={t('video.heading')} />
+          </h2>
 
-        <Reveal kind="scale" delay={150}>
-          <BpBox>
+          <Reveal kind="up" delay={120}>
+            <p style={{ fontSize: 'clamp(15px,1.3vw,18px)', fontWeight: 300, lineHeight: 1.8, opacity: 0.55, maxWidth: '46ch' }}>
+              {t('video.text')}
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Media column */}
+        <Reveal kind="scale" delay={150} className="video-media" style={{ display: 'flex', justifyContent: 'center' }}>
+          <BpBox style={{ display: 'inline-block' }}>
             <div
               style={{ position: 'relative', cursor: 'pointer', lineHeight: 0 }}
               onClick={toggle}
@@ -54,7 +74,8 @@ export const Video = () => {
                 src={videoSrc}
                 loop
                 playsInline
-                style={{ width: '100%', display: 'block' }}
+                className="video-el"
+                style={{ display: 'block', width: 'auto', height: 'auto', maxHeight: 'min(88vh, 820px)', maxWidth: '100%' }}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
               />
@@ -100,6 +121,15 @@ export const Video = () => {
         </Reveal>
 
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .video-grid { grid-template-columns: 1fr !important; }
+          .video-media { display: block !important; margin-top: 2.5rem; }
+          .video-media > div { display: block !important; }
+          .video-el { width: 100% !important; max-height: none !important; }
+        }
+      `}</style>
     </section>
   )
 }
