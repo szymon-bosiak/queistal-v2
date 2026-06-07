@@ -4,6 +4,7 @@ import { BpBox } from '../../shared/bp-box'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
 import videoSrc from '../../../assets/queistal_video.mp4'
+import videoPoster from '../../../assets/queistal_video_poster.jpg'
 
 const BP_GRID = {
   backgroundImage:
@@ -72,6 +73,8 @@ export const Video = () => {
               <video
                 ref={videoRef}
                 src={videoSrc}
+                poster={videoPoster}
+                preload="none"
                 loop
                 playsInline
                 className="video-el"
