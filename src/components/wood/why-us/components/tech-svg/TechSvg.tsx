@@ -26,11 +26,12 @@ export const TechSvg = () => (
     {Array.from({ length: 12 }, (_, i) => {
       const a = (i * 30 * Math.PI) / 180
       const r = 120, cx = 300, cy = 200
+      const round = (v: number) => Number(v.toFixed(3))
       return (
         <line
           key={i}
-          x1={cx + r * Math.cos(a)} y1={cy + r * Math.sin(a)}
-          x2={cx + (r + 10) * Math.cos(a)} y2={cy + (r + 10) * Math.sin(a)}
+          x1={round(cx + r * Math.cos(a))} y1={round(cy + r * Math.sin(a))}
+          x2={round(cx + (r + 10) * Math.cos(a))} y2={round(cy + (r + 10) * Math.sin(a))}
           stroke="rgba(40,37,34,1)" strokeWidth=".8"
         />
       )
