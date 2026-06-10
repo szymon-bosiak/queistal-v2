@@ -31,6 +31,11 @@ html {
   overflow-x: hidden;
 }
 
+/* Offset anchor targets so they aren't hidden behind the fixed nav */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 body {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
