@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { BpBox } from '../../shared/bp-box'
+import { GhostTitle } from '../../shared/ghost-title'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
 import { Slider } from './components/slider'
@@ -27,13 +28,16 @@ export const BeforeAfter = () => {
   return (
     <section
       id="przed-i-po"
+      className="grain"
       style={{
         padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
         background: '#0a0d12',
         color: 'var(--white)',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <GhostTitle text={t('beforeAfter.label')} side="left" top="4%" />
+      <div style={{ maxWidth: 1400, margin: '0 auto', position: 'relative' }}>
         <Reveal kind="up">
           <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>
             {t('beforeAfter.label')}

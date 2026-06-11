@@ -28,6 +28,7 @@ export const Video = () => {
   return (
     <section
       id="jak-dzialamy"
+      className="grain"
       style={{ background: 'var(--bp)', color: 'var(--white)', padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', ...BP_GRID }}
     >
       <div

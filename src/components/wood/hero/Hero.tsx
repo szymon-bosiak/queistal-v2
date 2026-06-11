@@ -1,12 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Marquee } from '../../shared/marquee'
 import hero from '../../../assets/hero.jpg'
+
+const SERVICE_KEYS = ['antique', 'construction', 'roofing', 'furniture', 'other'] as const
 
 export const Hero = () => {
   const { t } = useTranslation('wood')
   const [loaded, setLoaded] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  /* onLoad won't re-fire after hydration if the image is already cached */
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true)
+  }, [])
+
+  const tickerItems = SERVICE_KEYS.map(k => t(`about.services.${k}`))
 
   return (
+    <>
     <section
       style={{
         minHeight: '100svh',
@@ -37,17 +49,61 @@ export const Hero = () => {
           <img
             src={hero}
             alt="Queistal — architektura drewniana"
+            ref={imgRef}
             onLoad={() => setLoaded(true)}
+            className="wh-img"
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
               objectPosition: '40% center',
-              transform: loaded ? 'scale(1)' : 'scale(1.04)',
-              transition: 'transform 1.2s var(--ease)',
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity .8s var(--ease)',
             }}
           />
         </picture>
+
+        {/* Blueprint survey overlay — the photo is being "measured" */}
+        <svg
+          className="wh-annot"
+          viewBox="0 0 400 600"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+        >
+          {/* Rotating survey ring on the roof */}
+          <g style={{ transformOrigin: '252px 150px', animation: 'rotateSlow 40s linear infinite' }}>
+            <circle cx="252" cy="150" r="64" fill="none" stroke="rgba(255,255,255,.55)" strokeWidth="1" strokeDasharray="5 7" />
+            <circle cx="252" cy="150" r="44" fill="none" stroke="rgba(255,255,255,.3)" strokeWidth=".8" strokeDasharray="2 6" />
+          </g>
+          <circle cx="252" cy="150" r="2.5" fill="rgba(255,255,255,.85)" style={{ animation: 'pulseDot 1.8s ease-in-out infinite' }} />
+          <line x1="252" y1="150" x2="332" y2="100" stroke="rgba(255,255,255,.5)" strokeWidth=".8" strokeDasharray="3 4"
+            style={{ opacity: 0, animation: 'fadeIn 1s 1.4s var(--ease) forwards' }} />
+          <line x1="332" y1="100" x2="386" y2="100" stroke="rgba(255,255,255,.5)" strokeWidth=".8" strokeDasharray="3 4"
+            style={{ opacity: 0, animation: 'fadeIn 1s 1.6s var(--ease) forwards' }} />
+
+          {/* Vertical dimension line, right edge */}
+          <g stroke="rgba(255,255,255,.55)" strokeWidth="1" style={{ opacity: 0, animation: 'fadeIn 1.2s 1.1s var(--ease) forwards' }}>
+            <line x1="376" y1="240" x2="376" y2="560" strokeDasharray="6 5" />
+            <line x1="368" y1="240" x2="384" y2="240" />
+            <line x1="368" y1="560" x2="384" y2="560" />
+          </g>
+
+          {/* Horizontal dimension line, bottom */}
+          <g stroke="rgba(255,255,255,.55)" strokeWidth="1" style={{ opacity: 0, animation: 'fadeIn 1.2s 1.5s var(--ease) forwards' }}>
+            <line x1="80" y1="560" x2="340" y2="560" strokeDasharray="6 5" />
+            <line x1="80" y1="552" x2="80" y2="568" />
+            <line x1="340" y1="552" x2="340" y2="568" />
+          </g>
+
+          {/* Crosshair marks */}
+          {[[120, 110], [60, 320], [330, 420]].map(([x, y], i) => (
+            <g key={i} stroke="rgba(255,255,255,.7)" strokeWidth="1" style={{ animation: `crosshairBlink 4.5s ${i * 1.3}s ease-in-out infinite` }}>
+              <line x1={x - 7} y1={y} x2={x + 7} y2={y} />
+              <line x1={x} y1={y - 7} x2={x} y2={y + 7} />
+            </g>
+          ))}
+        </svg>
       </div>
 
       {/* Content — same 1400px inner container as cleaning */}
@@ -166,7 +222,13 @@ export const Hero = () => {
       </div>
 
       <style>{`
+        .wh-img { animation: kenBurns 28s ease-in-out infinite alternate; }
+        @keyframes kenBurns {
+          from { transform: scale(1)    translateX(0); }
+          to   { transform: scale(1.08) translateX(-1.5%); }
+        }
         @media (max-width: 768px) {
+          .wh-annot { display: none !important; }
           .whp { width: 100% !important; clip-path: none !important; }
           .whp::after {
             content: '';
@@ -194,5 +256,8 @@ export const Hero = () => {
         }
       `}</style>
     </section>
+
+    <Marquee items={tickerItems} tone="ink" duration={55} />
+    </>
   )
 }

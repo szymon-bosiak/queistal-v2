@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import Masonry from "react-masonry-css"
 import { GalleryTile } from "../../shared/gallery-tile"
+import { GhostTitle } from "../../shared/ghost-title"
 
 const BREAKPOINTS = { default: 4, 1100: 3, 768: 2, 480: 2 }
 
@@ -62,15 +63,18 @@ export const Projects = () => {
   return (
     <section
       id="realizacje"
+      className="grain"
       style={{
         padding: "clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)",
         background: "var(--bp)",
         backgroundImage: "linear-gradient(rgba(227,235,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(227,235,212,.04) 1px,transparent 1px)",
         backgroundSize: "48px 48px",
         color: "var(--white)",
+        overflow: "hidden",
       }}
     >
-      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+      <GhostTitle text={t("projects.label")} side="right" top="2%" />
+      <div style={{ maxWidth: 1400, margin: "0 auto", position: "relative" }}>
         {/* Header */}
         <div
           style={{

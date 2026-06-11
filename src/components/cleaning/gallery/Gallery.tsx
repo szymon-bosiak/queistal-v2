@@ -4,6 +4,7 @@ import Masonry from "react-masonry-css"
 import { Reveal } from "../../shared/reveal/Reveal"
 import { WordReveal } from "../../shared/reveal/WordReveal"
 import { GalleryTile } from "../../shared/gallery-tile"
+import { GhostTitle } from "../../shared/ghost-title"
 
 import g1 from "../../../assets/gallery/restoration/door.jpg"
 import g2 from "../../../assets/gallery/restoration/door-2.jpg"
@@ -46,14 +47,17 @@ export const Gallery = () => {
   return (
     <section
       id="galeria"
+      className="grain"
       style={{
         padding: "clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)",
         background: "var(--bp)",
         color: "var(--white)",
+        overflow: "hidden",
         ...BP_GRID,
       }}
     >
-      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+      <GhostTitle text={t("gallery.label")} side="left" top="3%" />
+      <div style={{ maxWidth: 1400, margin: "0 auto", position: "relative" }}>
         {/* Header */}
         <div style={{ marginBottom: "3rem" }}>
           <Reveal kind="up">

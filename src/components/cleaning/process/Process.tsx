@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useInView } from '../../../hooks/useInView'
 import { Reveal } from '../../shared/reveal/Reveal'
@@ -98,10 +99,38 @@ const ProcRow = ({ step, img, idx, last }: ProcRowProps) => {
 export const Process = () => {
   const { t } = useTranslation('cleaning')
   const steps = t('process.steps', { returnObjects: true }) as Step[]
+  const lineRef = useRef<HTMLDivElement>(null)
+  const rowsRef = useRef<HTMLDivElement>(null)
+
+  /* Vertical guide line draws itself as the steps scroll through the viewport */
+  useEffect(() => {
+    let raf = 0
+    const update = () => {
+      const line = lineRef.current
+      const rows = rowsRef.current
+      if (!line || !rows) return
+      const r = rows.getBoundingClientRect()
+      const p = (window.innerHeight * 0.75 - r.top) / r.height
+      line.style.transform = `scaleY(${Math.min(Math.max(p, 0), 1)})`
+    }
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      cancelAnimationFrame(raf)
+    }
+  }, [])
 
   return (
     <section
       id="proces"
+      className="grain"
       style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: 'var(--bp)', color: 'var(--white)', ...BP_GRID }}
     >
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
@@ -114,7 +143,21 @@ export const Process = () => {
           <WordReveal text={t('process.heading')} />
         </h2>
 
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div ref={rowsRef} style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
+          {/* Scroll-drawn guide line — sits in the gap between the number
+              column and the content, so it never overlaps the numbers */}
+          <div
+            ref={lineRef}
+            className="proc-line"
+            aria-hidden
+            style={{
+              position: 'absolute', top: '2.5rem', bottom: '2.5rem', left: 96, width: 1,
+              background: 'linear-gradient(to bottom, rgba(227,235,212,.55), rgba(227,235,212,.15))',
+              transform: 'scaleY(0)',
+              transformOrigin: 'top',
+              willChange: 'transform',
+            }}
+          />
           {steps.map((step, i) => (
             <ProcRow key={i} step={step} img={STEP_IMGS[i]} idx={i} last={i === steps.length - 1} />
           ))}
@@ -123,6 +166,7 @@ export const Process = () => {
 
       <style>{`
         @media (max-width: 768px) {
+          .proc-line { display: none !important; }
           .proc-row { grid-template-columns: 60px 1fr !important; }
           .proc-row > div:last-child { display: none !important; }
         }

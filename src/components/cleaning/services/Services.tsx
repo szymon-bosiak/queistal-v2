@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BpBox } from '../../shared/bp-box'
+import { GhostTitle } from '../../shared/ghost-title'
 import { Reveal } from '../../shared/reveal/Reveal'
 import { WordReveal } from '../../shared/reveal/WordReveal'
 import { useInView } from '../../../hooks/useInView'
@@ -171,7 +172,7 @@ const CleanServiceCard = ({ s, idx, priceLabel, priceUnit, priceDisclaimer, best
         transition: `opacity .9s ${idx * 120}ms var(--ease), transform .9s ${idx * 120}ms var(--ease)`,
       }}
     >
-      <BpBox style={{ padding: 0, color: 'var(--white)', overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <BpBox style={{ padding: 0, color: 'var(--white)', overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column', background: hov ? 'rgba(227,235,212,.025)' : 'transparent', transition: 'background .4s var(--ease), transform .4s var(--ease)', transform: hov ? 'translateY(-6px)' : 'translateY(0)' }}>
 
         {/* ── Visual header ── */}
         <div
@@ -264,9 +265,11 @@ export const Services = () => {
   return (
     <section
       id="uslugi"
-      style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: 'var(--bp)', color: 'var(--white)', ...BP_GRID }}
+      className="grain"
+      style={{ padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)', background: 'var(--bp)', color: 'var(--white)', overflow: 'hidden', ...BP_GRID }}
     >
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <GhostTitle text={t('services.label')} side="right" top="2%" />
+      <div style={{ maxWidth: 1400, margin: '0 auto', position: 'relative' }}>
 
         <Reveal kind="up">
           <div className="stag" style={{ marginBottom: '1rem', color: 'var(--sage)', opacity: 0.5 }}>

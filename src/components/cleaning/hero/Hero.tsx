@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { BpBox } from '../../shared/bp-box'
+import { Marquee } from '../../shared/marquee'
 
 const BP_GRID = {
   backgroundImage:
@@ -12,9 +13,12 @@ interface SpecRow { l: string; v: string }
 export const Hero = () => {
   const { t } = useTranslation('cleaning')
   const rows = t('hero.spec.rows', { returnObjects: true }) as SpecRow[]
+  const tickerItems = (t('services.items', { returnObjects: true }) as { title: string }[]).map(i => i.title)
 
   return (
+    <>
     <section
+      className="grain"
       style={{
         minHeight: '100svh',
         background: 'var(--bp)',
@@ -28,6 +32,18 @@ export const Hero = () => {
         ...BP_GRID,
       }}
     >
+      {/* Horizontal scanline travelling down the blueprint */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute', left: 0, width: '100%', height: 1,
+          background: 'linear-gradient(to right, transparent, rgba(227,235,212,.4), transparent)',
+          boxShadow: '0 0 18px 1px rgba(227,235,212,.2)',
+          animation: 'scanY 13s linear infinite',
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Ghost watermark */}
       <div
         style={{
@@ -103,10 +119,10 @@ export const Hero = () => {
             {rows.map((row, i) => (
               <div
                 key={i}
-                style={{ display: 'flex', justifyContent: 'space-between', padding: '.8rem 0', borderBottom: '1px dashed rgba(227,235,212,.1)', fontSize: 14 }}
+                style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1.5rem', padding: '.8rem 0', borderBottom: '1px dashed rgba(227,235,212,.1)', fontSize: 14 }}
               >
-                <span style={{ fontWeight: 400, letterSpacing: 1, opacity: 0.5 }}>{row.l}</span>
-                <span style={{ fontWeight: 300, opacity: 0.85 }}>{row.v}</span>
+                <span style={{ fontWeight: 400, letterSpacing: 1, opacity: 0.5, flexShrink: 0 }}>{row.l}</span>
+                <span style={{ fontWeight: 300, opacity: 0.85, textAlign: 'right' }}>{row.v}</span>
               </div>
             ))}
           </BpBox>
@@ -119,8 +135,8 @@ export const Hero = () => {
           transform: translateY(-2px);
           border-color: rgba(227,235,212,.85) !important;
         }
-        @media (max-width: 768px) {
-          .chi { grid-template-columns: 1fr !important; gap: 2rem !important; }
+        @media (max-width: 940px) {
+          .chi { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
         }
         @keyframes floatY {
           0%,100% { transform: translateY(0); }
@@ -128,5 +144,8 @@ export const Hero = () => {
         }
       `}</style>
     </section>
+
+    <Marquee items={tickerItems} tone="sage" duration={55} />
+    </>
   )
 }
