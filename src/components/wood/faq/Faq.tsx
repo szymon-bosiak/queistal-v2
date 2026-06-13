@@ -13,6 +13,7 @@ export const Faq = () => {
   return (
     <section
       id="faq"
+      className="grain"
       style={{
         padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
         background: 'var(--bp)',

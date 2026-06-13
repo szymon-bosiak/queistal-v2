@@ -4,7 +4,7 @@
 @theme {
   --font-oswald: 'Oswald', sans-serif;
   --color-sage: #E3EBD4;
-  --color-ink: #282522;
+  --color-ink: #0a0d12;
   --color-blueprint: #0d1117;
   --color-white: #ffffff;
   --ease: cubic-bezier(.4, 0, .2, 1);
@@ -13,7 +13,7 @@
 /* ── Short-name aliases matching v8 design tokens ── */
 :root {
   --sage:  #E3EBD4;
-  --ink:   #282522;
+  --ink:   #0a0d12;
   --bp:    #0d1117;
   --white: #fff;
 }
@@ -41,7 +41,7 @@ body {
   font-weight: 300;
   font-size: 19px;
   background-color: #E3EBD4;
-  color: #282522;
+  color: #0a0d12;
   -webkit-font-smoothing: antialiased;
 }
 

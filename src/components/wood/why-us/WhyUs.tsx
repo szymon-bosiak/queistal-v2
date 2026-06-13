@@ -18,7 +18,7 @@ export const WhyUs = () => {
       style={{
         padding: 'clamp(7rem,11vw,11rem) clamp(1.5rem,5vw,5rem)',
         background: 'var(--sage)',
-        borderTop: '1px dashed rgba(40,37,34,.18)',
+        borderTop: '1px dashed rgba(10,13,18,.18)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -41,7 +41,7 @@ export const WhyUs = () => {
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '1px',
-            background: 'rgba(40,37,34,.18)',
+            background: 'rgba(10,13,18,.18)',
           }}
         >
           {items.map((item, i) => (

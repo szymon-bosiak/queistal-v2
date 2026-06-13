@@ -7,6 +7,12 @@
     "testimonials": "//OPINIE",
     "faq": "//FAQ",
     "contact": "KONTAKT",
+    "contactPopup": {
+      "title": "//KONTAKT",
+      "primaryPhone": "TELEFON GŁÓWNY",
+      "phone": "TELEFON",
+      "email": "E-MAIL"
+    },
     "cleaning": {
       "services": "//USŁUGI",
       "beforeAfter": "//PRZED I PO",

@@ -7,6 +7,12 @@
     "testimonials": "//MEINUNGEN",
     "faq": "//FAQ",
     "contact": "KONTAKT",
+    "contactPopup": {
+      "title": "//KONTAKT",
+      "primaryPhone": "HAUPTNUMMER",
+      "phone": "TELEFON",
+      "email": "E-MAIL"
+    },
     "cleaning": {
       "services": "//LEISTUNGEN",
       "beforeAfter": "//VORHER & NACHHER",
@@ -28,7 +34,7 @@
     "phoneSecondaryHref": "tel:+48602345678",
     "email": "queistal@gmail.com",
     "rights": "© 2026 Queis Tal. Alle Rechte vorbehalten.",
-    "credit": "Projekt i realizacja: Szymon Bosiak",
+    "credit": "Design und Umsetzung: Szymon Bosiak",
     "creditHref": "https://www.linkedin.com/in/szymon-bosiak-b228151a4/",
     "contactLabel": "//KONTAKTIEREN SIE UNS",
     "companyLabel": "FIRMA",

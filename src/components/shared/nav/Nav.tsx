@@ -131,22 +131,23 @@ export const Nav = () => {
 
   /* Colors */
   const navBg   = scrolled
-    ? (isWood ? 'rgba(227,235,212,.95)' : 'rgba(13,17,23,.95)')
-    : (isWood ? 'rgba(227,235,212,.6)'  : 'rgba(13,17,23,.65)')
+    ? (isWood ? 'rgba(227,235,212,.95)' : 'rgba(10,13,18,.95)')
+    : (isWood ? 'rgba(227,235,212,.6)'  : 'rgba(10,13,18,.65)')
   const navColor = isWood ? 'var(--color-ink)' : '#fff'
-  const bd       = isWood ? 'rgba(40,37,34,.38)' : 'rgba(255,255,255,.28)'
+  const bd       = isWood ? 'rgba(10,13,18,.38)' : 'rgba(255,255,255,.28)'
   const logo     = isWood ? logoLight : logoDark
 
   return (
     <>
       <nav
+        className={isWood ? undefined : 'grain'}
         style={{
           position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 200,
           background: navBg,
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           boxShadow: scrolled
-            ? `0 1px 0 ${isWood ? 'rgba(40,37,34,.15)' : 'rgba(255,255,255,.08)'}`
+            ? `0 1px 0 ${isWood ? 'rgba(10,13,18,.15)' : 'rgba(255,255,255,.08)'}`
             : 'none',
           transition: 'background .35s var(--ease)',
           color: navColor,
@@ -172,7 +173,7 @@ export const Nav = () => {
 
             <div style={{
               display: 'flex', borderRadius: 40, overflow: 'hidden',
-              border: `1.5px solid ${isWood ? 'rgba(40,37,34,.22)' : 'rgba(255,255,255,.18)'}`,
+              border: `1.5px solid ${isWood ? 'rgba(10,13,18,.22)' : 'rgba(255,255,255,.18)'}`,
             }}>
               {(['wood', 'cleaning'] as const).map(s => {
                 const active = isWood ? s === 'wood' : s === 'cleaning'
@@ -209,7 +210,7 @@ export const Nav = () => {
               display: 'flex', gap: '1.5rem',
               flex: 1, justifyContent: 'flex-start',
               overflowX: 'auto', scrollbarWidth: 'thin',
-              scrollbarColor: `${isWood ? 'rgba(40,37,34,.25)' : 'rgba(255,255,255,.2)'} transparent`,
+              scrollbarColor: `${isWood ? 'rgba(10,13,18,.25)' : 'rgba(255,255,255,.2)'} transparent`,
               paddingBottom: navOverflow ? 1 : 0,
             }}
           >
@@ -275,15 +276,15 @@ export const Nav = () => {
                   cursor: 'pointer',
                 }}
               >
-                KONTAKT
+                {t('nav.contact')}
               </button>
 
               {contactOpen && (
                 <div style={{
                   position: 'absolute', top: 'calc(100% + 10px)', right: 0,
-                  background: 'var(--color-ink)', color: '#fff',
+                  background: isWood ? 'var(--color-ink)' : 'var(--color-blueprint)', color: '#fff',
                   minWidth: 300,
-                  boxShadow: '0 24px 60px rgba(0,0,0,.4)',
+                  boxShadow: '0 12px 28px rgba(0,0,0,.3)',
                   border: '1px dashed rgba(255,255,255,.14)',
                   zIndex: 400,
                   animation: 'fadeIn .15s ease',
@@ -295,7 +296,7 @@ export const Nav = () => {
                     display: 'flex', justifyContent: 'space-between',
                   }}>
                     <span style={{ fontSize: 10, fontWeight: 400, letterSpacing: 3, opacity: .35 }}>
-                      //KONTAKT
+                      {t('nav.contactPopup.title')}
                     </span>
                     <span style={{ fontSize: 10, fontWeight: 300, opacity: .22, letterSpacing: 1 }}>
                       QUEIS TAL
@@ -312,7 +313,7 @@ export const Nav = () => {
                     }}
                   >
                     <span style={{ fontSize: 10, letterSpacing: 3, opacity: .35, fontWeight: 400 }}>
-                      TELEFON GŁÓWNY
+                      {t('nav.contactPopup.primaryPhone')}
                     </span>
                     <span style={{ fontSize: 26, fontWeight: 400 }}>{TEL1.num}</span>
                   </a>
@@ -327,7 +328,7 @@ export const Nav = () => {
                     }}
                   >
                     <span style={{ fontSize: 10, letterSpacing: 3, opacity: .35, fontWeight: 400 }}>
-                      TELEFON
+                      {t('nav.contactPopup.phone')}
                     </span>
                     <span style={{ fontSize: 19, fontWeight: 300, opacity: .7 }}>{TEL2.num}</span>
                   </a>
@@ -341,7 +342,7 @@ export const Nav = () => {
                     }}
                   >
                     <span style={{ fontSize: 10, letterSpacing: 3, opacity: .35, fontWeight: 400 }}>
-                      E-MAIL
+                      {t('nav.contactPopup.email')}
                     </span>
                     <span style={{ fontSize: 14, fontWeight: 300, opacity: .65 }}>
                       queistal@gmail.com
@@ -385,7 +386,7 @@ export const Nav = () => {
       {/* ── Mobile full-screen menu ── */}
       <div style={{
         position: 'fixed', inset: 0, zIndex: 190,
-        background: isWood ? 'var(--color-ink)' : '#0d1117',
+        background: isWood ? 'var(--color-ink)' : 'var(--color-blueprint)',
         color: '#fff',
         display: 'flex', flexDirection: 'column', justifyContent: 'center',
         padding: '0 2rem',

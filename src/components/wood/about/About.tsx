@@ -33,7 +33,7 @@ export const About = () => {
         padding: 'clamp(5rem,9vw,8rem) clamp(1.5rem,5vw,5rem)',
         overflow: 'visible',
         background: 'var(--sage)',
-        borderBottom: '1px dashed rgba(40,37,34,.18)',
+        borderBottom: '1px dashed rgba(10,13,18,.18)',
       }}
     >
       <div
@@ -56,7 +56,7 @@ export const About = () => {
             {t('about.body')}
           </p>
           <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 1, height: 40, borderLeft: '1px dashed rgba(40,37,34,.3)' }} />
+            <div style={{ width: 1, height: 40, borderLeft: '1px dashed rgba(10,13,18,.3)' }} />
             <span style={{ fontSize: 11, letterSpacing: 3, opacity: 0.35, fontWeight: 400 }}>
               {t('about.servicesLabel')}
             </span>
@@ -66,7 +66,7 @@ export const About = () => {
         {/* Cards container */}
         <div className="wood-cards-wrap" style={{ flex: 1, minWidth: 340, position: 'relative', padding: '2.5rem 2rem' }}>
           {/* Dashed border frame */}
-          <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(40,37,34,.18)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, border: '1px dashed rgba(10,13,18,.18)', pointerEvents: 'none' }} />
 
           {/* Corner decors */}
           <img src={decor} alt="" className="wood-decor" style={{ position: 'absolute', left: '-1.5rem', top: '-1.5rem', width: '3.2rem', transform: 'none', opacity: 0.7, zIndex: 2 }} />

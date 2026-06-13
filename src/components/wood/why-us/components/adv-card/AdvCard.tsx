@@ -19,7 +19,7 @@ export const AdvCard = ({ n, title, body, idx = 0 }: AdvCardProps) => {
       onMouseLeave={() => setHov(false)}
       style={{
         padding: '3rem 2.5rem',
-        background: hov ? 'rgba(40,37,34,.95)' : 'rgba(227,235,212,.4)',
+        background: hov ? 'rgba(10,13,18,.95)' : 'rgba(227,235,212,.4)',
         color: hov ? 'var(--white)' : 'var(--ink)',
         backdropFilter: 'blur(2px)',
         WebkitBackdropFilter: 'blur(2px)',

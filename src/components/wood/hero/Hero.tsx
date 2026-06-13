@@ -30,7 +30,7 @@ export const Hero = () => {
         padding: 'clamp(6rem,10vw,9rem) clamp(1.5rem,5vw,5rem) clamp(3rem,6vw,5rem)',
         position: 'relative',
         overflow: 'hidden',
-        borderBottom: '1px dashed rgba(40,37,34,.18)',
+        borderBottom: '1px dashed rgba(10,13,18,.18)',
       }}
     >
       {/* Photo — right half, full-bleed, absolute */}
@@ -180,7 +180,7 @@ export const Hero = () => {
                 fontWeight: 400,
                 letterSpacing: '1.5px',
                 borderRadius: 40,
-                border: '1px solid rgba(40,37,34,.2)',
+                border: '1px solid rgba(10,13,18,.2)',
                 position: 'relative',
                 overflow: 'hidden',
                 transition: 'transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease)',
@@ -192,7 +192,7 @@ export const Hero = () => {
               href="#o-nas"
               className="hero-btn-secondary"
               style={{
-                border: '1.5px solid rgba(40,37,34,.38)',
+                border: '1.5px solid rgba(10,13,18,.38)',
                 color: 'var(--ink)',
                 padding: '13px 28px',
                 fontSize: 14,
@@ -234,7 +234,7 @@ export const Hero = () => {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(40,37,34,.88) 35%, rgba(40,37,34,.15) 100%);
+            background: linear-gradient(to top, rgba(10,13,18,.88) 35%, rgba(10,13,18,.15) 100%);
           }
           .whg { grid-template-columns: 1fr !important; gap: 0 !important; }
           .whg > div:last-child { display: none !important; }
@@ -247,11 +247,11 @@ export const Hero = () => {
         }
         .hero-btn-primary:hover {
           transform: translateY(-2px);
-          border-color: rgba(40,37,34,.45) !important;
+          border-color: rgba(10,13,18,.45) !important;
         }
         @media (max-width: 768px) {
           .hero-btn-primary:hover {
-            border-color: rgba(40,37,34,.45) !important;
+            border-color: rgba(10,13,18,.45) !important;
           }
         }
       `}</style>

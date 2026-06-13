@@ -11,7 +11,7 @@ export const Footer = () => {
   const routerState = useRouterState()
   const isWood = routerState.location.pathname.includes('/konstrukcje')
 
-  const bg      = isWood ? 'var(--sage)' : '#0d1117'
+  const bg      = isWood ? 'var(--sage)' : '#0a0d12'
   const textC   = isWood ? 'rgb(10,13,18)' : '#fff'
   const borderC = isWood ? 'rgba(10,13,18,.1)' : 'rgba(227,235,212,.1)'
   const logo    = isWood ? logoDefault : logoWhite
@@ -20,7 +20,7 @@ export const Footer = () => {
   const services: string[] = t('footer.services', { returnObjects: true }) as string[]
 
   return (
-    <footer style={{ background: bg, color: textC, fontFamily: 'Oswald, sans-serif' }}>
+    <footer className={isWood ? undefined : 'grain'} style={{ background: bg, color: textC, fontFamily: 'Oswald, sans-serif' }}>
 
       {/* ── Contact hero band ── */}
       <div style={{ borderBottom: dash(borderC), padding: 'clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5rem)' }}>

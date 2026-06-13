@@ -43,7 +43,7 @@ export const Testimonials = () => {
           top: 0,
           left: 'clamp(1.5rem,5vw,5rem)',
           right: 'clamp(1.5rem,5vw,5rem)',
-          borderTop: '1px dashed rgba(40,37,34,.18)',
+          borderTop: '1px dashed rgba(10,13,18,.18)',
         }}
       />
 
@@ -69,7 +69,7 @@ export const Testimonials = () => {
                   width: 44,
                   height: 44,
                   borderRadius: '50%',
-                  border: '1px solid rgba(40,37,34,.18)',
+                  border: '1px solid rgba(10,13,18,.18)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -77,7 +77,7 @@ export const Testimonials = () => {
                   cursor: 'pointer',
                   transition: 'background .2s',
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(40,37,34,.08)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(10,13,18,.08)' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent' }}
               >
                 <img
@@ -113,7 +113,7 @@ export const Testimonials = () => {
                 width: i === idx ? 28 : 8,
                 height: 8,
                 borderRadius: 4,
-                background: i === idx ? 'var(--ink)' : 'rgba(40,37,34,.2)',
+                background: i === idx ? 'var(--ink)' : 'rgba(10,13,18,.2)',
                 transition: 'width .3s var(--ease)',
                 border: 'none',
                 cursor: 'pointer',

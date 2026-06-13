@@ -57,7 +57,7 @@ export const GhostTitle = ({ text, side = 'right', top = '8%', tone = 'sage' }: 
         color: 'transparent',
         WebkitTextStroke: tone === 'sage'
           ? '1px rgba(227,235,212,.05)'
-          : '1px rgba(40,37,34,.07)',
+          : '1px rgba(10,13,18,.07)',
         letterSpacing: -2,
         whiteSpace: 'nowrap',
         userSelect: 'none',

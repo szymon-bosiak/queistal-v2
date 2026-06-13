@@ -15,7 +15,7 @@ const VARIANTS = {
     labelColor: 'var(--white)',
     borderColor: 'rgba(255,255,255,.10)',
     bracketColor: 'var(--white)',
-    gradientColor: 'rgba(40,37,34,.75)',
+    gradientColor: 'rgba(10,13,18,.75)',
     brightnessFilter: false,
   },
   restoration: {

@@ -9,8 +9,8 @@ interface TestimonialCardProps {
 export const TestimonialCard = ({ initials, name, text, fade, onLight }: TestimonialCardProps) => (
   <div
     style={{
-      background: onLight ? 'rgba(40,37,34,.06)' : 'rgba(255,255,255,.04)',
-      border: `1px dashed ${onLight ? 'rgba(40,37,34,.18)' : 'rgba(255,255,255,.12)'}`,
+      background: onLight ? 'rgba(10,13,18,.06)' : 'rgba(255,255,255,.04)',
+      border: `1px dashed ${onLight ? 'rgba(10,13,18,.18)' : 'rgba(255,255,255,.12)'}`,
       padding: 'clamp(2rem,4vw,3.5rem)',
       opacity: fade ? 1 : 0,
       transition: 'opacity .2s',
@@ -27,8 +27,8 @@ export const TestimonialCard = ({ initials, name, text, fade, onLight }: Testimo
         width: 68,
         height: 68,
         borderRadius: '50%',
-        background: onLight ? 'rgba(40,37,34,.08)' : 'rgba(227,235,212,.1)',
-        border: `1px solid ${onLight ? 'rgba(40,37,34,.18)' : 'rgba(255,255,255,.12)'}`,
+        background: onLight ? 'rgba(10,13,18,.08)' : 'rgba(227,235,212,.1)',
+        border: `1px solid ${onLight ? 'rgba(10,13,18,.18)' : 'rgba(255,255,255,.12)'}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

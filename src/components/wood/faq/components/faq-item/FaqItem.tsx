@@ -10,7 +10,7 @@ interface FaqItemProps {
 export const FaqItem = ({
   question,
   answer,
-  borderColor = 'rgba(40,37,34,.18)',
+  borderColor = 'rgba(10,13,18,.18)',
   color = 'var(--ink)',
 }: FaqItemProps) => {
   const [open, setOpen] = useState(false)

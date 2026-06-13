@@ -23,8 +23,8 @@ export const Marquee = ({ items, tone = 'sage', duration = 28 }: MarqueeProps) =
       style={{
         background: isSage ? 'var(--sage)' : 'var(--ink)',
         color: isSage ? 'var(--ink)' : 'var(--sage)',
-        borderTop: `1px dashed ${isSage ? 'rgba(40,37,34,.3)' : 'rgba(227,235,212,.25)'}`,
-        borderBottom: `1px dashed ${isSage ? 'rgba(40,37,34,.3)' : 'rgba(227,235,212,.25)'}`,
+        borderTop: `1px dashed ${isSage ? 'rgba(10,13,18,.3)' : 'rgba(227,235,212,.25)'}`,
+        borderBottom: `1px dashed ${isSage ? 'rgba(10,13,18,.3)' : 'rgba(227,235,212,.25)'}`,
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         userSelect: 'none',
