@@ -280,7 +280,7 @@ export const Nav = () => {
               </button>
 
               {contactOpen && (
-                <div style={{
+                <div className="grain" style={{
                   position: 'absolute', top: 'calc(100% + 10px)', right: 0,
                   background: isWood ? 'var(--color-ink)' : 'var(--color-blueprint)', color: '#fff',
                   minWidth: 300,
